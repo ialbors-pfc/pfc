@@ -1,0 +1,56 @@
+:figure-caption: Figura
+:xrefstyle: short
+
+== Introducción
+
+=== Contexto general
+En los últimos años se ha producido un creciente interés en el estudio de los procesos de aprendizaje en línea.
+Una prueba de ello es la proliferación de cursos en línea, con la aparición, por ejemplo, de los cursos en línea masivos y abiertos (en inglés, Massive Open Online Course o MOOCs).
+
+Aparte de las universidades a distancia, muchas organizaciones educativas tradicionales se han unido a ese corriente y están involucradas en plataformas que ofrecen cursos de ese tipo.
+Algunos ejemplos de estas instituciones son la Universidad de Stanford, la Universidad de Michigan, el Instituto de Tecnología de Massachusetts (MIT) o la Universidad de Oxford.
+Del mismo modo han aparecido nuevas organizaciones y plataformas que hacen de estos cursos su razón de ser, como Khan Academy, Coursera o edX.
+
+Otro ejemplo de la importancia que ha cobrado el aprendizaje en línea es el auge y madurez de los sistemas de gestión de aprendizaje existentes (Learning Management Systems o LMS).
+Entre los LMS más populares se encuentran Blackboard, Moodle o Desire2Learn (Green, 2013).
+En <<fig_google_trends>> se muestra, precisamente,  la evolución y el crecimiento del interés en Moodle en los últimos diez años.
+
+.Interés en Moodle a lo largo del tiempo. Fuente: Google Trends.
+[[fig_google_trends]]
+image::figure1.png[]
+
+El traslado (total o parcial) del ámbito educativo a entornos virtuales trae consigo la importante ventaja frente a los medios tradicionales que supone la enorme facilidad para recopilar, clasificar y procesar una gran cantidad de información relativa al desempeño de los alumnos en estos entornos.
+La propia naturaleza de estos nuevos medios permite el almacenamiento prácticamente ilimitado de grandes cantidades de datos de tipo muy heterogéneo: información relativa a las evaluaciones de los alumnos, interacciones entre alumnos, contenidos aportados por los alumnos o accesos a la herramientas puestas a su disposición, por poner algunos ejemplos.
+
+Esta disponibilidad casi inmediata de una gran cantidad de datos listos para ser procesados de forma automática es el abono perfecto para el campo de la minería de datos (DM, en inglés: Data Mining). Se puede definir DM como el proceso encargado de extraer información relevante, interpretable, útil y novedosa de un conjunto de datos (Romero & Ventura, 2010).
+
+Cuando la técnicas propias de DM se aplican al tipo de datos particulares involucrados en el campo de la educación, este tipo de técnicas se conocen como EDM (Educational Data Mining). EDM permite, por tanto, explorar esa gran cantidad de datos específicos para intentar extraer información relevante y útil a los propósitos típicos de un entorno educativo.
+
+La utilidad de EDM no se ve constreñida a los actores más obvios propios de estos escenarios, es decir, alumnos y profesores. Sirve también a otros actores como lo son los creadores de cursos, organizaciones educativas (como colegios o universidades) o gestores de recursos (desde gestores de la administración pública a administradores de red o sistemas).
+
+Entre las tareas propias de EDM, se pueden destacar los siguientes grandes grupos (Romero & Ventura, 2010):
+
+A. Análisis y visualización de datos.
+A. Feedback de apoyo para los profesores.
+A. Recomendaciones para los alumnos.
+A. Predicción del desempeño de los alumnos.
+A. Creación de modelos de alumnos para sistemas de personalización de la enseñanza.
+A. Detección de comportamientos anómalos de los alumnos.
+A. Agrupado de estudiantes.
+A. Análisis de redes sociales.
+
+En cada uno de estos apartados se emplean distintas técnicas de DM (por ejemplo: clasificación, regresión lineal, clustering, association rule mining o minería de reglas de asociación, etc.) para intentar alcanzar distintos objetivos dentro de cada apartado.
+A continuación se exponen algunos ejemplos más concretos de resultados que se han obtenido utilizando EDM. Entre paréntesis se especifica a cuál de los ocho grupos de la clasificación anterior pertenecería cada caso:
+
+    • Encontrar relaciones entre los patrones de acceso a LMS y la evaluación de los alumnos (B).
+    • Establecer recomendaciones concretas y personalizadas de material de aprendizaje para alumnos (C).
+    • Predicción de notas finales a partir de datos de participación en un LMS (D).
+    • Detección de comportamientos que pueden conducir a abandono de un curso (F).
+
+Este proyecto persigue poder establecer un modelo a partir de datos reales de una plataforma LMS. Partiendo de las técnicas de DM pertinentes se busca alcanzar un sistema de reglas capaz de predecir comportamientos o resultados de los alumnos de modo que estos puedan corregirse a tiempo en caso de ser negativos o ser alentados en caso de ser positivos.
+
+=== Justificación del proyecto
+.Preguntas a responder en este apartado
+NOTE: ¿Qué entendemos por justificación del proyecto? ¿Por qué es necesario este proyecto? ¿Por qué nos hemos decantado por hacer este proyecto? ¿Cuáles son sus posibles beneficios?
+
+=== Objetivos
