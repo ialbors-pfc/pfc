@@ -13,6 +13,7 @@ v1.0
 // stem needed by asciimath, latextmath
 :icons: font
 :experimental:
+:imagesdir: _images
 
 toc::[]
 
@@ -213,9 +214,7 @@ Es, en muchos casos, un plan B para cuando todo lo demás no funciona.
 Baker et al., 2012 [encontrar la referencia exacta] asegura que ha sido un
 algoritmo muy útil para detecta emociones a partir de ficheros de log.
 
-**HASTA AQUÍ**
-
-WARNING: Falta una imagen
+image::referencia.png[]
 
 Su principal inconveniente es que es necesario tener todos los datos para poder
 construir este modelo.
@@ -251,7 +250,7 @@ Es importante no solamente saber el valor final de la variable que se quiere
 predecir sino su calidad, es decir, cómo de cierto es su valor. Hay un 50% de
 probabilidades de que vayas a abandonar el colegio.
 
-Detector confidence:
+.Detector confidence:
 Esto es útil, por ejemplo, para decidir cómo será la intervención sobre un
 alumno. También considerando cuál es el coste de aplicar una intervención
 incorrecta y cuál el de no intervenir cuando sí es neceario.
@@ -266,7 +265,8 @@ necesario realizar cálculos a partir de la salida de los mismos. Por ejemplo en
 un árbol es común que para cada nodo último aparezca el número de elementos que
 para esa nodo están clasificados de las distintas maneras posibles.
 
-Confidence: aunque no siempre se puede usar, si está disponible siempre conviene
+.Confidence
+Aunque no siempre se puede usar, si está disponible siempre conviene
 utilizar esta métrica.
 
 ===== Exactitud o accuracy
@@ -303,6 +303,7 @@ Ejemplo con dos categorías (Expected agreement = Expected acuerdo para categor�
 ===== Curvas ROC
 Están pensadas para sistemas binarios de VERDADERO o FALSO. Por ejemplo, se usan
 mucho para análisis de métodos diagnósticos en medicina.
+
 Se usa en sistemas que, más que darnos el resultado de la clasificación, nos dan
 un valor a partir del cual podemos establecer un umbral para marcar el dato como
 VERDADERO o FALSO.
@@ -351,9 +352,19 @@ mejor que A’=0,5
 La probabilidad de que un punto clasificado como VERDADERO sea realmente
 VERDADERO.
 
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+Precision = \frac{TP}{TP + TF}
+++++++++++++++++++++++++++++++++++++++++++++
+
+
 ===== Exhaustividad
 La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
 
+[latexmath]
+++++
+Recall = \frac{TP}{TP + FN}
+++++
 
 ==== Métricas para regressors
 
@@ -379,13 +390,19 @@ modelo.
 
 ===== MAE/RMSE
 Mean Absolute Error
+
 Se calcula como la media del valor absoluto de la diferencia entre el valor
 predicho y el valor real.
+
 Indica la media de la desviación del erro predicho con respecto al real.
+
 Root Mean Squared Error
+
 Raíz cuadrada de la media del error al cuadrado.
+
 Este indicador se interpreta de forma similar al anterior pero penaliza más las
 desviaciones grandes.
+
 Suele preferirse este último.
 
 ===== Information Criteria
@@ -421,6 +438,7 @@ Lo importante es que nuestro modelo se puedan adaptar a nuevos contextos.
 Un método es separar los datos de entrada en dos grupos diferenciados (grupo de
 entrenamiento y grupo de test). De este modo el modelo se prueba contra el grupo
 de test que contiene elementos que el modelo no había visto antes.
+
 Si bien este método es muy rápido de procesar, su principal problema es que
 pueden darse muchas variaciones en los resultados dependiendo de cómo se
 establezca esa división entre datos de entranamiento y datos para evaluar.
@@ -429,46 +447,63 @@ establezca esa división entre datos de entranamiento y datos para evaluar.
 Con este método se separa los datos en varios conjuntos disjuntos con el mismo
 número de elementos. Se realiza el entrenamiento sobre todos los conjuntos menos
 uno de ellos, sobre el que se hará la evaluación.
-K-Fold
+
+.K-Fold
 se dividen los datos en K grupos del mismo tamaño. Es más rápido. Es típico usar
 K = 10.
-Leave-out-one
+
+.Leave-out-one
 En este caso cada dato es un forma un subconjunto. Es más estable y precisa
 pero, obviamente, existe un coste alto para procesarlo.
-Flat cross validation
+
+.Flat cross validation
 Cada punto tiene la misma probabilidad de encontrarse en cada fold
-Stratified cross validation:
+
+.Stratified cross validation:
 Se elige cada subconjunto para que las variables estén igualmente representadas.
-Student level cross-validation:
+
+.Student level cross-validation:
 Los grupos son seleccionados de modo que la información de un estudiante en
 concreto no puede estar representada en dos grupos.
+
 De este modo se puede generalizar el modelo para nuevos estudi	antes.
+
 En EDM se considera el mínimo nivel para hacer cross-validation
+
 Otros niveles empleados para Cross-validation:
 *  Lección/Contenido
 *  Escuela
 *  Demografia (población urbana/rural, raza, sexo)
 *  Software package
+
 La pregunta clave es para qué tipo de nuevos datos se quiere usar el modelo:
 para nuevos estudiantes, nuevas escuelas, nueva población, nuevo software. Se
 hace cross-validation para ese valor.
-2.1.6 Validez del modelo
-Generalizable
+
+==== Validez del modelo
+
+.Generalizable
 Si un modelo sigue siendo predictivo con nueva información que el modelo no haya
 visto nunca.
-Validez ecológica:
+
+.Validez ecológica:
 Establece si un modelo funcionará en un entorno real y no únicamente en un
 entorno de laboratorio (donde se pueden dar ciertos presupuestos o se puede
 ejercer cierto control que no existirá en un entorno real).
-Construct Validity:
+
+.Construct Validity:
 Si el modelo mide lo que realmente quería medir.
-Validez predictivo:
+
+.Validez predictivo:
 Si el modelo puede predecir no solamente el presente sino también el futuro.
-Substantive validity:
+
+.Substantive validity:
 Si el modelo tiene relevancia. Predice algo importante o de interés.
-Content validity
+
+.Content validity
 Si cubre todo el dominio que pretende cubrir.
-Conclusion validity:
+
+.Conclusion validity:
 Si las conclusiones están justificadas basándose en la evidencia
 
 === Automated Feature generation
@@ -485,6 +520,7 @@ serán esos subconjuntos.
 
 El objetivo de estas técnicas es encontrar relaciones ocultas a simple vista
 entre las variables de un conjunto de datos.
+
 Dentro de esta clasificación existen subclasificaciones.
 
 ==== Correlation mining
@@ -511,6 +547,7 @@ ejemplo, podría existir una asociación entre “suspender Matemáticas” y
 asociación no quiere decir que “suspender Matemáticas” sea causa de “suspender
 Lengua” o viceversa. En cambio podría existir una tercera variable: “nivel
 académico previo” que sí podría ser causa de las otras dos.
+
 Una forma de establecer relaciones causales de forma experimental implica la
 manipulación de los sujetos de estudio de modo variando valores de una variable
 A eso repercuta en el valor de otra variable B. Las implicaciones éticas que
@@ -518,6 +555,7 @@ conlleva este procedimiento, especialmente cuando el objeto de estudio es un ser
 humano (sería el caso de EDM), suponen un importante impedimento. Por ejemplo,
 obligar a un alumno a no atender en clase para comprobar cómo repercute eso eso
 en sus notas.
+
 Es por ello por lo que es importante ser capaces de obtener relaciones causales
 únicamente a partir de datos ya recopilados.
 
@@ -580,6 +618,7 @@ GPL Versión 3, la cual considera las cuatro libertades esenciales
 * libertad para redistribuir las modificaciones hechas sobre el software
 
 La ventaja principal de esta características es que esto permite
+
 * facilidad para estudiar el código fuente y modificarlo en caso de que se
 encuentren errores o de que sea necesario adaptarlo a las necesidades.
 El modelo de software libre y abierto ofrece, además, la posibilidad de
@@ -589,6 +628,7 @@ utilidad para más gente.
 === Herramientas Datamining
 Algunas de las herramientas más importantes en el campo de DM que se están
 usando para para EDM son las siguientes:
+
 *  RapidMiner
 *  R
 *  Weka
