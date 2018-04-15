@@ -21,7 +21,11 @@ toc::[]
 // Habría que hablar del constructivismo, construccionismo. De la teoría
 // psicológica que hay detrás de Moodle. Incorporar notas de cuaderno rojo.
 
-== Educational DataMining
+include::introduccion.adoc[]
+
+== Estado del arte
+
+=== Educational DataMining
 
 .¿Diferencia con respecto a Learning Analytics?
 NOTE: Baker, capítulo libro Educational DataMining & C.An -> podría decirse que
@@ -57,7 +61,7 @@ Se pueden clasificar Métodos o técnicas usadas en EDM:
 *  Distillation of data for human judgment
 *  Discovery with models
 
-=== Predicción
+==== Predicción
 Permite predecir un aspecto de un conjunto de datos (la variable a predecir) a
 partir de otras  variables de ese mismo conjunto de entrada. Se emplea tanto
 para predecir el futuro (¿qué alumno va a aprobar?) como el presente (¿qué
@@ -74,7 +78,7 @@ aburre, lo mejoraremos
 ofrecerle ayudas dirigidas.
 * Informar a los profesores, tutores, padres.
 
-==== Regresión
+===== Regresión
 Cuando lo que quieres predecir es un valor numérico (por ejemplo: la nota final
 de 0 a 10; el número de asignaturas que aprobará…)
 
@@ -88,20 +92,20 @@ serán susceptibles de ser usados para la predicción.
 Al utilizar este método se definirá qué combinación de esos parámetros y de qué
 forma sirven para predecir la variable correspondiente.
 
-===== Lineal
+====== Lineal
 Es la más típica en la que la variable se expresa como una función
 lineal de los parámetros que hacen de predictores.
 
 Es seguramente el método más sencillo y más fácil de comprender
 
-===== Regression trees:
+====== Regression trees:
 
 . RepTree no lineal
 . M5 (lineal)
 
 http://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/journal/PaperInformation.aspx?PaperID=70469
 
-==== Clasificación
+===== Clasificación
 En este caso la variable que se quiere predecir no es numérica sino categórica
 (ejemplos: aprobado/no aprobado, colegio, dejará el colegio/no lo dejará,…)
 
@@ -117,7 +121,7 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 *  Jrip decision rules
 *  K* Instance-based classifiers
 
-===== Step regression
+====== Step regression
 WARNING: No es stepwise regression!!!!
 
 Para clasificación binaria. En primer lugar se busca una función linear para
@@ -126,7 +130,7 @@ asigna un peso a cada parámetro y se calcula el valor numérico correspondiente
 Si dicho valor supera el umbral establecido, se asigna a la variable a predecir
 el 1, de otro modo el 0
 
-===== Regresión logística
+====== Regresión logística
 Es un algoritmo que, al igual que el anterio, también está pensado para
 clasificación con dos categorías o binaria.
 https://es.wikipedia.org/wiki/Regresi%C3%B3n_log%C3%ADstica
@@ -150,7 +154,7 @@ Es un algoritmo conservador
 
 WARNING: ¿Qué significa conservador?(¿qué significa, lo explica más adelabnte?)
 
-===== Decision trees (J48 o C4.5 o C5.0)
+====== Decision trees (J48 o C4.5 o C5.0)
 J48 es el nombre que recibe la implementación en Java y de código abierto
 del algoritmo C4.5. Esta implementación está incluida en una de las herramientas
  de minería de datos más popular: Weka.
@@ -170,7 +174,7 @@ categorías.
 Tiene sentido cuando hay interacciones entre variables o cuando se puede llegar
 al mismo resultado desde distintos puntos.
 
-===== Decision Rules (Jrip y PART)
+====== Decision Rules (Jrip y PART)
 Reglas de tipo *SI x ENTONCES* y que se comprueban en orden.
 
 Las diferencias entre los distintos algoritmos están más en cómo se generan y
@@ -198,7 +202,7 @@ Modelos fácilmente interpretables.
 
 Buenos cuando se dan interacciones en varios niveles.
 
-===== Clasificadores K* Instance-based classifiers
+====== Clasificadores K* Instance-based classifiers
 Predice el valor de la variable a predecir teniendo en cuenta otros puntos de
 datos vecinos. Tendrán más peso aquellos puntos que estén más cerca del punto de
 análisis.
@@ -219,7 +223,7 @@ image::referencia.png[]
 Su principal inconveniente es que es necesario tener todos los datos para poder
 construir este modelo.
 
-===== Bagged stumps
+====== Bagged stumps
 WARNING: [Lo que hay es del curso de EDM pero soy incapaz de encontrar nada más]
 
 Está relacionado con decision trees. Muchos árboles con sólo la primera feature.
@@ -234,18 +238,18 @@ conservadores.
 
 Algunos algoritmos menos conservadores a continuación:
 
-===== Support Vector Machines
+====== Support Vector Machines
 Útil para minería de texto y para datos de sensores. Crea modelos muy
 sofisticados. Sin embargo no es tan útil para el resto de datos que conciernen a
 EDM.
 
-===== Algoritmos genéticos
+====== Algoritmos genéticos
 
-===== Neural Networks
+====== Neural Networks
 Modelos muy complejos. Perceptrones
 Caso de estudio para clasificación
 
-==== Medidores de la calidad de clasificadores
+===== Medidores de la calidad de clasificadores
 Es importante no solamente saber el valor final de la variable que se quiere
 predecir sino su calidad, es decir, cómo de cierto es su valor. Hay un 50% de
 probabilidades de que vayas a abandonar el colegio.
@@ -269,7 +273,7 @@ para esa nodo están clasificados de las distintas maneras posibles.
 Aunque no siempre se puede usar, si está disponible siempre conviene
 utilizar esta métrica.
 
-===== Exactitud o accuracy
+====== Exactitud o accuracy
 #Agreements/(total codes/assesment)
 
 Se puede definir como el número de predicciones correctas del total de
@@ -281,7 +285,7 @@ predictor escoge siempre como valor de salida aprobado (un clasificador 0-R ó
 cero-R), su precisión será del 92% pero, en realidad, se trata de un predictor
 muy pobre.
 
-===== Coeficiente Kappa de Cohen
+====== Coeficiente Kappa de Cohen
 Es una métrica que compara la exactitud esperada con la observada.
 (Agreement-Expected agreement)/(1- Expected agreement)
 Interpretación:
@@ -300,7 +304,7 @@ proporcionales en su núnero de elementos.
 Ejemplo con dos categorías (Expected agreement = Expected acuerdo para categoría
 1 + expected para categoría2, siendo EA1 = freq cat1*freqcat1 clasificada)
 
-===== Curvas ROC
+====== Curvas ROC
 Están pensadas para sistemas binarios de VERDADERO o FALSO. Por ejemplo, se usan
 mucho para análisis de métodos diagnósticos en medicina.
 
@@ -322,7 +326,7 @@ Cutoff sería el umbral de decisión para decidir
 
 Ejemplos de curvas ROC correctas y malas
 
-===== A’
+====== A’
 Define la probabilidad de que, si al modelo se le propone un caso de cada
 categoría, si sabrá identificar cuál se corresponde con cuál.
 
@@ -348,7 +352,7 @@ mejor que A’=0,5
 *  Suele tener valores más altos que Kappa.
 *  Tiene en cuenta confidence
 
-===== Precisión
+====== Precisión
 La probabilidad de que un punto clasificado como VERDADERO sea realmente
 VERDADERO.
 
@@ -358,7 +362,7 @@ Precision = \frac{TP}{TP + TF}
 ++++++++++++++++++++++++++++++++++++++++++++
 
 
-===== Exhaustividad
+====== Exhaustividad
 La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
 
 [latexmath]
@@ -366,9 +370,9 @@ La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
 Recall = \frac{TP}{TP + FN}
 ++++
 
-==== Métricas para regressors
+===== Métricas para regressors
 
-===== Coeficiente de correlación de Pearson
+====== Coeficiente de correlación de Pearson
 Es una medida de la posible relación lineal entre dos variables. Es decir, si se
 consideran dos variables A y B, esta métrica establece si, al incrementar el
 valor de A, se produce un incremento lineal en el valor de B.
@@ -388,7 +392,7 @@ También se emplea el valor r², es decir, el coeficiente de correlación al
 cuadrado. Es una medida de qué porcentaje de la variación está explicada por el
 modelo.
 
-===== MAE/RMSE
+====== MAE/RMSE
 Mean Absolute Error
 
 Se calcula como la media del valor absoluto de la diferencia entre el valor
@@ -405,7 +409,7 @@ desviaciones grandes.
 
 Suele preferirse este último.
 
-===== Information Criteria
+====== Information Criteria
 Criterio de Información Bayesiano
 
 Se intenta llegar a un compromiso entre el número de parámetros utilizados en el
@@ -418,7 +422,7 @@ sobreajuste, se _penaliza_ cuantas más variables se empleen para el modelo.
 Akaike’s Information Criterion (Akaike, 1974)
 Es un método similar al anterior.
 
-==== Validación cruzada y sobreajuste
+===== Validación cruzada y sobreajuste
 El sobreajuste se da cuando el modelo no sólo se ajusta a la señal sino también
 al ruido.
 
@@ -434,7 +438,7 @@ Todos los modelos sufren de este problema en mayor o menor medida.
 
 Lo importante es que nuestro modelo se puedan adaptar a nuevos contextos.
 
-===== Método 1: método de retencion (o training set vs test set)
+====== Método 1: método de retencion (o training set vs test set)
 Un método es separar los datos de entrada en dos grupos diferenciados (grupo de
 entrenamiento y grupo de test). De este modo el modelo se prueba contra el grupo
 de test que contiene elementos que el modelo no había visto antes.
@@ -443,7 +447,7 @@ Si bien este método es muy rápido de procesar, su principal problema es que
 pueden darse muchas variaciones en los resultados dependiendo de cómo se
 establezca esa división entre datos de entranamiento y datos para evaluar.
 
-===== Método 2: Validación cruzada
+====== Método 2: Validación cruzada
 Con este método se separa los datos en varios conjuntos disjuntos con el mismo
 número de elementos. Se realiza el entrenamiento sobre todos los conjuntos menos
 uno de ellos, sobre el que se hará la evaluación.
@@ -480,7 +484,7 @@ La pregunta clave es para qué tipo de nuevos datos se quiere usar el modelo:
 para nuevos estudiantes, nuevas escuelas, nueva población, nuevo software. Se
 hace cross-validation para ese valor.
 
-==== Validez del modelo
+===== Validez del modelo
 
 .Generalizable
 Si un modelo sigue siendo predictivo con nueva información que el modelo no haya
@@ -506,24 +510,24 @@ Si cubre todo el dominio que pretende cubrir.
 .Conclusion validity:
 Si las conclusiones están justificadas basándose en la evidencia
 
-=== Automated Feature generation
+==== Automated Feature generation
 
-=== Automated Feature selection
+==== Automated Feature selection
 
-=== Descubrimiento de estructuras
+==== Descubrimiento de estructuras
 En este caso no se considera el valor final de una variable sino que se busca
 agrupar elementos de un conjunto mayor en subconjuntos que estén lo
 suficientemente relacionados sin tener ninguna idea preconcebida sobre cómo
 serán esos subconjuntos.
 
-=== Relationship Mining
+==== Relationship Mining
 
 El objetivo de estas técnicas es encontrar relaciones ocultas a simple vista
 entre las variables de un conjunto de datos.
 
 Dentro de esta clasificación existen subclasificaciones.
 
-==== Correlation mining
+===== Correlation mining
 http://www.eecs.umich.edu/eecs/pdfs/events/2711.pdf
 http://users.wpi.edu/~rsbaker/Encyclopedia%20Chapter%20Draft%20v10%20-fw.pdf
 
@@ -536,7 +540,7 @@ variables.
 
 Bonferroni y FDR como correcciones.
 
-==== Causal data mining
+===== Causal data mining
 El objetivo es hallar relaciones causales entre variables.
 http://nugget.unisa.edu.au/Thuc/CausalAssRule.pdf
 
@@ -570,7 +574,7 @@ acciones que ejecuta un alumno.
 PSLC Datashop.
 Regressors
 
-== Moodle
+=== Moodle
 Moodle el nombre se corresponde con las siglas en inglés Modular Object-Oriented
 Dynamic Learning Environment (sobre el origen del nombre existe un post de su
 creador en el fórum donde explica que la M de Modular se correspondía,
@@ -607,7 +611,7 @@ Las ventajas de Moodle.
 Algunas de las características más destacadas de esta plataforma son las
 siguientes
 
-=== Código fuente
+==== Código fuente
 El código fuente de Moodle es libre y abierto, es decir, está disponible para
 todo el mundo. La licencia del código [https://docs.moodle.org/dev/License] es
 GPL Versión 3, la cual considera las cuatro libertades esenciales
@@ -625,7 +629,7 @@ El modelo de software libre y abierto ofrece, además, la posibilidad de
 contribuir con esas mejoras o adaptaciones al proyecto principal si fueran de
 utilidad para más gente.
 
-=== Herramientas Datamining
+==== Herramientas Datamining
 Algunas de las herramientas más importantes en el campo de DM que se están
 usando para para EDM son las siguientes:
 
