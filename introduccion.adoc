@@ -53,4 +53,22 @@ Este proyecto persigue poder establecer un modelo a partir de datos reales de un
 .Preguntas a responder en este apartado
 NOTE: ¿Qué entendemos por justificación del proyecto? ¿Por qué es necesario este proyecto? ¿Por qué nos hemos decantado por hacer este proyecto? ¿Cuáles son sus posibles beneficios?
 
+La aplicación de las técnicas de Data Mining en el entorno educativo (o Educational Data Mining) es relativamente reciente.
+Si tomamos como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationaldatamining.org/conferences/) vemos que se trata de un ámbito _joven_ y sobre el que queda mucho por hacer.
+
+Además el interés intrínseco de esta disciplina es innegable.
+
 === Objetivos
+El objetivo de este proyecto es realizar una aproximación a algunas de las distintas técnicas de _datamining_ que se suelen aplicar sobre datos del ámbito educativo.
+
+La misma descripción de este objetivo cuenta con dos elementos diferenciados (_¿qué técnicas de datamining?_ y _¿sobre qué datos?_) cuyo espectro (que en su totalidad sería demasiado vasto y fuera del alcance de este proyecto) vamos a limitar.
+
+Con respecto a las distintas técnicas de datamining haremos un repaso descriptivo por las más significativas de ellas.
+Pero nos centraremos en lo que se conoce como ARM (Associative Rule Mining o Minería de Reglas Asociativas)
+
+Para acotar algo más el espectro del proyecto nos centraremos en las técnicas ARM (Associative Rule Mining) en cuanto a
+
+
+  Moodle y ARM
+
+Es también objetivo de este proyecto la exploración del proceso completo  una visión global

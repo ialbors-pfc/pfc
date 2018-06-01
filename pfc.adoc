@@ -1,4 +1,4 @@
-= PFC
+= Estudio y aplicación de modelos predictivos a partir del análisis de datos educativos en plataformas de teleformación
 Ignacio Albors Fernández <ignacio.albors@gmail.com>
 v1.0
 :numbered:
