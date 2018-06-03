@@ -1,0 +1,18 @@
+== Feature engineering
+
+=== Automated Feature Selection
+
+En ocasiones el número de variables que contiene un conjunto de datos es enorme e inmanejable para poder experimentar con ellas.
+
+La preselección de un número más reducido de variables previo a la ejecución del algoritmo correspondiente mejora el rendimiento de los algoritmos de minería de datos.
+
+Este proceso de filtrado de variables puede realizarse por medio de un análisis de las mismas, en la que el juicio humano es fundamental, aunque también se han desarrollado algunas técnicas para poder automatizarlo.
+
+Algunas de esas técnicas se describen brevemente a continuación.
+
+.Filtrado por correlación
+Se calcula la correlación de las distintas variables y se descartan aquellas que tienen una correlación más alta con respecto a otra (que se mantiene).
+
+La decisión sobre cuál se mantiene y cuáles se descartan es arbitraria y puede conducir a que se descarten ciertas variables más significativas en el ámbito teórico del problema a analizar (Sao Pedro et al., 2012).
+
+.Fast Correlation-Based Filtering
