@@ -1,0 +1,17 @@
+// Deben estar en orden alfabético
+
+== Referencias
+
+* Agrawal, R., Imielinski, T. &  Swami, A. (1993). Mining association rules between sets of items in large databases. ACM SIGMOD, 22 (2), 207–216.
+* Ceglar, A. & Roddick, J.F. (2006). Association Mining. ACM Computing Surveys, 38 (2), 5.
+* Green, K. C. (2013). Campus Computing Survey. Campus Computing Project. Recuperado de http://www.campuscomputing.net/sites/www.campuscomputing.net/files/CampusComputing2013_1.pdf
+* Moodle (n.d.). Recuperado en Julio 7, 2015 de Wikipedia: http://es.wikipedia.org/wiki/Moodle
+* Romero, C., López, M.I., Luna, J.M., & Ventura, S. (2013). Predicting students' final performance from participation in on-line discussion forums. Computers & Education, 68, 458-472.
+* Romero, C. & Ventura, S. (2010). Educational data mining: a review of the state of the art, IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews, 40(6), 601-618.
+* Weka (aprendizaje automático) (n.d.). Recuperado en Mayo 31, 2018 de Wikipedia: http://es.wikipedia.org/wiki/Weka_(aprendizaje_autom%C3%A1tico)
+
+
+
+* Sao Pedro, M., Baker, R.S.J.d., Gobert, J. (2012) Improving Construct Validity Yields Better Models of Systematic Inquiry, Even with Less Information. Proceedings of the 20th International Conference on User Modeling, Adaptation and Personalization (UMAP 2012), 249-260.
+
+* Liu, H., Yu, L. (2005) Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17 (4), 491-502.
