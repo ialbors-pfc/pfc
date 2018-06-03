@@ -4,6 +4,19 @@
 == Introducción
 
 === Contexto general
+
+La educación ha sido siempre objeto de estudio y análisis
+
+Ventajas de los MOOCs:
+
+* ventajas económicas
+* distribución geográfica
+* posibilidad de llegar a más gente y más diversa
+
+* facilita la interactividad frente al modelo tradicional en que el educador vuelca sus conocimientos
+* distintos ritmos.
+
+
 En los últimos años se ha producido un creciente interés en el estudio de los procesos de aprendizaje en línea.
 Una prueba de ello es la proliferación de cursos en línea, con la aparición, por ejemplo, de los cursos en línea masivos y abiertos (en inglés, Massive Open Online Course o MOOCs).
 
@@ -54,7 +67,10 @@ Este proyecto persigue poder establecer un modelo a partir de datos reales de un
 NOTE: ¿Qué entendemos por justificación del proyecto? ¿Por qué es necesario este proyecto? ¿Por qué nos hemos decantado por hacer este proyecto? ¿Cuáles son sus posibles beneficios?
 
 La aplicación de las técnicas de Data Mining en el entorno educativo (o Educational Data Mining) es relativamente reciente.
+Si bien podemos llegara
 Si tomamos como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationaldatamining.org/conferences/) vemos que se trata de un ámbito _joven_ y sobre el que queda mucho por hacer.
+
+(https://pdfs.semanticscholar.org/8c99/e2a12a22d33e273164866792f7646e0b46b9.pdf)
 
 Además el interés intrínseco de esta disciplina es innegable.
 
@@ -64,7 +80,7 @@ El objetivo de este proyecto es realizar una aproximación a algunas de las dist
 La misma descripción de este objetivo cuenta con dos elementos diferenciados (_¿qué técnicas de datamining?_ y _¿sobre qué datos?_) cuyo espectro (que en su totalidad sería demasiado vasto y fuera del alcance de este proyecto) vamos a limitar.
 
 Con respecto a las distintas técnicas de datamining haremos un repaso descriptivo por las más significativas de ellas.
-Pero nos centraremos en lo que se conoce como ARM (Associative Rule Mining o Minería de Reglas Asociativas)
+Pero nos centraremos en lo que se conoce como ARM (Association Rule Mining o Minería de Reglas de Asociación)
 
 Para acotar algo más el espectro del proyecto nos centraremos en las técnicas ARM (Associative Rule Mining) en cuanto a
 
