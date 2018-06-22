@@ -5,7 +5,38 @@
 
 === Contexto general
 
-La educación ha sido siempre objeto de estudio y análisis
+La educación y el aprendizaje son materias de estudio de enorme importancia que siempre han suscitado un enorme interés.
+Como prueba informal de su importancia se pueden poner los siguientes dos ejemplos significativos relativos a España:
+
+.Organismos públicos
+Desde la llegada de la democracia en 1977 siempre ha existido un ministerio de Educación.
+Si bien en algunos casos se añadía un apéndice al nombre del ministerio (Educación y Ciencia, Educación y Cultura, etc.) la palabra Educación siempre ha permanecido.
+
+.Leyes educativas
+Desde 1980 hasta 2013 se han publicado hasta siete leyes generales de educación: LOECE (1980), LODE (1985), LOGSE (1990), LOPEG (1995), LOCE (2002), LOE (2006) y LOMCE (2013).
+
+Esto nos da una media aproximada de cinco años y medio de vigencia de cada una de ellas: 7 leyes distintas durante 38 años, desde 1980 hasta hoy; es decir, algo más de la duración habitual de una legislatura.
+
+Estas leyes suelen venir acompañads de controversia (Fernández-González, 2016;Muñoz, 2003) que, junto a su relativamente corto tiempo de vida, dan una idea del interés y del enfrentamiento enconado que suscita el debate sobre ellas.
+
+
+https://es.wikipedia.org/wiki/Ministerios_de_Educaci%C3%B3n_de_Espa%C3%B1a
+
+https://es.wikipedia.org/wiki/Historia_de_la_educaci%C3%B3n_en_Espa%C3%B1a#Restauraci%C3%B3n_democr%C3%A1tica
+
+Su evidente importancia radica en que, por su propia naturaleza, se relacionan con todas las demás materias del conocimiento.
+Es decir, son parte fundamental e imposible de disociar de cualquier materia de estudio; esto mismo se podría expresar con la siguiente obviedad: para *conocer* una materia es necesario *aprenderla*.
+En ese sentido podríamos considerarla como una _metamateria_ que incluso se relaciona consigo misma de esta manera.
+
+Podemos establecer, por tanto, relaciones de interdependencia entre esta rama y todas las demás, siendo la educación la que influye sobre las demás.
+Además de esas relaciones _de dentro hacia fuera_, se pueden establecer otras relaciones _de fuera hacia dentro_, es decir, de aquellas disciplinas que han ejercido su influencia sobre el estudio de la educación y el aprendizaje.
+
+Tradicionalmente, estas disciplinas han sido, fundamentalmente, las siguientes:
+
+* Estadística
+* Psicología
+
+
 
 Ventajas de los MOOCs:
 
