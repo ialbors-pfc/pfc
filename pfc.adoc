@@ -1,3 +1,12 @@
+// Configuración github
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
 = Estudio y aplicación de modelos predictivos a partir del análisis de datos educativos en plataformas de teleformación
 Ignacio Albors Fernández <ignacio.albors@gmail.com>
 v1.0
