@@ -23,7 +23,6 @@ v1.0
 :icons: font
 :experimental:
 :imagesdir: _images
-:included: yes
 
 toc::[]
 
