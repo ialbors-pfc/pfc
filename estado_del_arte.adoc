@@ -3,6 +3,9 @@
 === Educational DataMining
 
 
+Tanto la reducción de precios como
+La eclosión de aplicaciones
+
 .¿Diferencia con respecto a Learning Analytics?
 NOTE: Baker, capítulo libro Educational DataMining & C.An -> podría decirse que
 EDM está más orientado al análisis automático de datos (por medio de algoritmos)
@@ -13,8 +16,8 @@ valore esa información _resumida_.
 EDM supone un cruce de caminos entre, al menos, tres disciplinas
 interrelacionadas: la estadística, la psicopedagogía y la minería de datos.
 
-EDM es una disciplina moderadamente reciente. Una de las organizaciones más
-relevantes dentro de esta disciplina es la International Educational Data Mining
+EDM es una disciplina moderadamente reciente.
+Una de las organizaciones más relevantes dentro de esta disciplina es la International Educational Data Mining
 Society que organizó su primer evento significativo en 2005: un taller en la
 Association for the Advancement of Artificial Intelligence o AAAI. Primera
 conferencia EDM2008 y JEDM se publica desde 2009.
@@ -606,7 +609,7 @@ El modelo de software libre y abierto ofrece, además, la posibilidad de
 contribuir con esas mejoras o adaptaciones al proyecto principal si fueran de
 utilidad para más gente.
 
-==== Herramientas Datamining
+=== Herramientas Datamining: weka
 Algunas de las herramientas más importantes en el campo de DM que se están
 usando para para EDM son las siguientes:
 

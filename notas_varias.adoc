@@ -16,3 +16,13 @@ Se calcula la correlación de las distintas variables y se descartan aquellas qu
 La decisión sobre cuál se mantiene y cuáles se descartan es arbitraria y puede conducir a que se descarten ciertas variables más significativas en el ámbito teórico del problema a analizar (Sao Pedro et al., 2012).
 
 .Fast Correlation-Based Filtering
+
+Consiste en encontrar la correlación entre cada par de variables.
+A continuación se ordenan las variables por su correlación con respecto a variaba que se quiere predecir.
+Se escoge la variable con el valor más alto.
+Se descartan todas las variables con más alta correlación con respecto a la que se acaba de escoger. Repetir el proceso.
+Es decir, lo que se pretende es eliminar aquellas variables que tienen una alta correlación con respecto a variables que ya se están teniendo en consideración.
+
+.Forward Selection
+
+https://www.stat.ubc.ca/~rollin/teach/643w04/lec/node41.html
