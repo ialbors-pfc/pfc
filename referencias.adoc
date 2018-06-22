@@ -24,3 +24,9 @@ endif::[]
 * Sao Pedro, M., Baker, R.S.J.d., Gobert, J. (2012) Improving Construct Validity Yields Better Models of Systematic Inquiry, Even with Less Information. Proceedings of the 20th International Conference on User Modeling, Adaptation and Personalization (UMAP 2012), 249-260.
 
 * Liu, H., Yu, L. (2005) Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17 (4), 491-502.
+
+
+* Jiménez Pérez, E. (2017). Lectura y educación en España: análisis longitudinal de las leyes educativas generales. Investigaciones Sobre Lectura, (8), 79-90. Recuperado a partir de https://www.comprensionlectora.es/revistaisl/index.php/revistaISL/article/view/218
+* Fernández-González, N. (2016). La LOMCE: aportaciones para el debate sobre la política educativa. Revista Educación, Política y Sociedad.
+
+* Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.
