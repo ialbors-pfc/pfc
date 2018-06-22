@@ -7,9 +7,17 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-// Deben estar en orden alfabético
+ifndef::toc[]
+:toc:
+
+toc::[]
 
 == Referencias
+
+endif::[]
+
+// Deben estar en orden alfabético
+
 
 * Agrawal, R., Imielinski, T. &  Swami, A. (1993). Mining association rules between sets of items in large databases. ACM SIGMOD, 22 (2), 207–216.
 * Ceglar, A. & Roddick, J.F. (2006). Association Mining. ACM Computing Surveys, 38 (2), 5.

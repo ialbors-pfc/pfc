@@ -10,9 +10,11 @@ endif::[]
 ifndef::toc[]
 :toc:
 toc::[]
-endif::[]
 
 == Estado del arte
+
+endif::[]
+
 
 === Educational DataMining
 

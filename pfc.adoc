@@ -36,10 +36,14 @@ toc::[]
 
 == Glosario
 
+== Introducción
+
 include::introduccion.adoc[]
 
 == Estructura del documento
 <<<
+
+== Estado del arte
 
 include::estado_del_arte.adoc[]
 
@@ -59,6 +63,8 @@ Kettle + docker
 
 
 <<<
+
+== Referencias
 
 include::referencias.adoc[]
 

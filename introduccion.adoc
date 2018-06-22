@@ -12,10 +12,13 @@ endif::[]
 
 ifndef::toc[]
 :toc:
+
 toc::[]
-endif::[]
 
 == Introducción
+
+endif::[]
+
 
 === Contexto general
 
