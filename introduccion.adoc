@@ -10,6 +10,11 @@ endif::[]
 :figure-caption: Figura
 :xrefstyle: short
 
+ifndef::toc[]
+:toc:
+toc::[]
+endif::[]
+
 == Introducción
 
 === Contexto general
