@@ -12,6 +12,13 @@ endif::[]
 
 == Introducción
 
+ifndef::included[]
+índice parcial
+
+toc::[]
+
+endif::[]
+
 === Contexto general
 
 La educación y el aprendizaje son materias de estudio de enorme importancia que siempre han suscitado un enorme interés.
