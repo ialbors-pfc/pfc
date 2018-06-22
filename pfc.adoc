@@ -21,12 +21,36 @@ toc::[]
 // Habría que hablar del constructivismo, construccionismo. De la teoría
 // psicológica que hay detrás de Moodle. Incorporar notas de cuaderno rojo.
 
+== Resumen
+
+== Palabras claves
+
+== Glosario
+
 include::introduccion.adoc[]
 
+== Estructura del documento
 <<<
 
 include::estado_del_arte.adoc[]
 
 <<<
 
+== Experimento
+=== Base de datos
+=== Análisis y extracción de datos
+=== Aplicación de algoritmos de datamining
+=== Resultados
+
+== Conclusiones
+
+=== Limitaciones y futuras líneas de investigación
+
+Kettle + docker
+
+
+<<<
+
 include::referencias.adoc[]
+
+<<<
