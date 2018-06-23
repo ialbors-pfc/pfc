@@ -62,21 +62,30 @@ Es por esto por lo que, si bien se indicará, en lo posible, las versiones del c
 
 === Análisis de BD de Moodle
 
-Como primera aproximación al problema se realiza un análisis superficial a partir de una base de datos de una instalación _limpia_ de Moodle (sin contenido, ni módulos adicionales).
+Como primera aproximación al problema se realiza un análisis superficial (número y estructura de tablas y vistas) a partir de una base de datos de una instalación _limpia_ de Moodle (sin contenido ni módulos adicionales).
 
-Esta instalación se corresponde con la siguiente versión:
+Lo que se quiere dilucidar a partir de este análisis será lo siguiente:
+
+* Número de tablas.
+* Número de vistas
+* Estructura general de las mismas.
+
+Para este análisis se ha empleado una instalación de Moodle que se corresponde con la versión:
 
  Moodle 3.5+ (Build: 20180614)
 
-El número de tablas de dicha instalación es de *401*.
+A partir de ella se obtienen los siguientes resultado numéricos:
 
-Es un número lo suficientemente grande como para entrar en el detalle de cada una de ellas en este documento.
+* Número de tablas: *401*.
+* Número de vistas: 0
+
+El número de tablas es lo suficientemente grande como para entrar en el detalle de cada una de ellas en este documento.
 Sin embargo, los nombres de las tablas dan una idea de la agrupación conceptual interna entre las distintas tablas.
 Estos nombres tienen este formato:
 
-mdl_{grupo}[_{elemento}]
+ mdl_{grupo}[_{elemento}]
 
-Siendo {grupo} el grupo conceptual y, opcionalmente, puede seguir una diferenciación más específica con {elemento}.
+Siendo _{grupo}_ el grupo conceptual que se menciona más arriba. Opcionalmente puede seguir una diferenciación más específica con _{elemento}_.
 
 Con esta clasificación se obtendrían 86 grupos conceptuales de los que se muestran algunos ejemplos a continuación:
 
@@ -93,30 +102,62 @@ Con esta clasificación se obtendrían 86 grupos conceptuales de los que se mues
 * _rating_
 * _workshop_
 
-Para intentar extraer algo más de información del esquema de la base de datos se emplea una herramienta para realizar ingeniería inversa y extraer a partir de una base de datos su diagrama de
+Para extraer algo más de información del esquema de la base de datos se emplea la herramienta *MySQL Workbench* para realizar ingeniería inversa y extraer a partir de una base de datos su diagrama de Entidad-Relación (diagrama ER).
+
+.Diagrama E-R de la BD de Moodle 3.5
+[[figure_er_diagram_moodle_db]]
+image::er_diagram.png[]
+
+Apenas puede extraerse información alguna de dicho diagrama que puede verse en la <<figure_er_diagram_moodle_db>>.
+El elevado número de tablas que se analizan (que, como se ha visto, son 401) produce un diagrama con elementos superpuestos y dispuestos de forma abigarrada.
+El objetivo de mostrarlo aquí, no obstante, es ilustrar el único punto significativo que puede destacarse del mismo, esto es, que no se observan dependencias relacionales entre las entidades de dicho diagrama.
+
+Puesto que, a todas luces, es imposible que todas las tablas se correspondan con entidades aisladas sin relación con las demás entidades, se ha de suponer que esas relaciones no se establecen en la BD sino directamente en el código (posiblemente por medio de algún _framework_ específico para ello).
+Todo ello supone una dificultad más en el análisis de los datos.
 
 === Esquema de una versión anterior
 
+Como parte de la documentación de Moodle se encuentran ciertos diagramas E-R de su BD (en https://docs.moodle.org/dev/Database_Schema).
 
-número de tablas
-Schema de mysql workbench Docker Moodle 3.5+ (Build: 20180614)
-Schema publicado para versión 3.3
+La última versión de la que existe esta documentación es la 3.3 (publicada en mayo de 2017).
+Como ya se ha mencionado, esto no debería ser un problema puesto que es de suponer cierta estabilidad en el modelo de datos.
+
+.Diagrama E-R de la BD de Moodle 3.3
+[[figure_er_diagram_moodle_db_33]]
+image::moodle_33_erd.png[]
+
+Este diagrama, como se ve en <<figure_er_diagram_moodle_db_33>>, confirma las dos suposiciones del apartado anterior:
+
+. sí existen relaciones entre las distintas entidades. En el diagrama, a simple vista, se aprecian numerosas interconexiones entre las tablas.
+. el propio diagrama ofrece una agrupación por conceptos de las entidades. Si en el apartado anterior se mencionaban hasta 86 grupos, en el nuevo diagrama se aprecian 38 grupos distintos.
+
+En la misma documentación donde se encuentra este diagrama, finalmente, se hace una especial hincapié de una selección de entre los 38 grupos. Se distinguen los siguientes 18 grupos:
+
+* assignment
+* advanced_grading
+* badge
+* course
+* competency
+* forum
+* grading
+* lesson
+* messages
+* question_bank
+* question_types
+* roles
+* quiz
+* scorm
+* survey
+* users_and_profiles
+* wiki
+* workshop
 
 
-Como primera aproximación al problema se va a analizar la estructura de la BD de Moodle (tablas, vistas, etcétera).
-
-En primer lugar se realiz
-
-* Cuántas tablas hay
-
-* Cómo se dividen por bloques.
-
-
-
-Para ello se emplea la herramienta Mysql Workbench, por medio de la cual
+----
 
 WARNING: Extraer el esquema de la BD Mysql de Moodle.
 Posteriormente comparar con los datos facilitados en el _dataset_.
+
 
 
 
