@@ -1,0 +1,71 @@
+// Configuración github
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+ifndef::toc[]
+:numbered:
+:toc:
+:toclevels: 5
+:lang: es
+:encoding: utf8
+:sectnumlevels: 5
+:toc-title: Índice
+:toc-placement: manual
+:stem: latexmath
+
+asasd
+
+toc::[]
+
+== Experimento
+
+endif::[]
+
+
+Como primera aproximación al problema se va a analizar la estructura de la BD de Moodle (tablas, vistas, etcétera).
+
+En primer lugar se realiz
+
+* Cuántas tablas hay
+
+* Cómo se dividen
+
+
+
+Para ello se emplea la herramienta Mysql Workbench, por medio de la cual
+
+WARNING: Extraer el esquema de la BD Mysql de Moodle.
+Posteriormente comparar con los datos facilitados en el _dataset_.
+
+
+
+Una de las principales dificultades que se encuentran para realizar este tipo de análisis es la de encontrar un banco de datos en crudo lo suficientemente amplio como para que el análisis pueda ser significativo.
+Uno de los principales motivos es la privacidad de los usuarios/alumnos/sujetos de estudio que se quiere preservar.
+
+En este caso se ha hecho uso de una base de datos publicada por Moodle Pty Ltd con la información personal anonimizada para que no se pueda discernir de quién se trata.
+
+Este conjunto de datos se encuentra disponible en la siguiente URL:
+https://research.moodle.net/158/.
+
+Además de los propios datos se facilita una descripción de los mismos de la cual se extrae a continuación la información más fundamental.
+
+Los datos se corresponden con un curso impartido en learn.moodle.net durante cuatro semanas de 2016.
+
+Si bien en el curso estaban inscritos 6119 alumnos, sólo 2167 de ellos dieron su permiso expreso para utilizar la información generada por ellos para la investigación académica. Por tanto sólo se disponde de los datos de estos 2167.
+
+Además se anonimizó la información (por medio de un plugin específico para moodle).
+
+El dataset dispone de cuatro ficheros:
+
+*
+
+
+=== Base de datos
+=== Análisis y extracción de datos
+=== Aplicación de algoritmos de datamining
+=== Resultados

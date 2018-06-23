@@ -50,10 +50,10 @@ include::estado_del_arte.adoc[]
 <<<
 
 == Experimento
-=== Base de datos
-=== Análisis y extracción de datos
-=== Aplicación de algoritmos de datamining
-=== Resultados
+
+include::experimento.adoc[]
+
+<<<
 
 == Conclusiones
 
@@ -61,6 +61,7 @@ include::estado_del_arte.adoc[]
 
 Kettle + docker
 
+Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (¿otros?) + anonimizar datos (RGPD)
 
 <<<
 
