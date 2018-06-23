@@ -1,3 +1,6 @@
+:imagesdir: _images
+:table-caption: Tabla
+
 // Configuración github
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -18,13 +21,86 @@ ifndef::toc[]
 :toc-placement: manual
 :stem: latexmath
 
-asasd
-
 toc::[]
 
 == Experimento
 
 endif::[]
+
+Moodle es una herramienta en constante y activo desarrollo.
+Es por ello que su la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
+
+Pero, al mismo tiempo, es una herramienta con la suficiente madurez como para poder afirmar que existe cierta estabilidad en dicho modelo de datos.
+
+Como muestra de ambas cosas (tanto de la actividad del proyecto como de su madurez) puede verse la comparativa de la  <<tabla_indicadores_git_moodle>> y de las figuras <<figura_num_autores_git_moodle>> y <<figura_num_commits_git_moodle>>.
+En ellas comparamos algunos indicadores generales sobre el repositorio de código fuente del proyecto _moodle_ con los de otro proyecto de código abierto de mayor alcance: _git_.
+
+.Indicadores de los repositorios de código de _git_ y _moodle_
+[[tabla_indicadores_git_moodle]]
+[%header,cols="40%h,30%,30%"]
+|===
+||moodle|git
+|Nº de commits totales|89.566|51805
+|Duración (primer commit)|17 años
+
+(2001-11-22)|13 años
+
+(2005-04-07)
+|Nº de autores|787|1598
+|===
+
+.Núm. de autores por año de proyectos moodle y git
+[[figura_num_autores_git_moodle]]
+image::num_autores_per_year.png[]
+
+.Núm. de commits por año de proyectos moodle y git
+[[figura_num_commits_git_moodle]]
+image::num_commits_per_year.png[]
+
+Es por esto por lo que, si bien se indicará, en lo posible, las versiones del código que se usarán en este análisis preliminiar, se puede suponer que no habrá diferencias sustanciales entre ellas en lo que al modelo de datos se refiere.
+
+
+=== Análisis de BD de Moodle
+
+Como primera aproximación al problema se realiza un análisis superficial a partir de una base de datos de una instalación _limpia_ de Moodle (sin contenido, ni módulos adicionales).
+
+Esta instalación se corresponde con la siguiente versión:
+
+ Moodle 3.5+ (Build: 20180614)
+
+El número de tablas de dicha instalación es de *401*.
+
+Es un número lo suficientemente grande como para entrar en el detalle de cada una de ellas en este documento.
+Sin embargo, los nombres de las tablas dan una idea de la agrupación conceptual interna entre las distintas tablas.
+Estos nombres tienen este formato:
+
+mdl_{grupo}[_{elemento}]
+
+Siendo {grupo} el grupo conceptual y, opcionalmente, puede seguir una diferenciación más específica con {elemento}.
+
+Con esta clasificación se obtendrían 86 grupos conceptuales de los que se muestran algunos ejemplos a continuación:
+
+* _badge_
+* _blog_
+* _competency_
+* _course_
+* _events_
+* _forum_
+* _grading_
+* _lesson_
+* _question_
+* _quiz_
+* _rating_
+* _workshop_
+
+Para intentar extraer algo más de información del esquema de la base de datos se emplea una herramienta para realizar ingeniería inversa y extraer a partir de una base de datos su diagrama de
+
+=== Esquema de una versión anterior
+
+
+número de tablas
+Schema de mysql workbench Docker Moodle 3.5+ (Build: 20180614)
+Schema publicado para versión 3.3
 
 
 Como primera aproximación al problema se va a analizar la estructura de la BD de Moodle (tablas, vistas, etcétera).
@@ -33,7 +109,7 @@ En primer lugar se realiz
 
 * Cuántas tablas hay
 
-* Cómo se dividen
+* Cómo se dividen por bloques.
 
 
 
@@ -63,7 +139,6 @@ Además se anonimizó la información (por medio de un plugin específico para m
 El dataset dispone de cuatro ficheros:
 
 *
-
 
 === Base de datos
 === Análisis y extracción de datos
