@@ -1,3 +1,4 @@
+:imagesdir: _images
 // Configuración github
 ifdef::env-github[]
 :tip-caption: :bulb:

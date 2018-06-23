@@ -23,7 +23,7 @@ v1.0
 :icons: font
 :experimental:
 :imagesdir: _images
-
+:table-caption: Tabla
 toc::[]
 
 // Notas:
