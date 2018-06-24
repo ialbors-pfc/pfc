@@ -7,12 +7,12 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-ifndef::toc[]
+ifndef::included[]
 :toc:
 
 toc::[]
 
-== Referencias
+== Bibliografía
 
 endif::[]
 
