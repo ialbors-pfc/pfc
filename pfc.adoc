@@ -71,3 +71,7 @@ Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (Â
 include::referencias.adoc[]
 
 <<<
+
+== ApÃ©ndices
+
+include::apendices.adoc[]
