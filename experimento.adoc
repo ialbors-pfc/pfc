@@ -10,7 +10,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-ifndef::toc[]
+ifndef::included[]
 :numbered:
 :toc:
 :toclevels: 5
@@ -20,10 +20,9 @@ ifndef::toc[]
 :toc-title: Índice
 :toc-placement: manual
 :stem: latexmath
-
 toc::[]
 
-== Experimento
+== Estudio
 
 endif::[]
 
