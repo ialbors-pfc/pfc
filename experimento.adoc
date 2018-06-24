@@ -26,12 +26,14 @@ toc::[]
 
 endif::[]
 
+=== Base de datos de Moodle
+
 Moodle es una herramienta en constante y activo desarrollo.
 Es por ello que su la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
 
-Pero, al mismo tiempo, es una herramienta con la suficiente madurez como para poder afirmar que existe cierta estabilidad en dicho modelo de datos.
+Pero, al mismo tiempo, es una herramienta con la suficiente madurez como para poder afirmar que existe cierta estabilidad en dicho modelo de datos y que los cambios con respecto al núcleo del mismo se considerarán mínimos.
 
-Como muestra de ambas cosas (tanto de la actividad del proyecto como de su madurez) puede verse la comparativa de la  <<tabla_indicadores_git_moodle>> y de las figuras <<figura_num_autores_git_moodle>> y <<figura_num_commits_git_moodle>>.
+Como muestra tanto de la actividad del proyecto como de su madurez puede verse la comparativa de la  <<tabla_indicadores_git_moodle>> y de las figuras <<figura_num_autores_git_moodle>> y <<figura_num_commits_git_moodle>>.
 En ellas comparamos algunos indicadores generales sobre el repositorio de código fuente del proyecto _moodle_ con los de otro proyecto de código abierto de mayor alcance: _git_.
 
 .Indicadores de los repositorios de código de _git_ y _moodle_
@@ -39,13 +41,13 @@ En ellas comparamos algunos indicadores generales sobre el repositorio de códig
 [%header,cols="40%h,30%,30%"]
 |===
 ||moodle|git
-|Nº de commits totales|89.566|51805
+|Nº de commits totales|89.566|51.805
 |Duración (primer commit)|17 años
 
 (2001-11-22)|13 años
 
 (2005-04-07)
-|Nº de autores|787|1598
+|Nº de autores|787|1.598
 |===
 
 .Núm. de autores por año de proyectos moodle y git
@@ -58,33 +60,45 @@ image::num_commits_per_year.png[]
 
 Es por esto por lo que, si bien se indicará, en lo posible, las versiones del código que se usarán en este análisis preliminiar, se puede suponer que no habrá diferencias sustanciales entre ellas en lo que al modelo de datos se refiere.
 
+==== Análisis de BD de Moodle 3.5
 
-=== Análisis de BD de Moodle
-
-Como primera aproximación al problema se realiza un análisis superficial (número y estructura de tablas y vistas) a partir de una base de datos de una instalación _limpia_ de Moodle (sin contenido ni módulos adicionales).
+Como primera aproximación al problema se realiza un análisis superficial (número y estructura de tablas y vistas) a partir de una base de datos de una instalación _limpia_ de Moodle, es decir sin contenido ni módulos adicionales y con la configuración mínima para poder empezar a trabajar con ella.
 
 Lo que se quiere dilucidar a partir de este análisis será lo siguiente:
 
-* Número de tablas.
-* Número de vistas
-* Estructura general de las mismas.
+* análisis cuantitativo:
+** Número de tablas.
+** Número de vistas
+* analisis cualitativo: estructura general de las mismas.
 
 Para este análisis se ha empleado una instalación de Moodle que se corresponde con la versión:
 
  Moodle 3.5+ (Build: 20180614)
 
-A partir de ella se obtienen los siguientes resultado numéricos:
+.Análisis cuantitativo
+
+De forma sencilla se pueden obtener los valores númericos buscados:
 
 * Número de tablas: *401*.
 * Número de vistas: 0
 
-El número de tablas es lo suficientemente grande como para entrar en el detalle de cada una de ellas en este documento.
-Sin embargo, los nombres de las tablas dan una idea de la agrupación conceptual interna entre las distintas tablas.
-Estos nombres tienen este formato:
+El número de tablas es alto, lo cual indica que un análisis en profundidad de las mismas será prolijo y complejo.
 
- mdl_{grupo}[_{elemento}]
+.Análisis cualitativo
 
-Siendo _{grupo}_ el grupo conceptual que se menciona más arriba. Opcionalmente puede seguir una diferenciación más específica con _{elemento}_.
+Entrar en el detalle de cada una de las tablas, como se ha dicho, sería un estudio que excede el alcance de este proyecto.
+
+Sin embargo sí se puede extraer cierta información a partir de  los nombres de las tablas.
+Estos nombres dan una idea de la agrupación conceptual interna entre ellas.
+
+Se observa que estos nombres se ajustan al siguiente formato:
+
+ {prefijo}_{grupo}[_{elemento}]
+
+Siendo:
+* {prefijo} es igual a "mdl" aunque, seguramente sea un parámetro configurable.
+* _{grupo}_ se corresponde con el grupo conceptual que se menciona más arriba.
+* opcionalmente puede seguir una diferenciación más específica con _{elemento}_.
 
 Con esta clasificación se obtendrían 86 grupos conceptuales de los que se muestran algunos ejemplos a continuación:
 
@@ -112,9 +126,9 @@ El elevado número de tablas que se analizan (que, como se ha visto, son 401) pr
 El objetivo de mostrarlo aquí, no obstante, es ilustrar el único punto significativo que puede destacarse del mismo, esto es, que no se observan dependencias relacionales entre las entidades de dicho diagrama.
 
 Puesto que, a todas luces, es imposible que todas las tablas se correspondan con entidades aisladas sin relación con las demás entidades, se ha de suponer que esas relaciones no se establecen en la BD sino directamente en el código (posiblemente por medio de algún _framework_ específico para ello).
-Todo ello supone una dificultad más en el análisis de los datos.
+Ello supone una dificultad más en el análisis de los datos.
 
-=== Esquema de una versión anterior
+==== Esquema de versión 3.3
 
 Como parte de la documentación de Moodle se encuentran ciertos diagramas E-R de su BD (en https://docs.moodle.org/dev/Database_Schema).
 
@@ -130,7 +144,8 @@ Este diagrama, como se ve en <<figure_er_diagram_moodle_db_33>>, confirma las do
 . sí existen relaciones entre las distintas entidades. En el diagrama, a simple vista, se aprecian numerosas interconexiones entre las tablas.
 . el propio diagrama ofrece una agrupación por conceptos de las entidades. Si en el apartado anterior se mencionaban hasta 86 grupos, en el nuevo diagrama se aprecian 38 grupos distintos.
 
-En la misma documentación donde se encuentra este diagrama, finalmente, se hace una especial hincapié de una selección de entre los 38 grupos. Se distinguen los siguientes 18 grupos:
+En la misma documentación donde se encuentra este diagrama, finalmente, se ofrecen diagramas individuales de una selección de 18 de entre los 38 grupos.
+Estos 18 grupos son:
 
 * assignment
 * advanced_grading
@@ -151,22 +166,25 @@ En la misma documentación donde se encuentra este diagrama, finalmente, se hace
 * wiki
 * workshop
 
+=== Origen de datos para el estudio
 
-----
+Una de las principales dificultades que se encuentran para realizar este tipo de estudios es la de encontrar un banco de datos en crudo lo suficientemente amplio como para que el análisis pueda ser significativo y que contenga información real.
+Uno de los principales motivos de esta dificultad es la privacidad de los usuarios/alumnos/sujetos de estudio que se quiere preservar.
 
-WARNING: Extraer el esquema de la BD Mysql de Moodle.
-Posteriormente comparar con los datos facilitados en el _dataset_.
+Las distintas organizaciones poseedoras de estos datos son renuentes a hacerlos públicos por el peligro (sobre todo legal) que supondría que se revelara información personal de los usuarios.
 
+Para este estudio se va a emplear un conjunto de datos publicados por Moodle Pty Ltd. (Dalton, 2017).
 
+Este conjunto de datos se publicó con la finalidad de que fuera empleado para la investigación, está convenientemente anonimizado y además sólo contiene información de aqullos participantes que otorgaron expresamente su permiso para que se usaran con fines académicos.
 
+Los datos se corresponden con un curso de cuatro semanas durante agosto de 2016.
+En la información del conjunto de datos no se especifica la versión de Moodle que se empleó para el curso.
+Si se toma en consideración las fechas de publicación de versiones y del propio curso y se hace la suposición de que el curso siempre se realiza con la última versión publicada, podríamos suponer que la versión sería 3.1.x; la primera versión 3.1.x es del 23 de mayo de 2016.
 
-Una de las principales dificultades que se encuentran para realizar este tipo de análisis es la de encontrar un banco de datos en crudo lo suficientemente amplio como para que el análisis pueda ser significativo.
-Uno de los principales motivos es la privacidad de los usuarios/alumnos/sujetos de estudio que se quiere preservar.
+De nuevo no hay mucha diferencia con las otras versiones mencionadas en este documento y podemos suponer que no afectaría sustancialmente el uso de una u otra.
 
-En este caso se ha hecho uso de una base de datos publicada por Moodle Pty Ltd con la información personal anonimizada para que no se pueda discernir de quién se trata.
-
-Este conjunto de datos se encuentra disponible en la siguiente URL:
-https://research.moodle.net/158/.
+*-
+El conjunto de datos consta de los siguientes ficheros
 
 Además de los propios datos se facilita una descripción de los mismos de la cual se extrae a continuación la información más fundamental.
 
@@ -180,7 +198,14 @@ El dataset dispone de cuatro ficheros:
 
 *
 
-=== Base de datos
+Correspondencia entre ficheros y las tablas de arriba
+
+
 === Análisis y extracción de datos
+
+==== Formato arff
+Weka hace uso de este formato
+
 === Aplicación de algoritmos de datamining
+
 === Resultados
