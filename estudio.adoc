@@ -190,22 +190,25 @@ El conjunto de datos consta de los siguientes seis ficheros:
 |===
 |Fichero|Descripción|Nº de registros
 | mdl_badge_issued.csv
-| Registro de todos los _premios_ digitales (insignias) otorgados a los usuarios
+| Registros con los _premios_ digitales (insignias) otorgados a los usuarios
 | 1.845
 
+| mdl_course_modules.csv
+| Registros con cada actividad del curso.
+| 61
+
 | mdl_course_modules_completion.csv
-|
+| Registros de si los usuarios han completado o no las actividades
 | 30.987
 
-| mdl_course_modules.csv
-|
-| 61
 | mdl_grade_grades_history.csv
-|
+| Registros de las puntuaciones para las actividades realizadas por los usuarios.
 | 70.038
+
 | mdl_logstore_standard_log.csv
-| Entradas para todos los eventos registrados por Moodle
+| Registros para todos los eventos registrados por Moodle
 | 2.635.394
+
 | mdl_user.csv
 | Detalle sobre los usuarios
 | 2.171
@@ -221,6 +224,10 @@ El formato de los ficheros es igual para todos ellos:
 
 === Análisis, preprocesado y extracción de datos
 
+El objetivo final de esta fase es crear un fichero único en formato ARFF en que cada instancia contenga toda la información significativa que se requiera.
+
+
+
 ==== Formato arff
 Weka hace uso del formato ARFF (por su nombre en inglés: _Attribute-Relation File Format_ o Formato de Fichero Atributo-Relación).
 
@@ -235,16 +242,33 @@ Este formato consiste en dos secciones:
  ** numeric
  ** string
  ** <nominal-specification>
- ** date <date-format>
+ ** date <formato-de-fecha>
 
 . Datos.
  * Esta sección comienza con una línea con:
  @data
  * A continuación se detalla cada una de las instancias (una por línea).
  * Los atributos, que coincidirán en orden con los definidos en la cabecera, se separan por comas.
+ * Aquellos valores que sean desconocidos se indicarán con un '?'.
+ * Los campos de texto (_string_) se indicará entre comillas dobles.
+
+==== Limpia de ficheros
+
+Para cada uno de los ficheros se realizará un preprocesado previo.
+
+* Eliminación de duplicados.
+* Descarte de atributos conforme a los siguientes criterios:
+** Si se indica en la descripción de Dalton (2017) que no es necesario.
+** Cuando el atributo sólo tome 1 único valor distinto. Es decir, si todas las instancias contienen ese mismo valor, no está aportando ninguna información adicional y sería innecesario.
+** Si está directamente ligado a otro atributo que se va a incluir. El ejemplo más claro sería descartar nombre y apellido cuando ya tenemos un username único por medio del cual se podrían conocer esos otros dos atributos.
 
 
+
+* Selección de atributos
+* Selección manual
+* preparación en único fichero
 
 === Aplicación de algoritmos de datamining
+
 
 === Resultados
