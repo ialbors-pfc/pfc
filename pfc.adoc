@@ -52,7 +52,7 @@ include::estado_del_arte.adoc[]
 
 == Estudio
 
-include::experimento.adoc[]
+include::estudio.adoc[]
 
 <<<
 
