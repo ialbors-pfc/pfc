@@ -175,36 +175,75 @@ Las distintas organizaciones poseedoras de estos datos son renuentes a hacerlos 
 
 Para este estudio se va a emplear un conjunto de datos publicados por Moodle Pty Ltd. (Dalton, 2017).
 
-Este conjunto de datos se publicó con la finalidad de que fuera empleado para la investigación, está convenientemente anonimizado y además sólo contiene información de aqullos participantes que otorgaron expresamente su permiso para que se usaran con fines académicos.
+Este conjunto de datos se publicó con la finalidad de que fuera empleado para la investigación, está convenientemente anonimizado (por medio de un plugin específico para moodle) y además sólo contiene información de aqullos participantes que otorgaron expresamente su permiso para que se usaran con fines académicos.
 
-Los datos se corresponden con un curso de cuatro semanas durante agosto de 2016.
+Los datos se corresponden con el curso "Teaching with Moodle" impartido desde la plataforma learn.moodle.net durante cuatro semanas de 2016.
 En la información del conjunto de datos no se especifica la versión de Moodle que se empleó para el curso.
-Si se toma en consideración las fechas de publicación de versiones y del propio curso y se hace la suposición de que el curso siempre se realiza con la última versión publicada, podríamos suponer que la versión sería 3.1.x; la primera versión 3.1.x es del 23 de mayo de 2016.
+Pero si se toma en consideración las fechas de publicación de versiones y del propio curso y se hace la suposición de que el curso siempre se realiza con la última versión publicada, podríamos suponer que la versión sería 3.1.x puesto que la primera versión 3.1.x es del 23 de mayo de 2016.
 
-De nuevo no hay mucha diferencia con las otras versiones mencionadas en este documento y podemos suponer que no afectaría sustancialmente el uso de una u otra.
+De nuevo se va a suponer que no hay mucha diferencia con respecto a las otras versiones mencionadas en este documento y que no  afectaría sustancialmente el uso de una u otra.
 
-*-
-El conjunto de datos consta de los siguientes ficheros
+El conjunto de datos consta de los siguientes seis ficheros:
 
-Además de los propios datos se facilita una descripción de los mismos de la cual se extrae a continuación la información más fundamental.
+.Ficheros incluidos en dataset de Moodle
+[options="header"]
+|===
+|Fichero|Descripción|Nº de registros
+| mdl_badge_issued.csv
+| Registro de todos los _premios_ digitales (insignias) otorgados a los usuarios
+| 1.845
 
-Los datos se corresponden con un curso impartido en learn.moodle.net durante cuatro semanas de 2016.
+| mdl_course_modules_completion.csv
+|
+| 30.987
 
-Si bien en el curso estaban inscritos 6119 alumnos, sólo 2167 de ellos dieron su permiso expreso para utilizar la información generada por ellos para la investigación académica. Por tanto sólo se disponde de los datos de estos 2167.
+| mdl_course_modules.csv
+|
+| 61
+| mdl_grade_grades_history.csv
+|
+| 70.038
+| mdl_logstore_standard_log.csv
+| Entradas para todos los eventos registrados por Moodle
+| 2.635.394
+| mdl_user.csv
+| Detalle sobre los usuarios
+| 2.171
+|===
 
-Además se anonimizó la información (por medio de un plugin específico para moodle).
+Todos los nombres de los ficheros se corresponden con nombres de tablas en la BD de la versión 3.5.
 
-El dataset dispone de cuatro ficheros:
+El formato de los ficheros es igual para todos ellos:
 
-*
+* texto plano
+* valores separados por comas
+* la primera fila es la cabecera con el nombre de los campos.
 
-Correspondencia entre ficheros y las tablas de arriba
-
-
-=== Análisis y extracción de datos
+=== Análisis, preprocesado y extracción de datos
 
 ==== Formato arff
-Weka hace uso de este formato
+Weka hace uso del formato ARFF (por su nombre en inglés: _Attribute-Relation File Format_ o Formato de Fichero Atributo-Relación).
+
+Este formato consiste en dos secciones:
+
+. Cabecera. Esta sección contiene los siguientes elementos.
+ * Nombre de la relación. Se define con una línea así:
+   @relation <nombre>
+ * Atributos. Se definen tantos como sean necesarios de la siguiente forma:
+   @attribute <nombre> <tipo>
+ * El tipo de atributo puede ser:
+ ** numeric
+ ** string
+ ** <nominal-specification>
+ ** date <date-format>
+
+. Datos.
+ * Esta sección comienza con una línea con:
+ @data
+ * A continuación se detalla cada una de las instancias (una por línea).
+ * Los atributos, que coincidirán en orden con los definidos en la cabecera, se separan por comas.
+
+
 
 === Aplicación de algoritmos de datamining
 
