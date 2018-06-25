@@ -1,0 +1,7 @@
+ialbors@taric-debian:~/dev/otros/pfc/docker$ docker run --rm -it  -v /tmp/.X11-unix/X0:/tmp/.X11-unix/X0 -v /home/ialbors/.mysql-workbench:/root/.mysql/workbench -e DISPLAY=:0 --name mysql-workbench jdecool/mysql-workbench mysql-workbench 
+
+ialbors@taric-debian:~$ xhost +local:root
+
+ialbors@taric-debian:~$ xhost -local:root
+
+docker run -it --rm mysql mysql -h192.168.1.82 -uroot -pmoodle moodle

@@ -1,0 +1,78 @@
+#version: '3.2'
+#
+#services:
+#
+#  moodle:
+#    image: jhardison/moodle
+#    restart: always
+#    ports:
+#      - 8080:80
+#    environment:
+#      MOODLE_URL: http://localhost:8080
+#
+#  db:
+#    image: mysql:5.7
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: moodle
+#      MYSQL_DATABASE: moodle
+#      MYSQL_USER: moodle
+#      MYSQL_PASSWORD: moodle
+#    volumes:
+#      - ./data:/docker-entrypoint-initdb.d
+
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: moodle
+      MYSQL_DATABASE: moodle
+      MYSQL_USER: moodle
+      MYSQL_PASSWORD: moodle
+    ports:
+      - 3306:3306
+#    volumes:
+#      - ./data:/docker-entrypoint-initdb.d
+#    dbapp:
+#        env_file:
+#            - moodle_variables.env
+  moodle:
+    image: jhardison/moodle:latest
+    restart: always
+    links:
+      - db:DB
+    depends_on: 
+      - db
+    restart: always
+#        volumes:
+#            - moodleapp-data:/var/moodledata
+    ports:
+      - 8080:80
+      - 4443:443
+    environment:
+      DB_ENV_MYSQL_DATABASE: moodle
+      DB_ENV_MYSQL_USER: moodle
+      DB_ENV_MYSQL_PASSWORD: moodle
+      MOODLE_URL: http://localhost:8080
+      DB_PORT_3306_TCP_ADDR: DB
+
+#   env_file:
+#            - moodle_variables.env
+#        networks:
+#            - backendDB
+#            - frontendWEB
+#        deploy:
+#            replicas: 1
+#            restart_policy:
+#                condition: any            
+
+#volumes: 
+#    db-volume:
+#    moodleapp-data:
+
+#networks:
+#    backendDB:
+#    frontendWEB:
