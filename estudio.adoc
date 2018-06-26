@@ -227,7 +227,6 @@ El formato de los ficheros es igual para todos ellos:
 El objetivo final de esta fase es crear un fichero único en formato ARFF en que cada instancia contenga toda la información significativa que se requiera.
 
 
-
 ==== Formato arff
 Weka hace uso del formato ARFF (por su nombre en inglés: _Attribute-Relation File Format_ o Formato de Fichero Atributo-Relación).
 
@@ -256,12 +255,15 @@ Este formato consiste en dos secciones:
 
 Para cada uno de los ficheros se realizará un preprocesado previo.
 
-* Eliminación de duplicados.
+* Eliminación de registros duplicados.
 * Descarte de atributos conforme a los siguientes criterios:
 ** Si se indica en la descripción de Dalton (2017) que no es necesario.
 ** Cuando el atributo sólo tome 1 único valor distinto. Es decir, si todas las instancias contienen ese mismo valor, no está aportando ninguna información adicional y sería innecesario.
-** Si está directamente ligado a otro atributo que se va a incluir. El ejemplo más claro sería descartar nombre y apellido cuando ya tenemos un username único por medio del cual se podrían conocer esos otros dos atributos.
-
+** Si está directamente ligado a otro atributo que se va a incluir.
+El ejemplo más claro sería descartar nombre y apellido cuando ya tenemos un atributo _username_ único por medio del cual se podrían conocer esos otros dos atributos.
+** Otros descartes basado en la inspección de los datos. Por ejemplo, se ve que el país sólo es AU o está vacío. Es de suponer que no va a proporcionar mucha información.
+* Conversión de atributos de texto en nominales.
+Por ejemplo: el atributo email no aporta en realidad mucha información (sobre todo si tenemos en cuenta que está anonimizado) pero sí podemos distinguir entre usuarios que han especificado email y usuarios que no.
 
 
 * Selección de atributos
