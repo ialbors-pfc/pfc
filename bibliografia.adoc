@@ -42,3 +42,5 @@ endif::[]
 * Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set. Recuperado a partir de https://research.moodle.net/158/
 
 * Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.
+
+* Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
