@@ -18,7 +18,6 @@ endif::[]
 
 === Educational DataMining
 
-
 Tanto la reducción de precios como
 La eclosión de aplicaciones
 
@@ -506,10 +505,6 @@ Si cubre todo el dominio que pretende cubrir.
 .Conclusion validity:
 Si las conclusiones están justificadas basándose en la evidencia
 
-==== Automated Feature generation
-
-==== Automated Feature selection
-
 ==== Descubrimiento de estructuras
 En este caso no se considera el valor final de una variable sino que se busca
 agrupar elementos de un conjunto mayor en subconjuntos que estén lo
@@ -559,9 +554,9 @@ en sus notas.
 Es por ello por lo que es importante ser capaces de obtener relaciones causales
 únicamente a partir de datos ya recopilados.
 
-==== 2.5.3 Association mining
+===== Association mining
 
-2.5.4 Sequential Pattern mining
+===== Sequential Pattern mining
 
 Las modernas herramientas para el aprendizaje (tanto los MOOCs como herramientas
 informáticas usadas en clases) permiten un registro más detallado de las

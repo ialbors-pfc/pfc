@@ -46,7 +46,7 @@ include::introduccion.adoc[]
 
 == Estado del arte
 
-include::estado_del_arte.adoc[]
+include::estado_del_arte0.adoc[]
 
 <<<
 
@@ -68,7 +68,7 @@ Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (Â
 
 == BibliografÃ­a
 
-include::referencias.adoc[]
+include::bibliografia.adoc[]
 
 <<<
 

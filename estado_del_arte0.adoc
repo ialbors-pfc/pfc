@@ -1,0 +1,10 @@
+=== Educational DataMining
+==== Predicción
+===== Regresión
+===== Métricas para regressors
+===== Clasificación
+===== Medidores de la calidad de clasificadores
+==== Descubrimiento de estructuras
+==== Relationship Mining
+=== Moodle
+=== Weka
