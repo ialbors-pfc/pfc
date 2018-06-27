@@ -39,6 +39,6 @@ endif::[]
 
 * Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.
 
-* Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set.
+* Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set. Recuperado a partir de https://research.moodle.net/158/
 
 * Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.
