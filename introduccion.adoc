@@ -24,54 +24,46 @@ endif::[]
 === Contexto general
 
 La educación y el aprendizaje son materias de estudio de enorme importancia que siempre han suscitado un enorme interés.
-Como prueba informal de su importancia se pueden poner los siguientes dos ejemplos significativos relativos a España:
 
-.Organismos públicos
-Desde la llegada de la democracia en 1977 siempre ha existido un ministerio de Educación.
-Si bien en algunos casos se añadía un apéndice al nombre del ministerio (Educación y Ciencia, Educación y Cultura, etc.) la palabra Educación siempre ha permanecido.
+No existe una definición única de la Educación.
+Los diferentes autores se han centrado en diferentes aspectos a lo largo de los diferentes siglos, las diferentes culturas y las diferentes condiciones sociales.
+Así podemos encontrar definiciones de los autores clásicos, como Platón que la definía de esta manera: “Educar es dar al cuerpo y al alma toda la belleza y perfección de que son capaces”; o bien esta otra definición de Aristóteles: “La educación consiste en dirigir los sentimientos de placer y dolor hacia el orden ético"; hasta llegar hasta mediados del siglo XX donde, en 1948, es recogida como un derecho fundamental en el artículo 26 de la Declaración Universal de los Derechos Humanos.
 
-.Leyes educativas
-Desde 1980 hasta 2013 se han publicado hasta siete leyes generales de educación: LOECE (1980), LODE (1985), LOGSE (1990), LOPEG (1995), LOCE (2002), LOE (2006) y LOMCE (2013).
+Todas ellas tienen un aspecto común que es poner al individuo como objetivo último de la acción.
+En la propia diversidad de definiciones a lo largo del tiempo podemos apreciar que la definición y el ámbito de aplicación varía con el momento y con el ámbito sociocultural.
 
-Esto nos da una media aproximada de cinco años y medio de vigencia de cada una de ellas: 7 leyes distintas durante 38 años, desde 1980 hasta hoy; es decir, algo más de la duración habitual de una legislatura.
+La Educación debe tener, por tanto, la aspiración de ser una herramienta para todos los seres humanos del planeta que sirva para dotarles de los mecanismos necesarios para afrontar la vida y mejorar la condición humana tanto de forma individual como colectiva.
 
-Estas leyes suelen venir acompañads de controversia (Fernández-González, 2016;Muñoz, 2003) que, junto a su relativamente corto tiempo de vida, dan una idea del interés y del enfrentamiento enconado que suscita el debate sobre ellas.
+Así la Educación no se puede ver desligada de la revolución digital que está transformando la sociedad.
+Las nuevas tecnologías se han convertido en parte fundamental de la existencia con nuevas formas de comunicación, de generación y divulgación de información y conocimientos, nuevos modelos productivos y económicos y permitiendo la personalización de los servicios.
+La revolución digital vino, como las anteriores, de una nueva tecnología, las Tecnologías de la Información y la Comunicación.
+ Ahora afrontamos la cuarta revolución industrial.
+ La cuarta revolución industrial “no se define por un conjunto de tecnologías emergentes en sí mismas, sino por la transición hacia nuevos sistemas que están construidos sobre la infraestructura de la revolución digital (anterior)", según Schwab, Director ejecutivo del Foro Económico Mundial
+ Esta realidad social conlleva un riesgo implícito: “En el juego del desarrollo tecnológico, siempre hay perdedores. Y una de las formas de inequidad que más me preocupa es la de los valores. Hay un real riesgo de que la élite tecnocrática vea todos los cambios que vienen como una justificación de sus valores"  (Elizabeth Garbee).
 
+Por tanto la Educación debe adaptarse para dotar a las personas de las capacidades necesarias para afrontar esta nueva realidad social y, por otro lado, para ser parte de esta revolución digital; además de, como ya se desprende de la definición de Platón, ayudar a cada individuo a obtener lo mejor de sus capacidades.
 
-https://es.wikipedia.org/wiki/Ministerios_de_Educaci%C3%B3n_de_Espa%C3%B1a
+Esta adaptación de la Educación a la nueva situación que suponen los avances tecnológicos que se han ido produciendo en los últimos años viene dada de distintas formas.
 
-https://es.wikipedia.org/wiki/Historia_de_la_educaci%C3%B3n_en_Espa%C3%B1a#Restauraci%C3%B3n_democr%C3%A1tica
-
-Su evidente importancia radica en que, por su propia naturaleza, se relacionan con todas las demás materias del conocimiento.
-Es decir, son parte fundamental e imposible de disociar de cualquier materia de estudio; esto mismo se podría expresar con la siguiente obviedad: para *conocer* una materia es necesario *aprenderla*.
-En ese sentido podríamos considerarla como una _metamateria_ que incluso se relaciona consigo misma de esta manera.
-
-Podemos establecer, por tanto, relaciones de interdependencia entre esta rama y todas las demás, siendo la educación la que influye sobre las demás.
-Además de esas relaciones _de dentro hacia fuera_, se pueden establecer otras relaciones _de fuera hacia dentro_, es decir, de aquellas disciplinas que han ejercido su influencia sobre el estudio de la educación y el aprendizaje.
-
-Tradicionalmente, estas disciplinas han sido, fundamentalmente, las siguientes:
-
-* Estadística
-* Psicología
-
-
-
-Ventajas de los MOOCs:
-
-* ventajas económicas
-* distribución geográfica
-* posibilidad de llegar a más gente y más diversa
-
-* facilita la interactividad frente al modelo tradicional en que el educador vuelca sus conocimientos
-* distintos ritmos.
-
-
-En los últimos años se ha producido un creciente interés en el estudio de los procesos de aprendizaje en línea.
+Un ejemplo es el creciente interés que se ha producido en el estudio de los procesos de aprendizaje en línea.
 Una prueba de ello es la proliferación de cursos en línea, con la aparición, por ejemplo, de los cursos en línea masivos y abiertos (en inglés, Massive Open Online Course o MOOCs).
 
 Aparte de las universidades a distancia, muchas organizaciones educativas tradicionales se han unido a ese corriente y están involucradas en plataformas que ofrecen cursos de ese tipo.
 Algunos ejemplos de estas instituciones son la Universidad de Stanford, la Universidad de Michigan, el Instituto de Tecnología de Massachusetts (MIT) o la Universidad de Oxford.
 Del mismo modo han aparecido nuevas organizaciones y plataformas que hacen de estos cursos su razón de ser, como Khan Academy, Coursera o edX.
+
+Algunas de las características que hacen interesantes para los distintos actores (universidades, alumnos, profesores... ) estos cursos son las siguientes:
+
+* Distribución geográfica: tanto los alumnos como los profesores no están restringidos a una ubicación geográfica única.
+* Posibilidad de llegar a más gente y más diversa: la barrera de entrada para estos cursos es mucho más baja que la de los cursos tradicionales.
+* Ventajas económicas: por ejemplo ciertos contenidos pueden ser reusados (vídeos con lecciones).
+* Facilita la interactividad frente al modelo tradicional en que el educador vuelca sus conocimientos.
+* Distintos ritmos: cada alumno puede establecer su propio ritmo de aprendizaje, sus horarios, etc.
+
+Al respecto de este tipo de cursos, Kenneth Cukier menciona el siguiente ejemplo: “Lo que ha sucedido en Estados Unidos, con los cursos en línea, llamados MOOCs, cursos masivos abiertos en línea, es que los profesores pueden ver cuándo los estudiantes están viendo sus cursos, y cuándo se detienen, cuándo releen una lección. Y un profesor de Stanford se dio cuenta de que hacia la lección siete u ocho todos los estudiantes regresaron a la lección número tres. Esa lección era una clase de repaso de matemáticas y mostraba que a medida que los estudiantes avanzaban más en el curso, estaban menos seguros de sus bases en matemáticas.
+Normalmente un profesor no tiene por qué saber que la clase se está quedando atrás pero, de repente, el profesor podía ver esto en los datos y podía aprender dos cosas.
+En primer lugar, que debía preparar mejor a sus alumnos.
+Y en segundo, que debía insistir más en esa dificultad en particular ya que los estudiantes se detenían y regresaban a esa lección”.
 
 Otro ejemplo de la importancia que ha cobrado el aprendizaje en línea es el auge y madurez de los sistemas de gestión de aprendizaje existentes (Learning Management Systems o LMS).
 Entre los LMS más populares se encuentran Blackboard, Moodle o Desire2Learn (Green, 2013).
@@ -81,16 +73,24 @@ En <<fig_google_trends>> se muestra, precisamente,  la evolución y el crecimien
 [[fig_google_trends]]
 image::figure1.png[]
 
+
 El traslado (total o parcial) del ámbito educativo a entornos virtuales trae consigo la importante ventaja frente a los medios tradicionales que supone la enorme facilidad para recopilar, clasificar y procesar una gran cantidad de información relativa al desempeño de los alumnos en estos entornos.
-La propia naturaleza de estos nuevos medios permite el almacenamiento prácticamente ilimitado de grandes cantidades de datos de tipo muy heterogéneo: información relativa a las evaluaciones de los alumnos, interacciones entre alumnos, contenidos aportados por los alumnos o accesos a la herramientas puestas a su disposición, por poner algunos ejemplos.
+La propia naturaleza de estos nuevos medios permite el almacenamiento prácticamente ilimitado y a coste muy reducido de grandes cantidades de datos de tipo muy heterogéneo: información relativa a las evaluaciones de los alumnos, interacciones entre alumnos, contenidos aportados por los alumnos o accesos a las herramientas puestas a su disposición, por poner algunos ejemplos.
 
-Esta disponibilidad casi inmediata de una gran cantidad de datos listos para ser procesados de forma automática es el abono perfecto para el campo de la minería de datos (DM, en inglés: Data Mining). Se puede definir DM como el proceso encargado de extraer información relevante, interpretable, útil y novedosa de un conjunto de datos (Romero & Ventura, 2010).
+Esta masificación de la información disponible (lo que ha venido en llamarse  Big Data) y la digitalización permiten, según, de nuevo, el propio Kenneth Cukier “proponer a nuestros hijos otro sistema educativo ya que éste fue concebido en una época diferente, en la era industrial, mecanicista, basada en una línea de montaje. Ahora se puede adaptar a las recomendaciones de Amazon y Google que se ajustan exactamente a nuestros intereses.
+Necesitamos una educación que se adapte a nuestras necesidades y esa es la mejor manera de aprender.”
 
-Cuando la técnicas propias de DM se aplican al tipo de datos particulares involucrados en el campo de la educación, este tipo de técnicas se conocen como EDM (Educational Data Mining). EDM permite, por tanto, explorar esa gran cantidad de datos específicos para intentar extraer información relevante y útil a los propósitos típicos de un entorno educativo.
+Para trabajar con esta nueva materia prima (una gran cantidad de datos con disponibilidad casi inmediata y listos para ser procesados de forma automática) es necesario utilizar herramientas adecuadas para ello.
+Y esta materia prima es el abono perfecto para el campo de la minería de datos (DM, en inglés: Data Mining).
+Se puede definir DM como el proceso encargado de extraer información relevante, interpretable, útil y novedosa de un conjunto de datos (Romero & Ventura, 2010).
 
-La utilidad de EDM no se ve constreñida a los actores más obvios propios de estos escenarios, es decir, alumnos y profesores. Sirve también a otros actores como lo son los creadores de cursos, organizaciones educativas (como colegios o universidades) o gestores de recursos (desde gestores de la administración pública a administradores de red o sistemas).
+Cuando la técnicas propias de DM se aplican al tipo de datos particulares involucrados en el campo de la educación, este tipo de técnicas se conocen como EDM (Educational Data Mining).
+EDM permite, por tanto, explorar esa gran cantidad de datos específicos para intentar extraer información relevante y útil a los propósitos típicos de un entorno educativo.
 
-Entre las tareas propias de EDM, se pueden destacar los siguientes grandes grupos (Romero & Ventura, 2010):
+La utilidad de EDM no se ve constreñida a los actores más obvios propios de estos escenarios, es decir, alumnos y profesores.
+Sirve también a otros actores como lo son los creadores de cursos, organizaciones educativas (como colegios o universidades) o gestores de recursos (desde gestores de la administración pública a administradores de red o sistemas).
+
+Entre las tareas propias de EDM, Romero y Ventura (2010) destacan los siguientes grandes grupos:
 
 A. Análisis y visualización de datos.
 A. Feedback de apoyo para los profesores.
@@ -105,35 +105,33 @@ En cada uno de estos apartados se emplean distintas técnicas de DM (por ejemplo
 A continuación se exponen algunos ejemplos más concretos de resultados que se han obtenido utilizando EDM. Entre paréntesis se especifica a cuál de los ocho grupos de la clasificación anterior pertenecería cada caso:
 
     • Encontrar relaciones entre los patrones de acceso a LMS y la evaluación de los alumnos (B).
-    • Establecer recomendaciones concretas y personalizadas de material de aprendizaje para alumnos (C).
+    • Establecer recomendaciones concretas y personalizadas de material de aprendizaje para alumnos \(C).
     • Predicción de notas finales a partir de datos de participación en un LMS (D).
     • Detección de comportamientos que pueden conducir a abandono de un curso (F).
 
-Este proyecto persigue poder establecer un modelo a partir de datos reales de una plataforma LMS. Partiendo de las técnicas de DM pertinentes se busca alcanzar un sistema de reglas capaz de predecir comportamientos o resultados de los alumnos de modo que estos puedan corregirse a tiempo en caso de ser negativos o ser alentados en caso de ser positivos.
+Por tanto, para que la Educación se adapte a la nueva situación y, a la vez, siga cumpliendo sus objetivos, es necesarios que los nuevos modelos educacionales se basen en el análisis de datos y sean capaces de predecir comportamientos, tendencias y resultados.
+
 
 === Justificación del proyecto
-.Preguntas a responder en este apartado
-NOTE: ¿Qué entendemos por justificación del proyecto? ¿Por qué es necesario este proyecto? ¿Por qué nos hemos decantado por hacer este proyecto? ¿Cuáles son sus posibles beneficios?
 
-La aplicación de las técnicas de Data Mining en el entorno educativo (o Educational Data Mining) es relativamente reciente.
-Si bien podemos llegara
-Si tomamos como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationaldatamining.org/conferences/) vemos que se trata de un ámbito _joven_ y sobre el que queda mucho por hacer.
+Como ya se ha mencionado en el apartado anterior el interés intrínseco de la Educación como objeto de estudio es innegable.
+Es un campo de enorme importancia puesto que afecta a todos los demás campos de estudio.
 
-(https://pdfs.semanticscholar.org/8c99/e2a12a22d33e273164866792f7646e0b46b9.pdf)
-
-Además el interés intrínseco de esta disciplina es innegable.
+La aplicación de las técnicas de Data Mining en el entorno educativo (o lo que se llama Educational Data Mining) es una actividad relativamente reciente.
+Si se toma como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationaldatamining.org/conferences/) se aprecia que se trata de una disciplina joven sobre la que queda mucho por hacer.
 
 === Objetivos
-El objetivo de este proyecto es realizar una aproximación a algunas de las distintas técnicas de _datamining_ que se suelen aplicar sobre datos del ámbito educativo.
+Este proyecto persigue realizar un análisis de modelos predictivos a partir de datos reales de una plataforma LMS.
+Partiendo de las técnicas de DM pertinentes se busca alcanzar un sistema de reglas capaz de predecir comportamientos o resultados de los alumnos de modo que estos puedan corregirse a tiempo en caso de ser negativos o ser alentados en caso de ser positivos.
 
 La misma descripción de este objetivo cuenta con dos elementos diferenciados (_¿qué técnicas de datamining?_ y _¿sobre qué datos?_) cuyo espectro (que en su totalidad sería demasiado vasto y fuera del alcance de este proyecto) vamos a limitar.
 
-Con respecto a las distintas técnicas de datamining haremos un repaso descriptivo por las más significativas de ellas.
-Pero nos centraremos en lo que se conoce como ARM (Association Rule Mining o Minería de Reglas de Asociación)
+Con respecto a las distintas técnicas de datamining se hará un repaso descriptivo por las más significativas de ellas.
+Pero se realizará el estudio oportuno a partir de lo que se conoce como ARM (Association Rule Mining o Minería de Reglas de Asociación) y, en concreto, a partir del algoritmo más usado en ARM: algoritmo Apriori.
 
-Para acotar algo más el espectro del proyecto nos centraremos en las técnicas ARM (Associative Rule Mining) en cuanto a
+Se ha optado por esta vía porque es la que otorga más libertad (no siempre busca predecir algo en concreto sino buscar reglas interesantes sin estar dirigidas hacia un punto concreto).
 
+Con respecto a los datos que se usarán para el modelado se ha elegido la plataforma Moodle como origen de los datos por varios motivos:
 
-  Moodle y ARM
-
-Es también objetivo de este proyecto la exploración del proceso completo  una visión global
+* es software libre lo que permite un mejor acceso a esta herramienta para poder instalarla, trabajar con ella y, dado el caso, conocer e investigar mejor su funcionamiento interno.
+* es una de las herramientas de su tipo más usadas por lo que los modelos y los análisis que se realicen podrán aplicarse en más entornos con datos reales.
