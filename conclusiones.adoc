@@ -1,0 +1,6 @@
+Hay que considerarlo como un proceso iterativo complejo formado por varias fases y cuya salida del proceso (el modelado final) siempre servirá de entrada para realimentar de nuevo todo el ciclo. Hipótesis, test, y refinamiento (Romero y Ventura, 2013)
+
+//https://pdfs.semanticscholar.org/c73b/0424e1a4ab2574cfce2e41c505f71f46940e.pdf
+
+
+image::edm_process.png[]
