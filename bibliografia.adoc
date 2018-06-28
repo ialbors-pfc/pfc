@@ -44,3 +44,11 @@ endif::[]
 * Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.
 
 * Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
+
+* Kharwar, A. R., & Kapadia, V. (1998). A Effective Preprocessing for Web Usage Mining.
+
+* Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012, May). On the use of data mining tools for data preparation in classification problems. In Computer and Information Science (ICIS), 2012 IEEE/ACIS 11th International Conference on (pp. 173-178). IEEE.
+
+* Romero, C., & Ventura, S. (2013). Data mining in education. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 3(1), 12-27.
+
+* Romero, C., Romero, J. R., & Ventura, S. (2014). A survey on pre-processing educational data. In Educational data mining (pp. 29-64). Springer, Cham.

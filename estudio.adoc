@@ -253,6 +253,22 @@ Este formato consiste en dos secciones:
 
 ==== Limpia de ficheros
 
+¿Por qué se necesita un preprocesado?
+
+// https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
+(Romero, Romero y Ventura, 2013)
+
+La fase de preprocesado puede llegar a consumir hasta un 80% del tiempo dedicado a un estudio de Data Minig (Kharwar y Kapadia, 1998). Otros autores llegan a poner este valor en el 90% como ya mencionan (Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012).
+
+Requiere de mucho tiempo pero también aporta mucho valor al estudio.
+Cuanto mejores son los datos de entrada, previamente preprocesados, mayor será la calidad de los resultados y mayor probabilidad de llegar a resultados significativos y útiles.
+
+Este preprocesado tiene más de proceso artesanal que automático.
+Si bien puede haber algunas pautas generales que sirvan como guía para el mismom en general no hay un conjunto acotado y establecido de pasos a seguir.
+
+Dependiendo del objetivo, de los datos iniciales, del algoritmo de Datamining que se quiera aplicar, de la herramienta que se usará y de otras muchas variables se aplicarán ciertas técnicas y otras.
+
+
 Para cada uno de los ficheros se realizará un preprocesado previo.
 
 * Eliminación de registros duplicados.
@@ -269,6 +285,8 @@ Por ejemplo: el atributo email no aporta en realidad mucha información (sobre t
 * Selección de atributos
 * Selección manual
 * preparación en único fichero
+* Selección automática de variables.
+* Rebalancear¿?
 
 === Aplicación de algoritmos de datamining
 
