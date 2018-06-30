@@ -48,7 +48,14 @@ endif::[]
 * Kharwar, A. R., & Kapadia, V. (1998). A Effective Preprocessing for Web Usage Mining.
 
 * Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012, May). On the use of data mining tools for data preparation in classification problems. In Computer and Information Science (ICIS), 2012 IEEE/ACIS 11th International Conference on (pp. 173-178). IEEE.
+// https://www.computer.org/csdl/proceedings/icis/2012/1536/00/06211093.pdf
 
 * Romero, C., & Ventura, S. (2013). Data mining in education. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 3(1), 12-27.
 
 * Romero, C., Romero, J. R., & Ventura, S. (2014). A survey on pre-processing educational data. In Educational data mining (pp. 29-64). Springer, Cham.
+// https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
+
+
+* Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).
+
+// http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf

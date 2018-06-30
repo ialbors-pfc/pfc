@@ -1,6 +1,3 @@
-:imagesdir: _images
-:table-caption: Tabla
-
 // Configuración github
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -19,6 +16,9 @@ ifndef::included[]
 :sectnumlevels: 5
 :toc-title: Índice
 :toc-placement: manual
+:stem: latexmath
+:imagesdir: _images
+:table-caption: Tabla
 :stem: latexmath
 toc::[]
 
@@ -67,8 +67,8 @@ Como primera aproximación al problema se realiza un análisis superficial (núm
 Lo que se quiere dilucidar a partir de este análisis será lo siguiente:
 
 * análisis cuantitativo:
-** Número de tablas.
-** Número de vistas
+* Número de tablas.
+* Número de vistas
 * analisis cualitativo: estructura general de las mismas.
 
 Para este análisis se ha empleado una instalación de Moodle que se corresponde con la versión:
@@ -222,73 +222,253 @@ El formato de los ficheros es igual para todos ellos:
 * valores separados por comas
 * la primera fila es la cabecera con el nombre de los campos.
 
-=== Análisis, preprocesado y extracción de datos
+=== Proceso
 
-El objetivo final de esta fase es crear un fichero único en formato ARFF en que cada instancia contenga toda la información significativa que se requiera.
+==== Fases previas
+Ya se han visto en este documento cuáles son las fases de un proyecto de Datamining, según el estándar abierto CRISP-DM (del inglés Cross Industry Standard Process for Data Mining):
 
+. Comprensión del objeto de estudio.
+. Comprensión de los datos.
+. Preparación de los datos.
+. Modelado.
+. Evaluación.
+. Despliegue.
 
-==== Formato arff
-Weka hace uso del formato ARFF (por su nombre en inglés: _Attribute-Relation File Format_ o Formato de Fichero Atributo-Relación).
+De estas seis fases sólo la última quedaría fuera del alcance de  este proyecto.
 
-Este formato consiste en dos secciones:
+La primera fase está representada por la comprensión del ámbito de la Educación.
+Es decir, comprender sus objetivos, necesidades y particularidades.
+El desarrollo de esta fase se debe llevar a cabo, en lo posible, con la colaboración de actores expertos y experimentados en la materia para que puedan guiar y establecer mejor hacia dónde se dirige el proyecto.
 
-. Cabecera. Esta sección contiene los siguientes elementos.
- * Nombre de la relación. Se define con una línea así:
-   @relation <nombre>
- * Atributos. Se definen tantos como sean necesarios de la siguiente forma:
-   @attribute <nombre> <tipo>
- * El tipo de atributo puede ser:
- ** numeric
- ** string
- ** <nominal-specification>
- ** date <formato-de-fecha>
+En este caso, sin embargo, no se va a entrar en detalles muy técnicos y específicos sobre la Educación.
+Es una de las razones por las que se selecciona ARM sobre otras técnicas.
+Se apelará al conocimiento común sobre la misma y, por tanto, a un objetivo muy genérico: encontrar relaciones interesantes dentro del conjunto de datos.
 
-. Datos.
- * Esta sección comienza con una línea con:
- @data
- * A continuación se detalla cada una de las instancias (una por línea).
- * Los atributos, que coincidirán en orden con los definidos en la cabecera, se separan por comas.
- * Aquellos valores que sean desconocidos se indicarán con un '?'.
- * Los campos de texto (_string_) se indicará entre comillas dobles.
+La segunda fase está ligada al apartado anterior donde se define el conjunto de datos que se va a emplear así como una breve descripción del mismo, tanto formal (cuántos ficheros, qué formato interno poseen) como semántica (qué contiene cada fichero).
 
-==== Limpia de ficheros
+En esta fase se incluye el proceso de inspección visual y manual del _dataset_ elegido, de modo que sea posible hacerse una idea aproximada (que puede ser refinada en siguientes fases o iteraciones) de la información que se quiere obtener.
 
-¿Por qué se necesita un preprocesado?
+En este proyecto, a partir de los ficheros seleccionados, se quiere obtener información intrínsecamente ligada a los usuarios así como la que se refiere a sus competencias en los cursos (notas, "insignias", etc.).
 
-// https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
-(Romero, Romero y Ventura, 2013)
+La tercera, cuarta y quinta fases se analizan en los sucesivos y respectivos apartados.
 
-La fase de preprocesado puede llegar a consumir hasta un 80% del tiempo dedicado a un estudio de Data Minig (Kharwar y Kapadia, 1998). Otros autores llegan a poner este valor en el 90% como ya mencionan (Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012).
+==== Preparación de los datos
 
-Requiere de mucho tiempo pero también aporta mucho valor al estudio.
-Cuanto mejores son los datos de entrada, previamente preprocesados, mayor será la calidad de los resultados y mayor probabilidad de llegar a resultados significativos y útiles.
+Los datos obtenidos en crudo normalmente no son aptos para poder realizar sobre ellos un estudio de Datamining.
+Es necesario  aplicarles un preprocesado previo que los convierta en material válido y de calidad.
+
+Esta fase de preparación de los datos es una de las fases más importantes de todo el proceso.
+Algunos autores consideran que puede llegar a consumir hasta un 80% del tiempo dedicado a un estudio de Dataminig (Kharwar y Kapadia, 1998); otros autores llegan a poner este valor en el 90%, tal y como mencionan Gonçalves, Barros y Vieira (2012).
+
+El esfuerzo y tiempo que requiere esta fase es directamente proporcional al valor que aportan al estudio.
+Gonçalves et al. (2013), de nuevo, mencionan que la contribución de esta fase al éxito del estudio puede ir de un 75% a un 90%.
+
+Es decir, cuanto mejores son los datos de entrada, previamente preprocesados en esta fase, mayor será la calidad de los resultados y mayor probabilidad de llegar a resultados significativos y útiles.
 
 Este preprocesado tiene más de proceso artesanal que automático.
-Si bien puede haber algunas pautas generales que sirvan como guía para el mismom en general no hay un conjunto acotado y establecido de pasos a seguir.
+Si bien puede haber algunas pautas generales que sirvan como guía para el mismo, en general no hay un conjunto acotado y establecido de técnicas y pasos a seguir.
 
-Dependiendo del objetivo, de los datos iniciales, del algoritmo de Datamining que se quiera aplicar, de la herramienta que se usará y de otras muchas variables se aplicarán ciertas técnicas y otras.
+Dependiendo, entre otras cosas, del objetivo, de los datos iniciales, del algoritmo de Datamining que se vaya a emplear y de la herramienta que se usará, se aplicarán ciertas técnicas y pasos u otros.
 
+.Pasos de la fase de preparación de datos en EDM
+[[preprocessing_steps]]
+image::edm_preprocess_tasks.png[]
 
-Para cada uno de los ficheros se realizará un preprocesado previo.
+Romero, Romero y Ventura (2013), por ejemplo, proponen los pasos de <<preprocessing_steps>>.
+Si bien no es imprescindible seguir a rajatabla y en orden esos pasos, en cualquier fase de preparación para un proyecto de EDM es habitual seguir varios de ellos o incluso todos.
 
-* Eliminación de registros duplicados.
-* Descarte de atributos conforme a los siguientes criterios:
-** Si se indica en la descripción de Dalton (2017) que no es necesario.
-** Cuando el atributo sólo tome 1 único valor distinto. Es decir, si todas las instancias contienen ese mismo valor, no está aportando ninguna información adicional y sería innecesario.
-** Si está directamente ligado a otro atributo que se va a incluir.
+Para este proyecto y esta fase, tras analizar el contenido de los ficheros que servirán de origen de datos, se decide que el objetivo final consta de los siguiente puntos:
+
+* crear un fichero único.
+* el formato del fichero será ARFF (puesto que la herramienta para realizar el Datamining será Weka y este es el formato más sencillo que acepta).
+* cada _instancia_ del fichero (cada línea con datos). contendrá toda la información significativa que se requiera relativa a un usuario.
+* esta información significativa se decidirá e irá refinando durante esta fase.
+
+Los pasos que se han seguido para la consecución de este objetivo se detallan a continuación, en los siguientes apartados.
+
+===== Selección de ficheros
+
+De entre los seis ficheros que forman el dataset de Dalton (2017), se van a explotar los siguientes:
+
+* mdl_user.csv: con la información y atributos del usuario que pueden ser relevantes para el estudio.
+* mdl_grade_grades_history.csv: del que se puede extraer información de calificaciones de los usuarios.
+* mdl_course_modules_completion.csv: del que se puede extraer información de las actividades completadas por los usuarios.
+* mdl_badge_issued.csv: del que se puede extraer información de las insignias obtenidas por los usarios.
+
+Y se desechan los dos ficheros siguientes:
+
+* mdl_course_modules.csv porque en un primer análisis no parecía aportar demasiada información significativa.
+* mdl_logstore_standard_log.csv porque debido a su mayor tamaño y complejidad requiere un análisis más exhaustivo.
+
+===== _Limpieza_ de ficheros
+
+El primer paso que se ha seguido para *todos* los ficheros que han quedado tras el apartado anterior es eliminar los registros duplicados.
+Se entiende que estos duplicados se deben a algún error puesto que, por ejemplo, no tiene sentido que haya dos usuarios exactamente con la misma información.
+
+En <<tabla_resumen_duplicados>> se puede ver un resumen cuantitativo del resultado de esta acción.
+
+[options="header"]
+[[tabla_resumen_duplicados]]
+.Resumen tras eliminar duplicados
+|===
+| Fichero| Número de duplicados | % del total
+| mdl_user.csv
+| 2
+| 0,09 %
+
+| mdl_badge_issued.csv
+| 2
+| 0,1 %
+
+| mdl_course_modules_completion.csv
+| 21
+| 0,07 %
+
+| mdl_grade_grades_history.csv
+| 125
+| 0,2 %
+|===
+
+A continuación se eliminan de cada fichero ciertos atributos atendiendo a los siguientes criterios:
+
+* Cuando el atributo sólo tome 1 único valor distinto. Es decir, si todas las instancias contienen ese mismo valor no está aportando en realidad ninguna información adicional y útil y sería innecesario.
+* Si se indica en la descripción de Dalton (2017) que no es necesario.
+* Si está directamente ligado a otro atributo que se va a incluir.
 El ejemplo más claro sería descartar nombre y apellido cuando ya tenemos un atributo _username_ único por medio del cual se podrían conocer esos otros dos atributos.
-** Otros descartes basado en la inspección de los datos. Por ejemplo, se ve que el país sólo es AU o está vacío. Es de suponer que no va a proporcionar mucha información.
-** Los atributos de fecha. Por simplificar.
-* Conversión de atributos de texto en nominales.
-Por ejemplo: el atributo email no aporta en realidad mucha información (sobre todo si tenemos en cuenta que está anonimizado) pero sí podemos distinguir entre usuarios que han especificado email y usuarios que no.
-
-* Selección de atributos
-* Selección manual
-* preparación en único fichero
-* Selección automática de variables.
-* Rebalancear¿?
-
-=== Aplicación de algoritmos de datamining
+* Otros descartes discrecionales basados  en la inspección de los datos. Por ejemplo, se observa que el país sólo es AU o está vacío. Es de suponer que no va a proporcionar mucha información.
+* Los atributos de tipo fecha. Se eliminan puesto que el análisis que se va a realizar no va a tener en cuenta fechas ni orden cronológico. En el caso del fichero mdl_grade_grades_history.csv, los parámetros de tiempo se eliminarán al final puesto que son necesarios para uno de los pasos intermedios que se verán más adelante.
 
 
-=== Resultados
+===== Transformación de atributos y filtrados
+
+Se detallana a continuación algunas de las transformaciones realizadas.
+
+.Fichero mdl_user.csv
+
+Algunos atributos de los usuarios no proporcionan (o no necesariamente) demasiada información de por sí.
+Por ejemplo los campos relativos al correo electrónico, números de teléfono, descripción o url del usuario; sobre todo si tenemos en cuenta que están anonimizados.
+Sin embargo sí puede ser significativo si el usuario ha completado esos elementos de su perfil.
+
+Se transforman, por ello, esos atributos (de tipo textual) en tipo nominal (en jerga de Weka) y binarios (sólo aceptan los valores 0 y 1 según estén o no rellenos).
+
+.Fichero mdl_badge_issued.csv
+
+Para este fichero se ha realizado una función de agregación.
+En concreto, se han sumado todas las _insignias_ conseguidas por un usuario.
+Así solamente se tendrá una línea por usuario con su número de _insignias_ conseguidas.
+
+.Fichero mdl_course_modules_completion.csv
+
+La información que se quería obtener a partir de este fichero es la del número de actividades completadas por usuario.
+
+Esto se ha logrado en dos pasos: en primer lugar filtrando las actividades completadas y dejando fuera las que no lo estaban; en segundo lugar se ha realizado una función de agregación parecida a la del fichero _mdl_badge_issued.csv_: suma de actividades completadas por usuario.
+
+.Fichero mdl_grade_grades_history.csv
+
+La información que se quería obtener a partir de este fichero era la del número de aprobados por usuario.
+
+Para ello se ha calculado el valor medio entre la nota máxima y la nota mínima como nota de corte para el aprobado:
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+nota\_corte = \frac{(rawgrademax - rawgrademin)}{2}
+++++++++++++++++++++++++++++++++++++++++++++
+
+Se ha creado una nueva variable binaria _aprobado_ cuyo valor será 1 cuando el atributo _finalgrade_ (que contiene la nota final para esa actividad) sea mayor que la nota de corte y valdrá 0 en otro caso.
+
+Los registros de esta tabla incluyen cada posible cambio que se da en la nota final.
+Por ello se hace una agregación para, por cada actividad y usuario, obtener la *última* calificación.
+
+El último paso será una agregación parecida a la de los dos últimos ficheros.
+Se suma, por cada usuario, la variable intermedia _aprobado_ y se obtiene así el número total de aprobados para un usario.
+
+===== Cruce de datos
+
+Llegados a este punto se tendrá la información de los cuatro ficheros preparada por separado: por cada fichero se tendrá una sola línea por usuario con la información relativa a este que es de interés.
+
+En este paso fusionaremos todos esos atributos cruzando la información por el atributo que identifica al usuario.
+
+Si un usuario no tiene definidas las variables generadas con el número de insignias, número de actividades completadas y número de aprobados, se les asignará el valor 0.
+
+===== Construcción de fichero arff
+El último paso de esta fase consiste en generar un fichero en el formato ARFF;
+formato que entiende la herramienta que se usará en la siguiente fase: Weka.
+
+Es decir, el artefacto de salida de esta fase -- el fichero ARFF -- será, por tanto, la entrada de la siguiente.
+
+Como ya se ha visto, el formato ARFF consiste en dos secciones.
+La sección de datos contendrá los datos del apartado anterior: atributos de usuario separados por coma y cada usuario en una línea distinta.
+
+Se reproduce aquí la cabecera con fines ilustrativos:
+
+.Cabecera fichero ARFF
+[source,numbered]
+----
+@relation user_full
+
+@attribute username string
+@attribute skype {0,1}
+@attribute phone1 {0,1}
+@attribute phone2 {0,1}
+@attribute institution {0,1}
+@attribute address {0,1}
+@attribute city {0,1}
+@attribute lang string
+@attribute timezone string
+@attribute url {0,1}
+@attribute description {0,1}
+@attribute num_badges numeric
+@attribute num_completados numeric
+@attribute num_aprobados numeric
+----
+
+En realidad todavía queda una última parte de preprocesado.
+Esta parte se realizará con la propia herramienta Weka y se ha incluido en el apartado de modelado puesto que puede cambiar según las pruebas de modelado que se vayan realizando.
+
+==== Modelado y evaluación de los resultados
+
+===== Preprocesado Weka
+
+Como ya se ha adelantado en el apartado anterior, en esta fase de modelado se incluyen también algunos pasos de preprocesado.
+
+Puesto que el algoritmo Apriori en Weka requiere que todos los atributos sean de tipo nominal es necesario aplicar algunas transformaciones al fichero de entrada obtenido en la fase anterior.
+Estas transformaciones se realizan por medio de los filtros de Weka y son las siguientes:
+
+* Se elimina el atributo *_username_* de tipo _string_. No es necesario para el estudio que se va a realizar el conocer al usuario concreto sobre el que se tiene la información.
+* Se convierten los atributos de tipo _string_ (*_lang_* y *_timezone_*) a tipo nominal. El rango de valores que pueden tomar estas variables es limitado.
+* El atributo que contiene el número de insignias, *_num_badges_*, puesto que sólo puede toma tres valores distintos (0, 1 y 2) se convierten de atributo numérico a nominal.
+* Se discretizan el resto de atributos de tipo numérico,  convirtiéndose así en nominales con rangos de valores.
+
+.Filtros de Weka aplicados
+[source]
+....
+weka.filters.MultiFilter
+-F "weka.filters.unsupervised.attribute.StringToNominal -R 8,9"
+-F "weka.filters.unsupervised.attribute.RemoveByName -E username"
+-F "weka.filters.unsupervised.attribute.Discretize -B 5 -M -1.0 -R 12,13 -unset-class-temporarily"
+-F "weka.filters.unsupervised.attribute.NumericToNominal -R first-last"
+....
+
+Se han realizado tres experimentos distintos. En cada experimento se ha usado el algoritmo Apriori en dos modalidades distintas:
+
+* con los valores por defecto.
+* y con la opción _treatZeroAsMissing_ activada. En este caso el primer valor posible de los atributos nominales es considerado como si se desconociera su valor.
+
+El primer experimento se realiza directamente tras las transformaciones que se han indicado algo más arriba.
+
+En el segundo experimento se realiza una selección de atributos automática.
+
+En el tercero se descartan aquellas instancias en las que el número de aprobados sea igual a cero.
+
+Cada experimento se construye a partir del anterior. Es decir, partiendo de las mismas transformaciones o filtros que se aplicaron en el anterior.
+
+===== Valores por defecto
+
+La primera
+
+Treat zero as missing
+
+===== Selección de atributos por correlación
+
+Los primeros 4
+===== Eliminar instancias con cero aprobados
