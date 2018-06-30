@@ -1,6 +1,8 @@
 
+# stem-latex for pdf does not work with option -o target/pfc.pdf
 build: fonts
-	docker run -it --rm  -v `pwd`:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf pfc.adoc -a pdf-stylesdir=. -a pdf-style=themes/basic-theme.yml -r  asciidoctor-mathematical -a pdf-fontsdir=./fonts/ -o target/pfc.pdf
+	docker run -it --rm  -v `pwd`:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf pfc.adoc -a pdf-stylesdir=. -a pdf-style=themes/basic-theme.yml -r  asciidoctor-mathematical -a pdf-fontsdir=./fonts/ -a mathematical-format=svg
+	mv pfc.pdf target/
 
 fonts:
 	mkdir fonts
