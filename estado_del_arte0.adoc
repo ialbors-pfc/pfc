@@ -1,3 +1,31 @@
+// Configuración github
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+ifndef::included[]
+:numbered:
+:toc:
+:toclevels: 5
+:lang: es
+:encoding: utf8
+:sectnumlevels: 5
+:toc-title: Índice
+:toc-placement: manual
+:stem: latexmath
+:imagesdir: _images
+:table-caption: Tabla
+:stem: latexmath
+toc::[]
+
+== Estado del arte
+
+endif::[]
+
 === Educational DataMining
 ==== Predicción
 ===== Regresión
@@ -8,3 +36,4 @@
 ==== Relationship Mining
 === Moodle
 === Weka
+include::weka.adoc[]
