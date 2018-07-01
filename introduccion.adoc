@@ -37,9 +37,9 @@ La Educación debe tener, por tanto, la aspiración de ser una herramienta para 
 Así la Educación no se puede ver desligada de la revolución digital que está transformando la sociedad.
 Las nuevas tecnologías se han convertido en parte fundamental de la existencia con nuevas formas de comunicación, de generación y divulgación de información y conocimientos, nuevos modelos productivos y económicos y permitiendo la personalización de los servicios.
 La revolución digital vino, como las anteriores, de una nueva tecnología, las Tecnologías de la Información y la Comunicación.
- Ahora afrontamos la cuarta revolución industrial.
- La cuarta revolución industrial “no se define por un conjunto de tecnologías emergentes en sí mismas, sino por la transición hacia nuevos sistemas que están construidos sobre la infraestructura de la revolución digital (anterior)", según Schwab, Director ejecutivo del Foro Económico Mundial
- Esta realidad social conlleva un riesgo implícito: “En el juego del desarrollo tecnológico, siempre hay perdedores. Y una de las formas de inequidad que más me preocupa es la de los valores. Hay un real riesgo de que la élite tecnocrática vea todos los cambios que vienen como una justificación de sus valores"  (Elizabeth Garbee).
+Ahora afrontamos la cuarta revolución industrial.
+La cuarta revolución industrial “no se define por un conjunto de tecnologías emergentes en sí mismas, sino por la transición hacia nuevos sistemas que están construidos sobre la infraestructura de la revolución digital (anterior)", según el fundador del Foro Económico Mundial (Perasso, 2016).
+Esta realidad social conlleva un riesgo implícito: “En el juego del desarrollo tecnológico, siempre hay perdedores. Y una de las formas de inequidad que más me preocupa es la de los valores. Hay un real riesgo de que la élite tecnocrática vea todos los cambios que vienen como una justificación de sus valores", afirma Elizabeth Garbee, investigadora de la Escuela para el Futuro de la Innovación en la Sociedad de la Universidad Estatal de Arizona (Perasso, 2016).
 
 Por tanto la Educación debe adaptarse para dotar a las personas de las capacidades necesarias para afrontar esta nueva realidad social y, por otro lado, para ser parte de esta revolución digital; además de, como ya se desprende de la definición de Platón, ayudar a cada individuo a obtener lo mejor de sus capacidades.
 
@@ -60,10 +60,10 @@ Algunas de las características que hacen interesantes para los distintos actore
 * Facilita la interactividad frente al modelo tradicional en que el educador vuelca sus conocimientos.
 * Distintos ritmos: cada alumno puede establecer su propio ritmo de aprendizaje, sus horarios, etc.
 
-Al respecto de este tipo de cursos, Kenneth Cukier menciona el siguiente ejemplo: “Lo que ha sucedido en Estados Unidos, con los cursos en línea, llamados MOOCs, cursos masivos abiertos en línea, es que los profesores pueden ver cuándo los estudiantes están viendo sus cursos, y cuándo se detienen, cuándo releen una lección. Y un profesor de Stanford se dio cuenta de que hacia la lección siete u ocho todos los estudiantes regresaron a la lección número tres. Esa lección era una clase de repaso de matemáticas y mostraba que a medida que los estudiantes avanzaban más en el curso, estaban menos seguros de sus bases en matemáticas.
+Al respecto de este tipo de cursos, Kenneth Cukier (editor de la revista The Economist) menciona el siguiente ejemplo: “Lo que ha sucedido en Estados Unidos, con los cursos en línea, llamados MOOCs, cursos masivos abiertos en línea, es que los profesores pueden ver cuándo los estudiantes están viendo sus cursos, y cuándo se detienen, cuándo releen una lección. Y un profesor de Stanford se dio cuenta de que hacia la lección siete u ocho todos los estudiantes regresaron a la lección número tres. Esa lección era una clase de repaso de matemáticas y mostraba que a medida que los estudiantes avanzaban más en el curso, estaban menos seguros de sus bases en matemáticas.
 Normalmente un profesor no tiene por qué saber que la clase se está quedando atrás pero, de repente, el profesor podía ver esto en los datos y podía aprender dos cosas.
 En primer lugar, que debía preparar mejor a sus alumnos.
-Y en segundo, que debía insistir más en esa dificultad en particular ya que los estudiantes se detenían y regresaban a esa lección”.
+Y en segundo, que debía insistir más en esa dificultad en particular ya que los estudiantes se detenían y regresaban a esa lección” (Sánchez, 2015).
 
 Otro ejemplo de la importancia que ha cobrado el aprendizaje en línea es el auge y madurez de los sistemas de gestión de aprendizaje existentes (Learning Management Systems o LMS).
 Entre los LMS más populares se encuentran Blackboard, Moodle o Desire2Learn (Green, 2013).
@@ -78,7 +78,7 @@ El traslado (total o parcial) del ámbito educativo a entornos virtuales trae co
 La propia naturaleza de estos nuevos medios permite el almacenamiento prácticamente ilimitado y a coste muy reducido de grandes cantidades de datos de tipo muy heterogéneo: información relativa a las evaluaciones de los alumnos, interacciones entre alumnos, contenidos aportados por los alumnos o accesos a las herramientas puestas a su disposición, por poner algunos ejemplos.
 
 Esta masificación de la información disponible (lo que ha venido en llamarse  Big Data) y la digitalización permiten, según, de nuevo, el propio Kenneth Cukier “proponer a nuestros hijos otro sistema educativo ya que éste fue concebido en una época diferente, en la era industrial, mecanicista, basada en una línea de montaje. Ahora se puede adaptar a las recomendaciones de Amazon y Google que se ajustan exactamente a nuestros intereses.
-Necesitamos una educación que se adapte a nuestras necesidades y esa es la mejor manera de aprender.”
+Necesitamos una educación que se adapte a nuestras necesidades y esa es la mejor manera de aprender” (Sánchez, 2015).
 
 Para trabajar con esta nueva materia prima (una gran cantidad de datos con disponibilidad casi inmediata y listos para ser procesados de forma automática) es necesario utilizar herramientas adecuadas para ello.
 Y esta materia prima es el abono perfecto para el campo de la minería de datos (DM, en inglés: Data Mining).

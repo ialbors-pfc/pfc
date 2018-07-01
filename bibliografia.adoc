@@ -59,3 +59,10 @@ endif::[]
 * Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).
 
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf
+
+* Asamblea General de la ONU. (1948). "Declaración Universal de los Derechos Humanos" (217 [III] A). Paris. Recuperado de http://www.un.org/en/universal-declaration-human-rights/
+
+
+* Perasso, V. (2016, oct. 12). Qué es la cuarta revolución industrial (y por qué debería preocuparnos). _BBC_. Recuperado de http://www.bbc.com/mundo/noticias-37631834
+
+* Sánchez, E. (2015, may. 22). Big Data al servicio de la educación. _Euronews_. Recuperado de http://es.euronews.com/2015/05/22/big-data-al-servicio-de-la-educacion
