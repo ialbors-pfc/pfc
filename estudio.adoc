@@ -28,6 +28,9 @@ endif::[]
 
 === Base de datos de Moodle
 
+Toda la información relevante de la que hace acopio Moodle se guarda en una base de datos relacional (MySQL o PostgreSQL).
+De ahí radica la importancia de conocerla para poder extraerla adecuadamente.
+
 Moodle es una herramienta en constante y activo desarrollo.
 Es por ello que su la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
 
@@ -300,7 +303,7 @@ Y se desechan los dos ficheros siguientes:
 * mdl_course_modules.csv porque en un primer análisis no parecía aportar demasiada información significativa.
 * mdl_logstore_standard_log.csv porque debido a su mayor tamaño y complejidad requiere un análisis más exhaustivo.
 
-===== _Limpieza_ de ficheros
+===== Limpieza de ficheros
 
 El primer paso que se ha seguido para *todos* los ficheros que han quedado tras el apartado anterior es eliminar los registros duplicados.
 Se entiende que estos duplicados se deben a algún error puesto que, por ejemplo, no tiene sentido que haya dos usuarios exactamente con la misma información.
@@ -462,13 +465,154 @@ En el tercero se descartan aquellas instancias en las que el número de aprobado
 
 Cada experimento se construye a partir del anterior. Es decir, partiendo de las mismas transformaciones o filtros que se aplicaron en el anterior.
 
-===== Valores por defecto
+===== Experimento inicial
 
-La primera
+Se hace uso del algoritmo Apriori sin modificar las opciones por defecto que usa Weka.
+Sólo se modificará el valor __treatZeroAsMissing__.
 
-Treat zero as missing
+En <<tabla_resumen_exp1>> se ve un resumen de los resultados.
+
+[cols="30%h,35%,35%",options="header"]
+[[tabla_resumen_exp1]]
+.Resumen experimento 1
+|===
+| | V. por defecto|Activo treatZeroAsMissing
+|Nº de instancias|2.168|2.168
+|Nº de atributos|13|13
+|Min. soporte|0,95|0,1
+|Min. confianza|0,9|0,9
+|===
+
+.Reglas obtenidas con valores por defecto
+----
+1. phone1=0 phone2=0 institution=0 2102 ==> address=0 2102    <conf:(1)> lift:(1.01) lev:(0.01) [20] conv:(20.36)
+2. skype=0 phone2=0 institution=0 2093 ==> address=0 2093    <conf:(1)> lift:(1.01) lev:(0.01) [20] conv:(20.27)
+3. skype=0 phone1=0 phone2=0 institution=0 2091 ==> address=0 2091    <conf:(1)> lift:(1.01) lev:(0.01) [20] conv:(20.25)
+4. phone2=0 institution=0 2105 ==> address=0 2104    <conf:(1)> lift:(1.01) lev:(0.01) [19] conv:(10.19)
+5. skype=0 phone1=0 phone2=0 url=0 2063 ==> address=0 2062    <conf:(1)> lift:(1.01) lev:(0.01) [18] conv:(9.99)
+6. skype=0 phone1=0 phone2=0 2117 ==> address=0 2115    <conf:(1)> lift:(1.01) lev:(0.01) [18] conv:(6.84)
+7. institution=0 address=0 2113 ==> phone1=0 2111    <conf:(1)> lift:(1.01) lev:(0.01) [16] conv:(6.17)
+8. phone2=0 institution=0 address=0 2104 ==> phone1=0 2102    <conf:(1)> lift:(1.01) lev:(0.01) [16] conv:(6.15)
+9. skype=0 institution=0 2103 ==> phone1=0 2101    <conf:(1)> lift:(1.01) lev:(0.01) [16] conv:(6.14)
+10. skype=0 institution=0 2103 ==> address=0 2101    <conf:(1)> lift:(1.01) lev:(0.01) [18] conv:(6.79)
+----
+
+Como puede verse, las reglas con los valores por defecto no aportan demasiada información.
+El indicador _lift_ para todas ellas vale 1,01 (valor muy bajo).
+
+De las diez reglas generadas los consecuentes se refieren únicamente a los atributos _address_ y _phone1_ y con valor = 0 -- es decir, esos campos no han sido rellenados por el usuario.
+Y tienen como antecedentes atributos del usuario que tampoco han sido rellenados.
+
+Estas reglas podrían resumirse de forma coloquial como: si el usuario no ha introducido alguno de los datos opcionales en su perfil, tampoco lo habrá hecho con otros de esos datos.
+
+Cuando se usa la opción _treatZeroAsMissing_ el valor del mínimo soporte baja drásticamente pero las reglas generadas tienen más interés.
+
+.Reglas obtenidas con _treatZeroAsMissing_
+----
+1. num_badges=2 583 ==> num_completados='(26.4-inf)' 583    <conf:(1)> lift:(3.25) lev:(0.19) [403] conv:(403.37)
+2. city=1 num_badges=2 513 ==> num_completados='(26.4-inf)' 513    <conf:(1)> lift:(3.25) lev:(0.16) [354] conv:(354.94)
+3. num_badges=2 num_aprobados='(5.6-8.4]' 485 ==> num_completados='(26.4-inf)' 485    <conf:(1)> lift:(3.25) lev:(0.15) [335] conv:(335.56)
+4. city=1 num_badges=2 num_aprobados='(5.6-8.4]' 423 ==> num_completados='(26.4-inf)' 423    <conf:(1)> lift:(3.25) lev:(0.13) [292] conv:(292.67)
+5. description=1 241 ==> city=1 230    <conf:(0.95)> lift:(1.11) lev:(0.01) [23] conv:(2.86)
+6. city=1 num_aprobados='(5.6-8.4]' 498 ==> num_completados='(26.4-inf)' 466    <conf:(0.94)> lift:(3.04) lev:(0.14) [312] conv:(10.44)
+7. num_aprobados='(5.6-8.4]' 574 ==> num_completados='(26.4-inf)' 531    <conf:(0.93)> lift:(3) lev:(0.16) [354] conv:(9.03)
+8. num_completados='(26.4-inf)' num_aprobados='(5.6-8.4]' 531 ==> num_badges=2 485    <conf:(0.91)> lift:(3.4) lev:(0.16) [342] conv:(8.26)
+9. city=1 num_completados='(26.4-inf)' num_aprobados='(5.6-8.4]' 466 ==> num_badges=2 423    <conf:(0.91)> lift:(3.38) lev:(0.14) [297] conv:(7.74)
+----
 
 ===== Selección de atributos por correlación
 
-Los primeros 4
+A raíz de la poca información que se obtenía en la primera modalidad del primer experimento, se va a intentar eliminar aquellos atributos redundantes.
+Para ello, en este segundo experimento, se van a seleccionar por medio un filtro Weka únicamente los *cinco atributos* con el valor de correlación más alto con respecto al atributo _num_aprobados_.
+
+
+[cols="30%h,35%,35%",options="header"]
+[[tabla_resumen_exp2]]
+.Resumen experimento 2
+|===
+| | V. por defecto|Activo treatZeroAsMissing
+|Nº de instancias|2.168|2.168
+|Nº de atributos|6|6
+|Min. soporte|0,45|0,1
+|Min. confianza|0,9|0,9
+|===
+
+.Reglas obtenidas con valores por defecto
+----
+1. timezone=99 description=0 1034 ==> url=0 1029    <conf:(1)> lift:(1.03) lev:(0.01) [29] conv:(5.8)
+2. timezone=99 1074 ==> url=0 1065    <conf:(0.99)> lift:(1.03) lev:(0.01) [27] conv:(3.62)
+3. num_completados='(-inf-6.6]' 1033 ==> num_aprobados='(-inf-2.8]' 1022    <conf:(0.99)> lift:(1.7) lev:(0.19) [419] conv:(35.85)
+4. num_completados='(-inf-6.6]' url=0 1015 ==> num_aprobados='(-inf-2.8]' 1004    <conf:(0.99)> lift:(1.7) lev:(0.19) [411] conv:(35.23)
+5. description=0 num_aprobados='(-inf-2.8]' 1188 ==> url=0 1173    <conf:(0.99)> lift:(1.02) lev:(0.01) [25] conv:(2.5)
+6. num_completados='(-inf-6.6]' 1033 ==> url=0 1015    <conf:(0.98)> lift:(1.02) lev:(0.01) [16] conv:(1.83)
+7. num_completados='(-inf-6.6]' num_aprobados='(-inf-2.8]' 1022 ==> url=0 1004    <conf:(0.98)> lift:(1.02) lev:(0.01) [16] conv:(1.81)
+8. description=0 1927 ==> url=0 1890    <conf:(0.98)> lift:(1.01) lev:(0.01) [27] conv:(1.71)
+9. num_aprobados='(-inf-2.8]' 1265 ==> url=0 1236    <conf:(0.98)> lift:(1.01) lev:(0.01) [13] conv:(1.42)
+10. num_completados='(-inf-6.6]' 1033 ==> url=0 num_aprobados='(-inf-2.8]' 1004    <conf:(0.97)> lift:(1.7) lev:(0.19) [415] conv:(14.8)
+----
+
+Con los valores por defecto el soporte se reduce a la mitad y las reglas generadas mejoran algo con respecto al experimento anterior.
+Pero muchas de ellas siguen teniendo un valor de _lift_ bajo.
+
+.Reglas obtenidas con _treatZeroAsMissing_
+----
+1. num_badges=2 583 ==> num_completados='(26.4-inf)' 583    <conf:(1)> lift:(3.25) lev:(0.19) [403] conv:(403.37)
+2. num_badges=2 num_aprobados='(5.6-8.4]' 485 ==> num_completados='(26.4-inf)' 485    <conf:(1)> lift:(3.25) lev:(0.15) [335] conv:(335.56)
+3. num_aprobados='(5.6-8.4]' 574 ==> num_completados='(26.4-inf)' 531    <conf:(0.93)> lift:(3) lev:(0.16) [354] conv:(9.03)
+4. num_completados='(26.4-inf)' num_aprobados='(5.6-8.4]' 531 ==> num_badges=2 485    <conf:(0.91)> lift:(3.4) lev:(0.16) [342] conv:(8.26)
+----
+
+Con _treatZeroAsMissing_ lo más destacable es que sólo se han podido obtener 4 reglas en vez de las 10 esperadas. Además, de nuevo, las reglas son más significativas que en la versión con valores por defecto aunque algo redundantes.
+
 ===== Eliminar instancias con cero aprobados
+
+Se observa que hay un número elevado de instancias en las que el atributo _num_aprobados_ vale cero.
+
+Se va a suponer que los usuarios con cero aprobados no estaban realmente interesados en el curso (tal vez se apuntaron inicialmente pero no lo continuaron).
+Por eso en este último experimento se van a desechar esas instancias para comprobar si aparece información relevante sobre los alumnos que sí han mostrado interés en el mismo.
+
+Para realizar esta prueba se ha tenido que introducir el filtro que elimina las instancias deseadas *antes* de la discretización de la variable _num_aprobados_.
+
+En este caso al aplicar la selección de variables se selecciona el atributo _institution_ en lugar de _url_.
+
+
+[cols="30%h,35%,35%",options="header"]
+[[tabla_resumen_exp2]]
+.Resumen experimento 3
+|===
+| | V. por defecto|Activo treatZeroAsMissing
+|Nº de instancias|1178|1178
+|Nº de atributos|6|6
+|Min. soporte|0,4|0,1
+|Min. confianza|0,9|0,9
+|===
+
+En <<tabla_resumen_exp2>> se observa que el número de instancias, obviamente, se han reducido.
+El resto de parámetros tienen valores parecidos al último experimento.
+
+.Reglas obtenidas con valores por defecto
+----
+1. num_badges=2 583 ==> num_completados='(26.6-inf)' 583    <conf:(1)> lift:(1.76) lev:(0.21) [252] conv:(252.4)
+2. num_badges=2 institution=0 562 ==> num_completados='(26.6-inf)' 562    <conf:(1)> lift:(1.76) lev:(0.21) [243] conv:(243.31)
+3. num_badges=2 description=0 474 ==> num_completados='(26.6-inf)' 474    <conf:(1)> lift:(1.76) lev:(0.17) [205] conv:(205.21)
+4. description=0 993 ==> institution=0 980    <conf:(0.99)> lift:(1.02) lev:(0.01) [15] conv:(2.05)
+5. num_completados='(26.6-inf)' description=0 544 ==> institution=0 533    <conf:(0.98)> lift:(1.01) lev:(0) [4] conv:(1.31)
+6. num_aprobados='(6.2-8.8]' 499 ==> num_completados='(26.6-inf)' 487    <conf:(0.98)> lift:(1.72) lev:(0.17) [204] conv:(16.62)
+7. num_completados='(26.6-inf)' 668 ==> institution=0 645    <conf:(0.97)> lift:(0.99) lev:(-0) [-3] conv:(0.8)
+8. num_badges=2 583 ==> institution=0 562    <conf:(0.96)> lift:(0.99) lev:(-0) [-4] conv:(0.76)
+9. num_badges=2 num_completados='(26.6-inf)' 583 ==> institution=0 562    <conf:(0.96)> lift:(0.99) lev:(-0) [-4] conv:(0.76)
+10. num_badges=2 583 ==> num_completados='(26.6-inf)' institution=0 562    <conf:(0.96)> lift:(1.76) lev:(0.21) [242] conv:(11.99)
+----
+
+
+.Reglas obtenidas con _treatZeroAsMissing_
+----
+1. num_badges=2 583 ==> num_completados='(26.6-inf)' 583    <conf:(1)> lift:(1.76) lev:(0.21) [252] conv:(252.4)
+2. num_badges=2 num_aprobados='(6.2-8.8]' 455 ==> num_completados='(26.6-inf)' 455    <conf:(1)> lift:(1.76) lev:(0.17) [196] conv:(196.99)
+3. num_aprobados='(6.2-8.8]' 499 ==> num_completados='(26.6-inf)' 487    <conf:(0.98)> lift:(1.72) lev:(0.17) [204] conv:(16.62)
+4. num_completados='(26.6-inf)' num_aprobados='(6.2-8.8]' 487 ==> num_badges=2 455    <conf:(0.93)> lift:(1.89) lev:(0.18) [213] conv:(7.45)
+5. num_aprobados='(6.2-8.8]' 499 ==> num_badges=2 455    <conf:(0.91)> lift:(1.84) lev:(0.18) [208] conv:(5.6)
+6. num_aprobados='(6.2-8.8]' 499 ==> num_badges=2 num_completados='(26.6-inf)' 455    <conf:(0.91)> lift:(1.84) lev:(0.18) [208] conv:(5.6)
+----
+
+De nuevo se observa que con _treatZeroAsMissing_ la calidad de las reglas generadas mejora con respecto a los valores por defecto. También se aprecia que disminuye el número de reglas generadas y, por último, que el _interés_ de las mismas ha bajado con respecto al segundo experimento (valores de lift por debajo de 2).
