@@ -17,6 +17,10 @@ Valores de cursos en español. Distintos niveles (grado superior, educación bá
 Acceso directo a BD
 
 PDLC
+https://archive.ics.uci.edu/ml/datasets/Open+University+Learning+Analytics+dataset
+** https://analyse.kmi.open.ac.uk/open_dataset
+
+Usar Predictive Apriori y otros
 
 Uso de Docker Kettle
 
