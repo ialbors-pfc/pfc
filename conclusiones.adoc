@@ -2,5 +2,22 @@ Hay que considerarlo como un proceso iterativo complejo formado por varias fases
 
 //https://pdfs.semanticscholar.org/c73b/0424e1a4ab2574cfce2e41c505f71f46940e.pdf
 
+Importancia del preprocesado.
+
+Revisar las transformaciones realizadas y los atributos seleccionados
+
+Análisis de logs
+
+Bajar de nivel de usuario análisis de cada actividad.
+
+Análisis secuencial (¿se han aprobado más tras recibir insignias?)
+
+Valores de cursos en español. Distintos niveles (grado superior, educación básica, etc.).
+
+Acceso directo a BD
+
+PDLC
+
+Uso de Docker Kettle
 
 image::edm_process.png[]

@@ -58,6 +58,8 @@ include::estudio.adoc[]
 
 == Conclusiones
 
+include::conclusiones.adoc[]
+
 === Limitaciones y futuras líneas de investigación
 
 Kettle + docker
