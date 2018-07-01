@@ -66,3 +66,14 @@ endif::[]
 * Perasso, V. (2016, oct. 12). Qué es la cuarta revolución industrial (y por qué debería preocuparnos). _BBC_. Recuperado de http://www.bbc.com/mundo/noticias-37631834
 
 * Sánchez, E. (2015, may. 22). Big Data al servicio de la educación. _Euronews_. Recuperado de http://es.euronews.com/2015/05/22/big-data-al-servicio-de-la-educacion
+
+* Holmes, G., Donkin, A., & Witten, I. H. (1994, November). Weka: A machine learning workbench. In Intelligent Information Systems, 1994. Proceedings of the 1994 Second Australian and New Zealand Conference on (pp. 357-361). IEEE.
+// https://researchcommons.waikato.ac.nz/bitstream/handle/10289/1138/uow-cs-wp-1994-09.pdf?sequence=1
+
+* Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2009). The WEKA data mining software: an update. ACM SIGKDD explorations newsletter, 11(1), 10-18.
+// https://www.researchgate.net/profile/Mark_Hall6/publication/221900777_The_WEKA_data_mining_software_An_update/links/09e41507f01ad2a029000000.pdf
+
+* Bouckaert, R. R., Frank, E., Hall, M. A., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2010). WEKA - Experiences with a Java Open-Source Project. Journal of Machine Learning Research, 11(Sep), 2533-2541.
+// http://www.jmlr.org/papers/volume11/bouckaert10a/bouckaert10a.pdf
+
+* ARFF (book version) (n.d.). Recuperado en Julio 1, 2017 de http://weka.wikispaces.com/ARFF%20%28book%20version%29

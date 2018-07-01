@@ -1,0 +1,96 @@
+
+Holmes, Donkin y Witten (1994) describen Weka como una herramienta cuya misión es ayudar a aplicar técnicas de aprendizaje automático a problemas del mundo real y que está más orientada al uso por los especialistas en distintos dominios de análisis que al uso por los expertos en aprendizaje automático.
+
+.Pantalla de inicio de Weka
+image::weka_main_screen.png[]
+
+Su desarrollo empieza bajo el auspicio de la Universidad de Waikato en Nueva Zelanda a partir de 1993.
+Inicialmente consistía en una amalgama de programas escritos en C reunidos por medio de una interfaz gráfica basada en TCL/TK.
+Unos años más tarde, dedido a dificultades para mantener el código, se decide reescribir todo desde el principio en el lenguaje de programación Java.
+
+A día de hoy es una herramienta de referencia para el aprendizaje automático y la minería de datos (Hall et al., 2009).
+
+Según Bouckaert et al. (2010) algunos de las características que han favorecido su adopción y que se extienda su uso son las siguientes:
+
+* portabilidad: característica heredada del lenguaje de programación usado en su desarrollo: Java.
+Gracias a esto puede ejecutarse en un gran número de plataformas (como Windows, Linux o Solaris).
+* la existencia de una interfaz gráfica (o GUI), que rebaja la barrera de entrada para usar cualquier programa y facilita su uso.
+* la combinación de la publicación del _software_ con la publicación de un libro sobre Datamining en el que se emplea Weka como herramienta ilustrativa. Ambas cosas han funcionado como un círculo virtuoso.
+* extensibildad: es posible extender su funcionalidad (con nuevos algoritmos o técnicas) de forma sencilla e incluso embeber dicha funcionalidad en otro programa.
+* la extensa documentación (generada por los autores o por la propia comunidad) facilita el uso de la herramienta.
+* integralidad: se han reescrito ciertos algoritmos en Java para que así esta herramienta sea una solución integral que contenga, si no todos, los más importantes algoritmos de esta materia.
+
+A este listado se puede añadir que la licencia sea libre (GPL) y el código fuente esté disponible de forma abierta.
+
+Weka reúne un amplio conjunto de algoritmos para minería de datos (algoritmos de clasificación, _clustering_, o minería de asociación) así como herramientas específicas para preprocesar conjuntos de datos, para selección automática de atributos y para  visualización de datos e información estadística.
+
+Incluye un gestor de paquetes que permite instalar herramientas y algoritmos adicionales. Ello convierte a WEKA en una herramienta todavía más modular que antes, con módulos que se pueden instalar una vez en ejecución.
+
+Aunque ya se ha mencionado su interfaz gráfica, es de destacar que también permite su uso por línea de comandos lo cual facilita la automatización de procesos y pruebas.
+
+.Pantalla del Explorer de Weka
+image::weka_explorer_screen.png[]
+
+La entrada de datos para Weka puede ser tanto una base de datos (a la que se accedería gracias al API de Java: JDBC) como un fichero de texto plano con un formato determinado (ARFF) cuya definición se verá en el siguiente apartado.
+
+
+==== Formato arff
+El formato ARFF (por su nombre en inglés: _Attribute-Relation File Format_ o Formato de Fichero Atributo-Relación) se creó ex profeso para usarlo con Weka.
+
+Sirve para describir un conjunto de datos.
+
+Un fichero con este formato no es más que un fichero de texto plano que sigue las convenciones que se explican a continuación.
+
+El formato consiste en dos secciones ("ARFF (book version)", n.d.):
+
+. Cabecera. Esta sección contiene los siguientes elementos.
+ * Nombre de la relación. Se define con una línea con este formato:
++
+----
+  @relation <nombre>
+----
++
+ * Atributos. Se definen tantos como sean necesarios de la siguiente forma:
++
+----
+  @attribute <nombre> <tipo>
+----
++
+El tipo de atributo puede ser:
+
+ *** numeric: enteros o reales.
++
+----
+  @attribute num_completados numeric
+----
++
+ *** string: cadenas de texto
++
+----
+  @attribute username string
+----
++
+ *** nominal: un conjunto acotado de valores
++
+----
+  @attribute color {rojo, verde, azul}
+----
++
+ *** date: para fechas; se especifica también el formato de la fecha.
++
+----
+  @attribute timestamp date "yyyy-MM-dd HH:mm:ss"
+----
++
+
+. Datos.
+ * Esta sección comienza con una línea con:
++
+----
+ @data
+----
++
+ * A continuación se detalla cada una de las instancias (una por línea).
+ * El valor de los atributos, que coincidirán en orden con los definidos en la cabecera, se separan por comas.
+ * Aquellos valores que sean desconocidos se indicarán con un '?'.
+ * Los campos de texto (_string_) se indicarán entre comillas dobles cuando haya un espacio en el valor.
