@@ -430,6 +430,10 @@ Esta parte se realizará con la propia herramienta Weka y se ha incluido en el a
 
 ==== Modelado y evaluación de los resultados
 
+Esta sección se desempañará con la herramienta Weka, como ya se ha adelantado.
+La versión de Weka que se ha usado es la 3.8.1.
+
+
 ===== Preprocesado Weka
 
 Como ya se ha adelantado en el apartado anterior, en esta fase de modelado se incluyen también algunos pasos de preprocesado.
@@ -577,7 +581,7 @@ En este caso al aplicar la selección de variables se selecciona el atributo _in
 
 
 [cols="30%h,35%,35%",options="header"]
-[[tabla_resumen_exp2]]
+[[tabla_resumen_exp3]]
 .Resumen experimento 3
 |===
 | | V. por defecto|Activo treatZeroAsMissing
@@ -587,7 +591,7 @@ En este caso al aplicar la selección de variables se selecciona el atributo _in
 |Min. confianza|0,9|0,9
 |===
 
-En <<tabla_resumen_exp2>> se observa que el número de instancias, obviamente, se han reducido.
+En <<tabla_resumen_exp3>> se observa que el número de instancias, obviamente, se han reducido.
 El resto de parámetros tienen valores parecidos al último experimento.
 
 .Reglas obtenidas con valores por defecto
