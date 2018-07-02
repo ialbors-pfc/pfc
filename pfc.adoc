@@ -46,7 +46,8 @@ include::introduccion.adoc[]
 
 == Estado del arte
 
-include::estado_del_arte0.adoc[]
+// include::estado_del_arte0.adoc[]
+include::estado_del_arte.adoc[]
 
 <<<
 
@@ -58,14 +59,14 @@ include::estudio.adoc[]
 
 == Conclusiones
 
-include::conclusiones.adoc[]
-
-=== Limitaciones y futuras líneas de investigación
-
-Kettle + docker
-
-Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (¿otros?) + anonimizar datos (RGPD)
-
+// include::conclusiones.adoc[]
+//
+// === Limitaciones y futuras líneas de investigación
+//
+// Kettle + docker
+//
+// Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (¿otros?) + anonimizar datos (RGPD)
+//
 <<<
 
 == Bibliografía
