@@ -1,0 +1,68 @@
+Moodle el nombre se corresponde con las siglas en inglés Modular Object-Oriented
+Dynamic Learning Environment (sobre el origen del nombre existe un post de su
+creador en el fórum donde explica que la M de Modular se correspondía,
+inicialmente con su nombre).
+
+Existen dos conceptos fundamentales que subyacen en la filosofía que dirige el
+proyecto Moodle: constructivismo y construccionismo.
+
+El constructivismo es una teoría del aprendizaje que otorga un papel fundamental
+a la “construcción de algo” en el proceso de aprendizaje. Es decir, considera el
+aprendizaje, más que un proceso pasivo, en el que el sujeto que aprende recibe
+el conocimiento (de forma oral o escrita, por ejemplo), es un proceso activo en
+el que el sujeto debe interactuar con el objeto de conocimiento (esto es,
+construir activamente ese conocimiento) para poder adquirir realmente ese
+conocimiento. Por poner un ejemplo sencillo, para enseñar a sumar no bastará con
+una clase en que se expliquen las reglas básicas de la suma sino que el alumno
+realizará sumas él mismo para poder comprenderlo mejor.
+
+Se ha elegido Moodle como la herramienta LMS sobre la cual se realizará el
+análisis debido a que es la que se está empleando en la actualidad en los cursos
+tal y cual del .
+
+
+La filosofía que subyace bajo el proyecto de Moodle según se asegura en
+https://docs.moodle.org/33/en/Philosophy es la pedagogía social y
+construccionista.
+
+Definiciones:
+Constructivismo: en pedagogía
+
+Las ventajas de Moodle.
+
+
+Algunas de las características más destacadas de esta plataforma son las
+siguientes
+
+==== Código fuente
+El código fuente de Moodle es libre y abierto, es decir, está disponible para
+todo el mundo. La licencia del código [https://docs.moodle.org/dev/License] es
+GPL Versión 3, la cual considera las cuatro libertades esenciales
+
+* libertad de uso del sofware con cualquier propósito
+* libertad para modificar el software
+* libertad para redistribuir copias del sofware
+* libertad para redistribuir las modificaciones hechas sobre el software
+
+La ventaja principal de esta características es que esto permite
+
+* facilidad para estudiar el código fuente y modificarlo en caso de que se
+encuentren errores o de que sea necesario adaptarlo a las necesidades.
+El modelo de software libre y abierto ofrece, además, la posibilidad de
+contribuir con esas mejoras o adaptaciones al proyecto principal si fueran de
+utilidad para más gente.
+
+
+
+
+Algunas alternativas a Moodle
+(vamos a centrarnos en las de código libre)
+
+Chamilo
+Sakai
+
+
+
+Paradiso LMS
+
+Blackboard
