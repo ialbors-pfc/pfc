@@ -110,88 +110,103 @@ Esta forma está demasiado orientada al mundo web, por lo que Baker (2010) propo
 De esta última clasificación se verán a continuación los puntos más destacables.
 
 ===== Predicción
-// Permite predecir un aspecto de un conjunto de datos (la variable a predecir) a
-// partir de otras  variables de ese mismo conjunto de entrada. Se emplea tanto
-// para predecir el futuro (¿qué alumno va a aprobar?) como el presente (¿qué
-// alumno está padeciendo acoso?)
-//
-// Ejemplos: estudiante viendo un vídeo ¿aburrido o frustrado?
-// ¿aprobará? ¿qué nota sacará?
-//
-// Los objetivos de estas predicciones:
-//
-// * Mejorar el contenido educativo: puesto que sabemos que el alumno se
-// aburre, lo mejoraremos
-// * Toma de decisiones automáticas. Si el alumno no está entendiendo cierto contenido
-// ofrecerle ayudas dirigidas.
-// * Informar a los profesores, tutores, padres.
 
-===== Regresión
-// Cuando lo que quieres predecir es un valor numérico (por ejemplo: la nota final
-// de 0 a 10; el número de asignaturas que aprobará…)
-//
-// Para construir un modelo de regresión se parte de un conjunto de datos de
-// entrenamiento, es decir, datos para los cuales conocemos el valor que queremo
-// predecir.
-//
-// Junto a ese valor que queremos predecir existe otra serie de parámetros que
-// serán susceptibles de ser usados para la predicción.
-//
-// Al utilizar este método se definirá qué combinación de esos parámetros y de qué
-// forma sirven para predecir la variable correspondiente.
-//
-// ====== Lineal
-// Es la más típica en la que la variable se expresa como una función
-// lineal de los parámetros que hacen de predictores.
-//
-// Es seguramente el método más sencillo y más fácil de comprender
-//
-// ====== Regression trees:
-//
-// . RepTree no lineal
-// . M5 (lineal)
-//
-// http://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/journal/PaperInformation.aspx?PaperID=70469
+Romero y Ventura (2013) se refieren a esta categoría como aquella cuyo objetivo es predecir un aspecto concreto de un conjunto de datos (la variable a predecir) a partir de otras variables de ese mismo conjunto de datsos.
 
-===== Métricas para regressors
+Se puede emplear tanto para predecir el futuro (¿qué alumno va a aprobar?) como el presente (¿qué alumno está padeciendo acoso o está desmotivado?).
 
-// ====== Coeficiente de correlación de Pearson
-// Es una medida de la posible relación lineal entre dos variables. Es decir, si se
-// consideran dos variables A y B, esta métrica establece si, al incrementar el
-// valor de A, se produce un incremento lineal en el valor de B.
-//
-// Análisis de los distintos valores:
-//
-// *  1: la correlación es perfecta.
-// *  0: no existe relación lineal entre las dos variables consideradas.
-// *  -1: existe una correlación perfecta pero inversa.
-// *  Valores intermedios depende del campo en el que se esté aplicando. Para
-// EDM, por ejemplo, una correlación de 0,3 se considera buena.
-//
-// Correlación de 1 es perfecta. Si es cero quiere decir que no existe correlación.
-// Si es -1
-//
-// También se emplea el valor r², es decir, el coeficiente de correlación al
-// cuadrado. Es una medida de qué porcentaje de la variación está explicada por el
-// modelo.
-//
-// ====== MAE/RMSE
-// Mean Absolute Error
-//
-// Se calcula como la media del valor absoluto de la diferencia entre el valor
-// predicho y el valor real.
-//
-// Indica la media de la desviación del erro predicho con respecto al real.
-//
-// Root Mean Squared Error
-//
-// Raíz cuadrada de la media del error al cuadrado.
-//
-// Este indicador se interpreta de forma similar al anterior pero penaliza más las
-// desviaciones grandes.
-//
-// Suele preferirse este último.
-//
+La utilidad de estas predicciones puede ser múltiple.
+Algunos ejemplos de esta utilidad pueden ser:
+
+* Mejorar el contenido educativo.
+Puesto que sabemos que el alumno se aburre o no está motivado (e incluso en qué momentos ocurre) podemos mejorar el material didáctico.
+* Toma de decisiones automáticas. Si el alumno no está entendiendo cierto contenido se le puede ofrecer automáticamente ciertas ayudas dirigidas.
+* Informar a los actores pertinentes del entorno educativo (alumnos, profesores, tutores, padres, directores, etc.) de ciertas tendencias detectadas para que puedan revertirlas o alentarlas.
+
+Los tipos de métodos predictivos más destacables son la regresión y la clasificación.
+Ambos se verán a continuación.
+
+====== Regresión
+
+Se emplea este método cuando lo que quieres predecir es un valor numérico (por ejemplo: la nota final de 0 a 10 o el número de asignaturas que aprobará un alumno).
+
+Para construir un modelo de regresión se parte de un conjunto de datos de entrenamiento.
+Es decir, datos para los cuales conocemos el valor del atributo o variable que queremos predecir.
+
+Junto a ese valor que queremos predecir existe otra serie de parámetros o variables que serán susceptibles de ser usados para la predicción.
+
+El resultado de aplicar este método define qué parámetros y combinados de qué manera sirven para predecir la variable de interés para el estudio.
+
+La regresión se divide en regresión lineal y en árboles de regresión.
+
+La regresión lineal es la más típica.
+En ella la variable que se quiere predecir se expresa como una función lineal de los parámetros que hacen de predictores.
+
+Por ejemplo:
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2
+++++++++++++++++++++++++++++++++++++++++++++
+
+Si la regresión lineal es múltiple considera múltiples variables independientes.
+Esto tendrá sentido cuando todas las variables incluidas tengan un efecto aditivo, es decir, aporten información para determinar el valor final de la variable a predecir.
+
+Estas relaciones lineales no siempre responden a los problemas actuales con múltiples datos y con varias interacciones que hacen que aumente el número de parámetros.
+
+Los árboles de regresión no son más que árboles de decisión donde el valor final es una variable de tipo numérico.
+
+El objetivo es predecir los valores de una variable basándose en reglas de decisión sencillas a partir de los datos origen. Los diferentes algoritmos van segmentando los datos en grupos más homogéneos hasta llegar al último nodo, donde no se pueden realizar nuevas particiones. Cada división en la que se separan los datos representan una hoja del árbol.
+
+Dos ejemplos de algoritmos de este tipo serían: M5 y RepTree.
+
+.Pseudocódigo de ejemplo de un árbol de regresión RepTree (no lineal)
+=====
+ If X>3
+   Y = 2
+ Else If X<-7
+   Y = 4
+ Else Y = 3
+=====
+
+.Pseudocódigo de ejemplo de un árbol de regresión M5 ( lineal)
+====
+ If X>3
+   Y = 2A + 3B
+ Else If X< -7
+   Y = 2A – 3B
+ Else Y = 2A + 0.5B + C
+====
+
+
+====== Métricas para regresión
+
+Es necesario utilizar unas medidas comunes que sirvan para poder comparar unos métodos con otros. Para las técnicas de regresión las más importantes son estas:
+
+.Coeficiente de correlación de Pearson
+
+Es una medida de la posible relación lineal entre dos variables.
+Es decir, si se consideran dos variables A y B, esta métrica establece si, al incrementar el valor de A, se produce un incremento lineal en el valor de B.
+
+Análisis de los distintos valores:
+
+*  1: la correlación es perfecta.
+*  0: no existe relación lineal entre las dos variables consideradas.
+*  -1: existe una correlación perfecta pero inversa.
+*  Valores intermedios depende del campo en el que se esté aplicando. Para
+EDM, por ejemplo, una correlación de 0,3 se considera buena.
+
+También se emplea el valor r², es decir, el coeficiente de correlación al cuadrado.
+Es una medida de qué porcentaje de la variación está explicada por el modelo.
+
+.MAE/RMSE
+
+El valor absoluto medio (MAE por sus siglas en inglés: Mean Absolute Error) se calcula como la media del valor absoluto de la diferencia entre el valor predicho y el valor real.
+
+Indica la media de la desviación del error predicho con respecto al real.
+
+RMSE (Root Mean Squared Error o Raíz cuadrada de la media del error al cuadrado) es un indicador que se interpresta de forma parecida al anterior pero que penaliza más las desviaciones más grandes.
+
 // ====== Information Criteria
 // Criterio de Información Bayesiano
 //
@@ -206,21 +221,20 @@ De esta última clasificación se verán a continuación los puntos más destaca
 // Es un método similar al anterior.
 //
 
-===== Clasificación
-// En este caso la variable que se quiere predecir no es numérica sino categórica
-// (ejemplos: aprobado/no aprobado, colegio, dejará el colegio/no lo dejará,…)
-//
-// Con cada label/etiqueta aparecerán otras características que, combinadas de una
-// determinada manera, al igual que ocurría con la regresión, serán capaces de
-// predecir la etiqueta mencionada
-//
-// Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
-//
-// *  Step regression
-// *  Logistic regression
-// *  J48/C4.5 decision trees
-// *  Jrip decision rules
-// *  K* Instance-based classifiers
+====== Clasificación
+
+En esta categoría la variable de la que quiere predecir su valor no es de tipo numérica, sino categórica.
+Por ejemplo: ¿a qué universidad irá un alumno?, ¿dejará un alumno el colegio antes de tiempo o no?.
+
+De forma similar a lo que ocurría con la regresión, la combinación de ciertos valores de ciertos atributos serán capaces de predecir un valor concreto.
+
+Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
+
+*  Step regression
+*  Logistic regression
+*  J48/C4.5 decision trees
+*  Jrip decision rules
+*  K* Instance-based classifiers
 //
 // ====== Step regression
 // WARNING: No es stepwise regression!!!!
@@ -350,10 +364,11 @@ De esta última clasificación se verán a continuación los puntos más destaca
 // Modelos muy complejos. Perceptrones
 // Caso de estudio para clasificación
 
-===== Medidores de la calidad de clasificadores
-// Es importante no solamente saber el valor final de la variable que se quiere
-// predecir sino su calidad, es decir, cómo de cierto es su valor. Hay un 50% de
-// probabilidades de que vayas a abandonar el colegio.
+====== Métricas para clasificación
+
+Al igual que ocurría con la regresión, es importante no solamente saber el valor final de la variable que se quiere predecir sino también su calidad, es decir, cómo de cierto es su valor.
+Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabilidades de que el alumno vaya a  abandonar el colegio" que si sólamente se dice que el modelo predictivo predice que el alumno va a abandonar el colegio.
+
 //
 // .Detector confidence:
 // Esto es útil, por ejemplo, para decidir cómo será la intervención sobre un
@@ -560,10 +575,18 @@ De esta última clasificación se verán a continuación los puntos más destaca
 // Si las conclusiones están justificadas basándose en la evidencia
 
 ===== Descubrimiento de estructuras
-// En este caso no se considera el valor final de una variable sino que se busca
-// agrupar elementos de un conjunto mayor en subconjuntos que estén lo
-// suficientemente relacionados sin tener ninguna idea preconcebida sobre cómo
-// serán esos subconjuntos.
+El descubrimiento de estructuras o _clustering_ tiene por objeto la segmentación de los datos.
+Se agrupan los elementos de un conjunto mayor en subconjuntos, llamados _clusters_, que estén lo suficientemente relacionados sin tener ninguna idea preconcebida sobre cómo serán esos subconjuntos.
+
+No hay una variable resultado de la que quiera conocer su valor final; solamente se definen esos clusters en los que los datos se agrupan por la similitud interna.
+Es decir, que si se realiza la agrupación correctamente, los datos dentro de un mismo cluster son más parecidos entre sí que respecto a los datos de otros clusters.
+
+Los métodos de clustering aplicados a EDM más usados son:
+* K-Means
+* Expectation Maximization (EM)-Based Clustering
+* Gaussian Mixture Models
+El clustering es usado cuando se sabe relativamente poco del modelo, al usarlo en entornos muy conocidos, podemos llegar a conclusiones, ya conocidas.
+
 
 ===== Relationship Mining
 
@@ -612,12 +635,6 @@ De esta última clasificación se verán a continuación los puntos más destaca
 //
 // ===== Sequential Pattern mining
 //
-// Las modernas herramientas para el aprendizaje (tanto los MOOCs como herramientas
-// informáticas usadas en clases) permiten un registro más detallado de las
-// acciones que ejecuta un alumno.
-//
-// PSLC Datashop.
-// Regressors
 
 === Moodle
 //include::moodle.adoc[]
