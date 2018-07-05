@@ -54,7 +54,7 @@ Del mismo modo han aparecido nuevas organizaciones y plataformas que hacen de es
 
 Algunas de las características que hacen interesantes para los distintos actores (universidades, alumnos, profesores... ) estos cursos son las siguientes:
 
-* Distribución geográfica: tanto los alumnos como los profesores no están restringidos a una ubicación geográfica única.
+* Distribución geográfica: ni los alumnos ni los profesores están restringidos a una ubicación geográfica única.
 * Posibilidad de llegar a más gente y más diversa: la barrera de entrada para estos cursos es mucho más baja que la de los cursos tradicionales.
 * Ventajas económicas: por ejemplo ciertos contenidos pueden ser reusados (vídeos con lecciones).
 * Facilita la interactividad frente al modelo tradicional en que el educador vuelca sus conocimientos.
@@ -118,15 +118,15 @@ Como ya se ha mencionado en el apartado anterior el interés intrínseco de la E
 Es un campo de enorme importancia puesto que afecta a todos los demás campos de estudio.
 
 La aplicación de las técnicas de Data Mining en el entorno educativo (o lo que se llama Educational Data Mining) es una actividad relativamente reciente.
-Si se toma como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationaldatamining.org/conferences/) se aprecia que se trata de una disciplina joven sobre la que queda mucho por hacer.
+Si se toma como punto de referencia o punto de inflexión de esta disciplina la Primera Conferencia Internacional sobre EDM que tuvo lugar en 2008 en Montreal (http://educationalData Mining.org/conferences/) se aprecia que se trata de una disciplina joven sobre la que queda mucho por hacer.
 
 === Objetivos
 Este proyecto persigue realizar un análisis de modelos predictivos a partir de datos reales de una plataforma LMS.
 Partiendo de las técnicas de DM pertinentes se busca alcanzar un sistema de reglas capaz de predecir comportamientos o resultados de los alumnos de modo que estos puedan corregirse a tiempo en caso de ser negativos o ser alentados en caso de ser positivos.
 
-La misma descripción de este objetivo cuenta con dos elementos diferenciados (_¿qué técnicas de datamining?_ y _¿sobre qué datos?_) cuyo espectro (que en su totalidad sería demasiado vasto y fuera del alcance de este proyecto) vamos a limitar.
+La misma descripción de este objetivo cuenta con dos elementos diferenciados (_¿qué técnicas de Data Mining?_ y _¿sobre qué datos?_) cuyo espectro (que en su totalidad sería demasiado vasto y fuera del alcance de este proyecto) vamos a limitar.
 
-Con respecto a las distintas técnicas de datamining se hará un repaso descriptivo por las más significativas de ellas.
+Con respecto a las distintas técnicas de Data Mining se hará un repaso descriptivo por las más significativas de ellas.
 Pero se realizará el estudio oportuno a partir de lo que se conoce como ARM (Association Rule Mining o Minería de Reglas de Asociación) y, en concreto, a partir del algoritmo más usado en ARM: algoritmo Apriori.
 
 Se ha optado por esta vía porque es la que otorga más libertad (no siempre busca predecir algo en concreto sino buscar reglas interesantes sin estar dirigidas hacia un punto concreto).

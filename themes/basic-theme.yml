@@ -15,7 +15,7 @@ admonition:
 
 page:
   layout: portrait
-  margin: [0.75in, 1in, 0.75in, 1in]
+  margin: [0.80in, 1in, 0.75in, 1in]
   size: Letter
 caption:
   font_color: #bb0000
@@ -25,6 +25,7 @@ base:
   font_size: 12
   line_height_length: 17
   line_height: $base_line_height_length / $base_font_size
+  align: justify
 vertical_spacing: $base_line_height_length
 heading:
   #font_color: #262626
@@ -33,7 +34,30 @@ heading:
   font_style: bold
   line_height: 1.2
   margin_bottom: $vertical_spacing
+  text_transform: uppercase
 link:
   font_color: #002FA7
 outline_list:
   indent: $base_font_size * 1.5
+toc:
+  text_transform: uppercase
+footer:
+  height: 0.75in
+  line_height: 1
+  recto:
+    right:
+      content: '*{page-number}*'
+  verso:
+    left:
+      content: '*{page-number}*'
+header:
+  height: 0.55in
+  line_height: 0.5
+  border_color: #000000
+  border_width: 0.5
+  recto:
+    right:
+      content: '*{section-title}*'
+  verso:
+    left:
+      content: '*{section-title}*'

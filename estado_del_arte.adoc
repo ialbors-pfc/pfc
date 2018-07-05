@@ -31,8 +31,8 @@ endif::[]
 
 ==== Introducción
 
-Ya se ha definido en este documento EDM como la aplicación de las técnicas tradicionales de Datamining al mundo de la educación.
-La International Educational Data Mining Society, que nace en 2011 con el objetivo de fomentar la colaboración y el desarrollo científico de esta nueva disciplina, la define en su web (www.educationaldatamining.org) como "una disciplina emergente cuyo objetivo es el desarrollo de métodos para explorar los tipos de datos particulares que provienen de entornos educativos y usar esos métodos para comprender mejor a los estudiantes y los entornos en los que aprenden".
+Ya se ha definido en este documento EDM como la aplicación de las técnicas tradicionales de Data Mining al mundo de la educación.
+La International Educational Data Mining Society, que nace en 2011 con el objetivo de fomentar la colaboración y el desarrollo científico de esta nueva disciplina, la define en su web (www.educationalData Mining.org) como "una disciplina emergente cuyo objetivo es el desarrollo de métodos para explorar los tipos de datos particulares que provienen de entornos educativos y usar esos métodos para comprender mejor a los estudiantes y los entornos en los que aprenden".
 
 Es decir, el objetivo de EDM es entresacar el  conocimiento escondido detrás de grandes cantidades de datos, en este caso procedentes de las herramientas educativas, usando técnicas cómo el aprendizaje automático, la inteligencia artificial o la estadística.
 
@@ -45,10 +45,10 @@ Existen también muchos puntos en común con Learning Analytics. Baker e Inventa
 
 ==== Proceso
 
-El proceso de Datamining es aplicable a cualquier sector o actividad que genera gran cantidad de datos.
+El proceso de Data Mining es aplicable a cualquier sector o actividad que genera gran cantidad de datos.
 En EDM, como ya se ha dicho, se aplicará este proceso dentro del marco educativo.
 
-CRISP-DM (del inglés Cross Industry Standard Process for Data Mining) es un estándar abierto que define el modelo de proceso que se seguirá para proyectos de Datamining.
+CRISP-DM (del inglés Cross Industry Standard Process for Data Mining) es un estándar abierto que define el modelo de proceso que se seguirá para proyectos de Data Mining.
 
 .Fases de CRISP-DM (Kenneth Jensen)
 image::CRISP-DM_Process_Diagram.png[]
@@ -57,7 +57,7 @@ Las fases de este modelo se detallan a continuación:
 
 . Definición del Problema:
 +
-El proceso de Datamining empieza entendiendo el problema. Es un ejercicio conjunto que involucra a los expertos del dominio de conocimiento y de Datamining, de forma que se pueda trasladar el objetivo a la definición del problema del data mining.
+El proceso de Data Mining empieza entendiendo el problema. Es un ejercicio conjunto que involucra a los expertos del dominio de conocimiento y de Data Mining, de forma que se pueda trasladar el objetivo a la definición del problema del data mining.
 +
 . Exploración de los datos:
 +
@@ -69,12 +69,12 @@ En esta fase se recopilan, se limpian y se formatean los datos, es decir, se con
 +
 En esta fase se aplican diferentes funciones de minería de datos. Algunas de las funciones de minería pueden usar los datos con un tipo específico de datos, en esta fase se deben establecer los diferentes modelos.
 Esta fase es iterativa y debe ser repetida en sucesivas ocasiones, cambiando y modificando parámetros hasta obtener el modelo óptimo.
-. Evaluación/Evaluation
+. Evaluación
 +
 En esta fase se evalúa el modelo. Si el modelo no satisface las necesidades se debe volver a la fase de modelado, revisando los parámetros, hasta conseguir la respuesta deseada.
 . Despliegue
 +
-Los expertos en Datamining exportan los resultados a herramientas desde las que podrán ser explotados (como tablas de bases de datos relacionales u hojas de cálculo).
+Los expertos en Data Mining exportan los resultados a herramientas desde las que podrán ser explotados (como tablas de bases de datos relacionales u hojas de cálculo) para la aplicación del modelo correspondiente.
 
 
 ==== Clasificación de técnicas
@@ -88,24 +88,19 @@ Una de ellas es la que proponen Romero y Ventura (2007):
 ** minería de reglas de asociación y de patrones secuenciales.
 ** Minería de textos.
 
-Esta forma está demasiado orientada al mundo web, por lo que Baker (2010) propone, no obstante, esta otra:
+Esta forma está demasiado orientada al mundo web, por lo que Baker (2010) propone otra clasificación de la que aquí se extrae lo más importante:
 
-* Predicción
-** Regresión
-** Clasificación
-** Latent Knowledge Estimation
-* Descubrimiento de estructuras
-**  Clustering
-**  Factor Análisis
-**  Domain Structure Discovery
-**  Network Analysis
-*  Relationship Mining
-**  Association Rule Mining
-**  Correlation Mining
-**  Sequential Pattern mining
-**  Causal Data Mining
-*  Distillation of data for human judgment
-*  Discovery with models
+* Predicción.
+** Regresión.
+** Clasificación.
+* Clustering.
+* Relationship Mining.
+** Correlation Mining.
+** Causal Data Mining.
+** ARM o Association Rule Mining.
+** Sequential Pattern Mining.
+* Distillation of data for human judgment.
+* Discovery with models.
 
 De esta última clasificación se verán a continuación los puntos más destacables.
 
@@ -128,12 +123,12 @@ Ambos se verán a continuación.
 
 ====== Regresión
 
-Se emplea este método cuando lo que quieres predecir es un valor numérico (por ejemplo: la nota final de 0 a 10 o el número de asignaturas que aprobará un alumno).
+Se emplea este método cuando lo que se quiere predecir es un valor numérico (por ejemplo: la nota final de 0 a 10 o el número de asignaturas que aprobará un alumno).
 
 Para construir un modelo de regresión se parte de un conjunto de datos de entrenamiento.
-Es decir, datos para los cuales conocemos el valor del atributo o variable que queremos predecir.
+Es decir, datos para los cuales conocemos el valor del atributo o variable que se quiere predecir.
 
-Junto a ese valor que queremos predecir existe otra serie de parámetros o variables que serán susceptibles de ser usados para la predicción.
+Junto a ese valor que se  quiere predecir existe otra serie de parámetros o variables que serán susceptibles de ser usados para la predicción.
 
 El resultado de aplicar este método define qué parámetros y combinados de qué manera sirven para predecir la variable de interés para el estudio.
 
@@ -162,22 +157,21 @@ Dos ejemplos de algoritmos de este tipo serían: M5 y RepTree.
 
 .Pseudocódigo de ejemplo de un árbol de regresión RepTree (no lineal)
 =====
- If X>3
-   Y = 2
- Else If X<-7
-   Y = 4
- Else Y = 3
+ If X>10
+   Y = 22
+ Else If Z<-5
+   Y = 1
+ Else Y = 11
 =====
 
 .Pseudocódigo de ejemplo de un árbol de regresión M5 ( lineal)
 ====
- If X>3
-   Y = 2A + 3B
- Else If X< -7
-   Y = 2A – 3B
- Else Y = 2A + 0.5B + C
+ If X>55
+   Y = 11A + 4B
+ Else If X < 1
+   Y = 22A – 5B
+ Else Y = 9A + 8B + 1,2C
 ====
-
 
 ====== Métricas para regresión
 
@@ -369,7 +363,9 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 Al igual que ocurría con la regresión, es importante no solamente saber el valor final de la variable que se quiere predecir sino también su calidad, es decir, cómo de cierto es su valor.
 Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabilidades de que el alumno vaya a  abandonar el colegio" que si sólamente se dice que el modelo predictivo predice que el alumno va a abandonar el colegio.
 
-//
+
+Algunas de esas métricas se detallan a continuación.
+
 // .Detector confidence:
 // Esto es útil, por ejemplo, para decidir cómo será la intervención sobre un
 // alumno. También considerando cuál es el coste de aplicar una intervención
@@ -389,30 +385,37 @@ Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabil
 // Aunque no siempre se puede usar, si está disponible siempre conviene
 // utilizar esta métrica.
 //
-// ====== Exactitud o accuracy
-// #Agreements/(total codes/assesment)
-//
-// Se puede definir como el número de predicciones correctas del total de
-// predicciones realizadas.
-//
-// No es un buen medidor, en general. En distribuciones no uniformes, por ejemplo.
-// Caso paradigmático: el porcentaje de aprobados de un examen es 92%; si nuestro
-// predictor escoge siempre como valor de salida aprobado (un clasificador 0-R ó
-// cero-R), su precisión será del 92% pero, en realidad, se trata de un predictor
-// muy pobre.
-//
-// ====== Coeficiente Kappa de Cohen
-// Es una métrica que compara la exactitud esperada con la observada.
-// (Agreement-Expected agreement)/(1- Expected agreement)
-// Interpretación:
-//
-// *  Kappa = 0: el clasificador es igual de bueno que el azar.
-// *  Kappa = 1: el predictor es perfecto.
-// *  Kappa = -1: las predicciones son perfectamente opuestas a la realidad.
-// *  Kappa < 0: en este caso el modelo es peor que el azar.
-// *  Entre 0 y 1: son los valores más típicos. Se suelen admitir como válidos
-// valores entre 0.3 y 0.5 para considerar un modelo mejor que el azar.
-//
+
+.Exactitud o accuracy
+
+Se puede definir como el número de predicciones correctas del total de predicciones realizadas.
+
+No siempre es un buen medidor de la calidad de las predicciones.
+Si, por ejemplo,  se tiene un curso cuyo porcentaje de aprobados es del 80%; si el modelo de predicción consiste en seleccionar siempre "aprobado" como resultado (lo que se denomina clasificador 0-R), la exactitud de nuestro modelo será del 80% pero, sin embargo, en realidad no es un muy buen predictor.
+
+.Coeficiente Kappa de Cohen
+Es una métrica que compara la exactitud esperada con la observada.
+
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+k = \frac{(Pa-Pe)}{1-Pe}
+++++++++++++++++++++++++++++++++++++++++++++
+
+Siendo:
+
+* Pa: la proporción de acuerdos entre la realidad y la predicción.
+* Pe: la proporción de acuerdos esperada.
+
+Interpretación de Kappa:
+
+* Kappa = 0: el clasificador es igual de bueno que el azar.
+* Kappa = 1: el predictor es perfecto.
+* Kappa = -1: las predicciones son perfectamente opuestas a la realidad.
+* Kappa < 0: en este caso el modelo es peor que el azar.
+* Entre 0 y 1: son los valores más típicos.
+Se suelen admitir como válidos valores entre 0.3 y 0.5 para considerar un modelo mejor que el azar.
+
 // Comparar Kappa entre dos conjuntos de datos es complicado. Sólo tiene sentido
 // compararlos si las distintas categorías en que queremos clasificar son
 // proporcionales en su núnero de elementos.
@@ -468,16 +471,19 @@ Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabil
 // *  Suele tener valores más altos que Kappa.
 // *  Tiene en cuenta confidence
 //
-// ====== Precisión
-// La probabilidad de que un punto clasificado como VERDADERO sea realmente
-// VERDADERO.
-//
-// [latexmath]
-// ++++++++++++++++++++++++++++++++++++++++++++
-// Precision = \frac{TP}{TP + TF}
-// ++++++++++++++++++++++++++++++++++++++++++++
-//
-//
+.Precisión
+Es la probabilidad de que un punto clasificado como VERDADERO sea realmente VERDADERO.
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+Precision = \frac{TP}{TP + FP}
+++++++++++++++++++++++++++++++++++++++++++++
+
+Siendo:
+
+* TP: TRUE POSITIVE o Verdadero Positivo (se ha marcado correctamente como VERDADERO).
+* FP: FALSE POSITIVE o Falso Positivo (se ha clasificado incorrectamente como VERDADERO).
+
 // ====== Exhaustividad
 // La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
 //
@@ -574,7 +580,7 @@ Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabil
 // .Conclusion validity:
 // Si las conclusiones están justificadas basándose en la evidencia
 
-===== Descubrimiento de estructuras
+===== Clustering
 El descubrimiento de estructuras o _clustering_ tiene por objeto la segmentación de los datos.
 Se agrupan los elementos de un conjunto mayor en subconjuntos, llamados _clusters_, que estén lo suficientemente relacionados sin tener ninguna idea preconcebida sobre cómo serán esos subconjuntos.
 
@@ -582,62 +588,118 @@ No hay una variable resultado de la que quiera conocer su valor final; solamente
 Es decir, que si se realiza la agrupación correctamente, los datos dentro de un mismo cluster son más parecidos entre sí que respecto a los datos de otros clusters.
 
 Los métodos de clustering aplicados a EDM más usados son:
+
 * K-Means
 * Expectation Maximization (EM)-Based Clustering
 * Gaussian Mixture Models
-El clustering es usado cuando se sabe relativamente poco del modelo, al usarlo en entornos muy conocidos, podemos llegar a conclusiones, ya conocidas.
+
+El clustering es usado cuando se sabe relativamente poco del modelo. Al usarlo en entornos muy conocidos podemos llegar a conclusiones ya conocidas.
 
 
-===== Relationship Mining
+===== Minería de relaciones
 
-// El objetivo de estas técnicas es encontrar relaciones ocultas a simple vista
-// entre las variables de un conjunto de datos.
+El objetivo de estas técnicas es encontrar relaciones ocultas a simple vista entre las variables de un conjunto de datos.
 //
 // Dentro de esta clasificación existen subclasificaciones.
 
-// ===== Correlation mining
+====== Correlation Mining
 // http://www.eecs.umich.edu/eecs/pdfs/events/2711.pdf
 // http://users.wpi.edu/~rsbaker/Encyclopedia%20Chapter%20Draft%20v10%20-fw.pdf
 //
-// El objetivo es encontrar correlaciones lineales entre variables cuando el número
-// de variables es muy alto. El enfoque puede ser más reducido y así intentar
-// encontrar qué variables están correlacionadas con otra fija en la que se tiene
-// un interés especial o bien un enfoque más amplio en el que se quiera encontrar
-// asociaciones significativas entre dos variables cualquiera del conjunto de
-// variables.
+El objetivo es encontrar correlaciones lineales entre variables cuando el número de variables es muy alto.
+
+El enfoque puede ser más reducido y así intentar
+encontrar qué variables están correlacionadas con otra fija en la que se tiene
+un interés especial o bien un enfoque más amplio en el que se quiera encontrar
+asociaciones significativas entre dos variables cualquiera del conjunto de
+variables sin ninguna limitación inicial.
 //
 // Bonferroni y FDR como correcciones.
-//
-// ===== Causal data mining
-// El objetivo es hallar relaciones causales entre variables.
+
+====== Causal Data Mining
+El objetivo es hallar relaciones causales entre variables.
 // http://nugget.unisa.edu.au/Thuc/CausalAssRule.pdf
-//
-// Es decir, no solamente deben existir una asociación entre dos variables o entre
-// los valores de dos variables, sino que esa relación debe ser causal. Por
-// ejemplo, podría existir una asociación entre “suspender Matemáticas” y
-// “suspender Lengua” en un conjunto determinado de datos. Que exista esa
-// asociación no quiere decir que “suspender Matemáticas” sea causa de “suspender
-// Lengua” o viceversa. En cambio podría existir una tercera variable: “nivel
-// académico previo” que sí podría ser causa de las otras dos.
-//
-// Una forma de establecer relaciones causales de forma experimental implica la
-// manipulación de los sujetos de estudio de modo variando valores de una variable
-// A eso repercuta en el valor de otra variable B. Las implicaciones éticas que
-// conlleva este procedimiento, especialmente cuando el objeto de estudio es un ser
-// humano (sería el caso de EDM), suponen un importante impedimento. Por ejemplo,
-// obligar a un alumno a no atender en clase para comprobar cómo repercute eso eso
-// en sus notas.
-//
-// Es por ello por lo que es importante ser capaces de obtener relaciones causales
-// únicamente a partir de datos ya recopilados.
-//
-// ===== Association mining
-//
-// ===== Sequential Pattern mining
-//
+
+Es decir, no solamente debe existir una asociación entre dos variables o entre los valores de dos variables, sino que esa relación debe ser causal.
+Por ejemplo, podría existir una asociación entre “suspender Matemáticas” y
+“suspender Lengua” en un conjunto determinado de datos.
+Que exista esa asociación no quiere decir que “suspender Matemáticas” sea causa de “suspender
+Lengua” o viceversa.
+En cambio podría existir una tercera variable -- “nivel académico previo”, por ejemplo -- que sí podría ser causa de las otras dos.
+
+Una forma de estudiar las posible relaciones causales de forma experimental implica la
+manipulación de los sujetos de estudio de modo que variando los valores de una variable
+A se estudie si esa variación repercuta en el valor de otra variable B.
+Las implicaciones éticas que conlleva este procedimiento, especialmente cuando el objeto de estudio es un ser humano (como es el caso de EDM), suponen un importante impedimento.
+Por ejemplo si se obliga a un alumno a no atender en clase para comprobar cómo repercute eso
+en sus notas.
+
+Es por ello por lo que es importante ser capaces de obtener relaciones causales
+únicamente a partir de datos ya recopilados.
+
+====== Association Rule Mining
+Consiste en encontrar relaciones entre variables del tipo:
+
+ IF A, B, C THEN X, Y, Z.
+
+Se emplea para encontrar relaciones sorprendentes o inesperadas entre las variables.
+
+El algoritmo más conocido y usado dentro de esta clasificación es el algoritmo Apriori (Agrawal, Imielinski y Swami, 1993).
+
+Existen varias métricas que suelen usarse para comparar y valorar modelos creados a partir de ARM. Se definen a continuación las más importantes y empleadas.
+
+.Support
+
+Hay dos formas de definir este valor.
+Se puede definir como una proporción: número de instancias que cumplen la regla generada (antecedente y consecuente) entre el número de instancias total.
+O bien como un valor absoluto: el número total de instancias que cumplen la regla.
+
+.Confidence
+
+Se define como el número de instancias que cumplen la regla entre el número de instancias que cumplen el antecedente de la regla.
+
+.Lift
+
+Si se tiene una regla del tipo:
+ A => B
+
+El valor lift se calcula de esta forma:
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+Lift = \frac{Confidence(A->B)}{P(B)}
+++++++++++++++++++++++++++++++++++++++++++++
+
+Siendo:
+
+* P(B): la probabilidad de B.
+
+====== Sequential Pattern mining
+
+En esta categoría el objetivo es crear relaciones como las de ARM pero en la que se tiene en cuenta el factor tiempo.
+
+Es decir el antecedente es anterior en el tiempo al consecuente. Por ejemplo:
+
+ IF estudiante elige asignaturaA este año THEN escoge asignaturaB el año siguiente.
+
+===== Distillation of data for human judgment
+El objetivo es presentar la información de forma resumida, inteligible, visual y/o interactiva para ayudar en la toma de decisiones (Romero y Ventura, 2013).
+
+Como se ve en la propia definición, estaría muy ligado a LA.
+
+===== Discovery with models
+
+El descubrimiento con modelos consiste en utilizar un modelo predictivo (creado a partir de algunas de las técnicas típicas de Data Mining) como un componente más para el análisis y creación de otro modelo predictivo (Romero y Ventura, 2013).
+
+Generalmente se usa un modelo de predicción para una variable que posteriormente es usado con otro modelo de predicción donde esta variable pasa a ser una variable productora.
+
+La otra técnica más frecuente es usar la predicción de una variable para posteriormente aplicar una técnica de miniería de relaciónes.
+
+Es un término acuñado por Baker y Yacef (2009) que, según ellos mismos afirman, surge a partir de 2008/2009, por lo que todavía no tiene demasiado recorrido a pesar de que ya en 2010 suponía el 20% de los estudios publicados en EDM.
+
 
 === Moodle
-//include::moodle.adoc[]
+include::moodle.adoc[]
 
 === Weka
 

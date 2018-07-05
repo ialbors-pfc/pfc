@@ -29,7 +29,7 @@ endif::[]
 === Base de datos de Moodle
 
 Toda la información relevante de la que hace acopio Moodle se guarda en una base de datos relacional (MySQL o PostgreSQL).
-De ahí radica la importancia de conocerla para poder extraerla adecuadamente.
+De ahí radica la importancia de conocer bien esa BD para poder extraer la información pertinente adecuadamente.
 
 Moodle es una herramienta en constante y activo desarrollo.
 Es por ello que su la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
@@ -37,7 +37,7 @@ Es por ello que su la definición de su modelo de datos, reflejada en la base de
 Pero, al mismo tiempo, es una herramienta con la suficiente madurez como para poder afirmar que existe cierta estabilidad en dicho modelo de datos y que los cambios con respecto al núcleo del mismo se considerarán mínimos.
 
 Como muestra tanto de la actividad del proyecto como de su madurez puede verse la comparativa de la  <<tabla_indicadores_git_moodle>> y de las figuras <<figura_num_autores_git_moodle>> y <<figura_num_commits_git_moodle>>.
-En ellas comparamos algunos indicadores generales sobre el repositorio de código fuente del proyecto _moodle_ con los de otro proyecto de código abierto de mayor alcance: _git_.
+En ellas se comparan algunos indicadores generales sobre el repositorio de código fuente del proyecto _moodle_ con los de otro proyecto de código abierto de mayor alcance: _git_.
 
 .Indicadores de los repositorios de código de _git_ y _moodle_
 [[tabla_indicadores_git_moodle]]
@@ -70,8 +70,8 @@ Como primera aproximación al problema se realiza un análisis superficial (núm
 Lo que se quiere dilucidar a partir de este análisis será lo siguiente:
 
 * análisis cuantitativo:
-* Número de tablas.
-* Número de vistas
+** Número de tablas.
+** Número de vistas.
 * analisis cualitativo: estructura general de las mismas.
 
 Para este análisis se ha empleado una instalación de Moodle que se corresponde con la versión:
@@ -99,7 +99,8 @@ Se observa que estos nombres se ajustan al siguiente formato:
  {prefijo}_{grupo}[_{elemento}]
 
 Siendo:
-* {prefijo} es igual a "mdl" aunque, seguramente sea un parámetro configurable.
+
+* {prefijo} es igual a "mdl".
 * _{grupo}_ se corresponde con el grupo conceptual que se menciona más arriba.
 * opcionalmente puede seguir una diferenciación más específica con _{elemento}_.
 
@@ -182,7 +183,7 @@ Este conjunto de datos se publicó con la finalidad de que fuera empleado para l
 
 Los datos se corresponden con el curso "Teaching with Moodle" impartido desde la plataforma learn.moodle.net durante cuatro semanas de 2016.
 En la información del conjunto de datos no se especifica la versión de Moodle que se empleó para el curso.
-Pero si se toma en consideración las fechas de publicación de versiones y del propio curso y se hace la suposición de que el curso siempre se realiza con la última versión publicada, podríamos suponer que la versión sería 3.1.x puesto que la primera versión 3.1.x es del 23 de mayo de 2016.
+Pero si se toma en consideración las fechas de publicación de versiones y del propio curso y se hace la suposición de que el curso siempre se realiza con la última versión publicada, se podría suponer que la versión sería 3.1.x puesto que la primera versión 3.1.x es del 23 de mayo de 2016.
 
 De nuevo se va a suponer que no hay mucha diferencia con respecto a las otras versiones mencionadas en este documento y que no  afectaría sustancialmente el uso de una u otra.
 
@@ -228,16 +229,16 @@ El formato de los ficheros es igual para todos ellos:
 === Proceso
 
 ==== Fases previas
-Ya se han visto en este documento cuáles son las fases de un proyecto de Datamining, según el estándar abierto CRISP-DM (del inglés Cross Industry Standard Process for Data Mining):
+Ya se han visto en este documento cuáles son las fases de un proyecto de Data Mining, según el estándar abierto CRISP-DM (del inglés Cross Industry Standard Process for Data Mining):
 
-. Comprensión del objeto de estudio.
-. Comprensión de los datos.
+. Definición del Problema.
+. Exploración de los datos.
 . Preparación de los datos.
 . Modelado.
 . Evaluación.
 . Despliegue.
 
-De estas seis fases sólo la última quedaría fuera del alcance de  este proyecto.
+De estas seis fases sólo la última quedaría fuera del alcance de  este proyecto puesto que no se va a aplicar en un entorno real.
 
 La primera fase está representada por la comprensión del ámbito de la Educación.
 Es decir, comprender sus objetivos, necesidades y particularidades.
@@ -257,7 +258,7 @@ La tercera, cuarta y quinta fases se analizan en los sucesivos y respectivos apa
 
 ==== Preparación de los datos
 
-Los datos obtenidos en crudo normalmente no son aptos para poder realizar sobre ellos un estudio de Datamining.
+Los datos obtenidos en crudo normalmente no son aptos para poder realizar sobre ellos un estudio de Data Mining.
 Es necesario  aplicarles un preprocesado previo que los convierta en material válido y de calidad.
 
 Esta fase de preparación de los datos es una de las fases más importantes de todo el proceso.
@@ -271,7 +272,7 @@ Es decir, cuanto mejores son los datos de entrada, previamente preprocesados en 
 Este preprocesado tiene más de proceso artesanal que automático.
 Si bien puede haber algunas pautas generales que sirvan como guía para el mismo, en general no hay un conjunto acotado y establecido de técnicas y pasos a seguir.
 
-Dependiendo, entre otras cosas, del objetivo, de los datos iniciales, del algoritmo de Datamining que se vaya a emplear y de la herramienta que se usará, se aplicarán ciertas técnicas y pasos u otros.
+Dependiendo, entre otras cosas, del objetivo, de los datos iniciales, del algoritmo de Data Mining que se vaya a emplear y de la herramienta que se usará, se aplicarán ciertas técnicas y pasos u otros.
 
 .Pasos de la fase de preparación de datos en EDM
 [[preprocessing_steps]]
@@ -283,8 +284,8 @@ Si bien no es imprescindible seguir a rajatabla y en orden esos pasos, en cualqu
 Para este proyecto y esta fase, tras analizar el contenido de los ficheros que servirán de origen de datos, se decide que el objetivo final consta de los siguiente puntos:
 
 * crear un fichero único.
-* el formato del fichero será ARFF (puesto que la herramienta para realizar el Datamining será Weka y este es el formato más sencillo que acepta).
-* cada _instancia_ del fichero (cada línea con datos). contendrá toda la información significativa que se requiera relativa a un usuario.
+* el formato del fichero será ARFF (puesto que la herramienta para realizar el Data Mining será Weka y este es el formato más sencillo que acepta).
+* cada _instancia_ del fichero (cada línea con datos) contendrá toda la información significativa que se requiera relativa a un usuario.
 * esta información significativa se decidirá e irá refinando durante esta fase.
 
 Los pasos que se han seguido para la consecución de este objetivo se detallan a continuación, en los siguientes apartados.
@@ -344,7 +345,7 @@ El ejemplo más claro sería descartar nombre y apellido cuando ya tenemos un at
 
 ===== Transformación de atributos y filtrados
 
-Se detallana a continuación algunas de las transformaciones realizadas.
+Se detallan a continuación algunas de las transformaciones realizadas.
 
 .Fichero mdl_user.csv
 

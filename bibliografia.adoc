@@ -20,88 +20,49 @@ endif::[]
 
 
 * Agrawal, R., Imielinski, T. &  Swami, A. (1993). Mining association rules between sets of items in large databases. ACM SIGMOD, 22 (2), 207–216.
-* Ceglar, A. & Roddick, J.F. (2006). Association Mining. ACM Computing Surveys, 38 (2), 5.
-* Green, K. C. (2013). Campus Computing Survey. Campus Computing Project. Recuperado de http://www.campuscomputing.net/sites/www.campuscomputing.net/files/CampusComputing2013_1.pdf
-* Moodle (n.d.). Recuperado en Julio 7, 2015 de Wikipedia: http://es.wikipedia.org/wiki/Moodle
-* Romero, C., López, M.I., Luna, J.M., & Ventura, S. (2013). Predicting students' final performance from participation in on-line discussion forums. Computers & Education, 68, 458-472.
-* Romero, C. & Ventura, S. (2010). Educational data mining: a review of the state of the art, IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews, 40(6), 601-618.
-* Weka (aprendizaje automático) (n.d.). Recuperado en Mayo 31, 2018 de Wikipedia: http://es.wikipedia.org/wiki/Weka_(aprendizaje_autom%C3%A1tico)
-
-
-
-* Sao Pedro, M., Baker, R.S.J.d., Gobert, J. (2012) Improving Construct Validity Yields Better Models of Systematic Inquiry, Even with Less Information. Proceedings of the 20th International Conference on User Modeling, Adaptation and Personalization (UMAP 2012), 249-260.
-
-* Liu, H., Yu, L. (2005) Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17 (4), 491-502.
-
-
-* Jiménez Pérez, E. (2017). Lectura y educación en España: análisis longitudinal de las leyes educativas generales. Investigaciones Sobre Lectura, (8), 79-90. Recuperado a partir de https://www.comprensionlectora.es/revistaisl/index.php/revistaISL/article/view/218
-* Fernández-González, N. (2016). La LOMCE: aportaciones para el debate sobre la política educativa. Revista Educación, Política y Sociedad.
-
-* Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.
-
-* Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set. Recuperado a partir de https://research.moodle.net/158/
-
-* Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.
-
-* Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
-
-* Kharwar, A. R., & Kapadia, V. (1998). A Effective Preprocessing for Web Usage Mining.
-
-* Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012, May). On the use of data mining tools for data preparation in classification problems. In Computer and Information Science (ICIS), 2012 IEEE/ACIS 11th International Conference on (pp. 173-178). IEEE.
-// https://www.computer.org/csdl/proceedings/icis/2012/1536/00/06211093.pdf
-
-* Romero, C., & Ventura, S. (2013). Data mining in education. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 3(1), 12-27.
-
-* Romero, C., Romero, J. R., & Ventura, S. (2014). A survey on pre-processing educational data. In Educational data mining (pp. 29-64). Springer, Cham.
-// https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
-
-
-* Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).
-
-// http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf
-
+* ARFF (book version) (n.d.). Recuperado en Julio 1, 2017 de http://weka.wikispaces.com/ARFF%20%28book%20version%29
 * Asamblea General de la ONU. (1948). "Declaración Universal de los Derechos Humanos" (217 [III] A). Paris. Recuperado de http://www.un.org/en/universal-declaration-human-rights/
+* Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
+* Baker, R. S., & Inventado, P. S. (2014). Educational data mining and learning analytics. In Learning analytics (pp. 61-75). Springer, New York, NY.
+* Baker, R., & Siemens, G. (2014) Educational data mining and learning analytics. In Sawyer, K. (Ed.) Cambridge Handbook of the Learning Sciences: 2nd Edition, pp. 253-274.
+* Baker, R. S., & Yacef, K. (2009). The state of educational data mining in 2009: A review and future visions. JEDM| Journal of Educational Data Mining, 1(1), 3-17.
 
-
-* Perasso, V. (2016, oct. 12). Qué es la cuarta revolución industrial (y por qué debería preocuparnos). _BBC_. Recuperado de http://www.bbc.com/mundo/noticias-37631834
-
-* Sánchez, E. (2015, may. 22). Big Data al servicio de la educación. _Euronews_. Recuperado de http://es.euronews.com/2015/05/22/big-data-al-servicio-de-la-educacion
-
-* Holmes, G., Donkin, A., & Witten, I. H. (1994, November). Weka: A machine learning workbench. In Intelligent Information Systems, 1994. Proceedings of the 1994 Second Australian and New Zealand Conference on (pp. 357-361). IEEE.
-// https://researchcommons.waikato.ac.nz/bitstream/handle/10289/1138/uow-cs-wp-1994-09.pdf?sequence=1
-
-* Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2009). The WEKA data mining software: an update. ACM SIGKDD explorations newsletter, 11(1), 10-18.
-// https://www.researchgate.net/profile/Mark_Hall6/publication/221900777_The_WEKA_data_mining_software_An_update/links/09e41507f01ad2a029000000.pdf
-
+// https://jedm.educationalData Mining.org/index.php/JEDM/article/download/8/2
 * Bouckaert, R. R., Frank, E., Hall, M. A., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2010). WEKA - Experiences with a Java Open-Source Project. Journal of Machine Learning Research, 11(Sep), 2533-2541.
 // http://www.jmlr.org/papers/volume11/bouckaert10a/bouckaert10a.pdf
-
-* ARFF (book version) (n.d.). Recuperado en Julio 1, 2017 de http://weka.wikispaces.com/ARFF%20%28book%20version%29
-
-
+* Ceglar, A. & Roddick, J.F. (2006). Association Mining. ACM Computing Surveys, 38 (2), 5.
+* Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set. Recuperado a partir de https://research.moodle.net/158/
+* Fernández-González, N. (2016). La LOMCE: aportaciones para el debate sobre la política educativa. Revista Educación, Política y Sociedad.
+* Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012, May). On the use of data mining tools for data preparation in classification problems. In Computer and Information Science (ICIS), 2012 IEEE/ACIS 11th International Conference on (pp. 173-178). IEEE.
+// https://www.computer.org/csdl/proceedings/icis/2012/1536/00/06211093.pdf
+* Green, K. C. (2013). Campus Computing Survey. Campus Computing Project. Recuperado de http://www.campuscomputing.net/sites/www.campuscomputing.net/files/CampusComputing2013_1.pdf
+* Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2009). The WEKA data mining software: an update. ACM SIGKDD explorations newsletter, 11(1), 10-18.
+// https://www.researchgate.net/profile/Mark_Hall6/publication/221900777_The_WEKA_data_mining_software_An_update/links/09e41507f01ad2a029000000.pdf
+* Holmes, G., Donkin, A., & Witten, I. H. (1994, November). Weka: A machine learning workbench. In Intelligent Information Systems, 1994. Proceedings of the 1994 Second Australian and New Zealand Conference on (pp. 357-361). IEEE.
+// https://researchcommons.waikato.ac.nz/bitstream/handle/10289/1138/uow-cs-wp-1994-09.pdf?sequence=1
+* Jiménez Pérez, E. (2017). Lectura y educación en España: análisis longitudinal de las leyes educativas generales. Investigaciones Sobre Lectura, (8), 79-90. Recuperado a partir de https://www.comprensionlectora.es/revistaisl/index.php/revistaISL/article/view/218
+* Kharwar, A. R., & Kapadia, V. (1998). A Effective Preprocessing for Web Usage Mining.
+* Liu, H., Yu, L. (2005) Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17 (4), 491-502.
+* Moodle (n.d.). Recuperado en Julio 7, 2015 de Wikipedia: http://es.wikipedia.org/wiki/Moodle
+* Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.
+* Perasso, V. (2016, oct. 12). Qué es la cuarta revolución industrial (y por qué debería preocuparnos). _BBC_. Recuperado de http://www.bbc.com/mundo/noticias-37631834
+* Romero, C., López, M.I., Luna, J.M., & Ventura, S. (2013). Predicting students' final performance from participation in on-line discussion forums. Computers & Education, 68, 458-472.
+* Romero, C. & Ventura, S. (2010). Educational data mining: a review of the state of the art, IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews, 40(6), 601-618.
+* Romero, C., & Ventura, S. (2007). Educational data mining: A survey from 1995 to 2005. Expert systems with applications, 33(1), 135-146.
 * Romero, C., & Ventura, S. (2013). Data mining in education. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 3(1), 12-27.
 
 // https://pdfs.semanticscholar.org/c73b/0424e1a4ab2574cfce2e41c505f71f46940e.pdf
-
-* Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
-
-* Romero, C., & Ventura, S. (2007). Educational data mining: A survey from 1995 to 2005. Expert systems with applications, 33(1), 135-146.
-
-
-// http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.702&rep=rep1&type=pdf
-
-* Baker, R. S., & Inventado, P. S. (2014). Educational data mining and learning analytics. In Learning analytics (pp. 61-75). Springer, New York, NY.
+* Romero, C., Romero, J. R., & Ventura, S. (2014). A survey on pre-processing educational data. In Educational data mining (pp. 29-64). Springer, Cham.
+// https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
+* Sao Pedro, M., Baker, R.S.J.d., Gobert, J. (2012) Improving Construct Validity Yields Better Models of Systematic Inquiry, Even with Less Information. Proceedings of the 20th International Conference on User Modeling, Adaptation and Personalization (UMAP 2012), 249-260.
+* Sánchez, E. (2015, may. 22). Big Data al servicio de la educación. _Euronews_. Recuperado de http://es.euronews.com/2015/05/22/big-data-al-servicio-de-la-educacion
+* Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.
+* Weka (aprendizaje automático) (n.d.). Recuperado en Mayo 31, 2018 de Wikipedia: http://es.wikipedia.org/wiki/Weka_(aprendizaje_autom%C3%A1tico)
+* Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).
 
 
-* Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39). Citeseer.
-
+// http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf
 
 
-
-* Baker, R., & Siemens, G. (2014) Educational data mining and learning analytics. In Sawyer, K. (Ed.) Cambridge Handbook of the Learning Sciences: 2nd Edition, pp. 253-274.
-
-
-* Baker, R. S., & Yacef, K. (2009). The state of educational data mining in 2009: A review and future visions. JEDM| Journal of Educational Data Mining, 1(1), 3-17.
-
-// https://jedm.educationaldatamining.org/index.php/JEDM/article/download/8/2
+// http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.103.702&rep=rep1&type=pdf

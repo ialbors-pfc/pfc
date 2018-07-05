@@ -1,7 +1,5 @@
 Moodle el nombre se corresponde con las siglas en inglés Modular Object-Oriented
-Dynamic Learning Environment (sobre el origen del nombre existe un post de su
-creador en el fórum donde explica que la M de Modular se correspondía,
-inicialmente con su nombre).
+Dynamic Learning Environment.
 
 Existen dos conceptos fundamentales que subyacen en la filosofía que dirige el
 proyecto Moodle: constructivismo y construccionismo.

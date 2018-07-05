@@ -1,27 +1,68 @@
-Hay que considerarlo como un proceso iterativo complejo formado por varias fases y cuya salida del proceso (el modelado final) siempre servirá de entrada para realimentar de nuevo todo el ciclo. Hipótesis, test, y refinamiento (Romero y Ventura, 2013)
+En este proyecto se ha realizado un modelado básico a partir de un conjunto de datos reales de un curso realizado sobre la plataforma Moodle.
 
+Si bien, a la luz de los resultados obtenidos, se puede afirmar que las reglas generadas son más relevantes con la opción _treatZeroAsMissing_ y en el segundo caso del experimento -- esto es, cuando se ha hecho una selección automática de atributos por correlación --, sería necesario y conveniente realizar un análisis con un experto en el dominio de aplicación (es decir, tanto en educación como, a ser posible, en el curso objeto de estudio) para poder hacer una valoración y validación de las reglas obtenidas y de su posible utilidad en un entorno real.
+
+Se comprueba la importancia del preprocesado previo de los datos que, además de confirmar que el tiempo que lleva realizarlo es un porcentaje elevado del total, también dirige el estudio en una dirección u otra.
+
+En este caso se ha dirigido el estudio a un nivel de alumno pero bien se podría haber bajado a un nivel de detalle mayor, de interacciones del usuario con el sistema, a partir de los registros de _log_, o de cada uno de los cambios en las notas finales por cada actividad (en vez de considerar únicamente el último valor de estas y obtener la suma total).
+
+Por tanto sería interesante realizar otros experimentos con otro nivel de detalle y seleccionando otros atributos distintos para lo que habría que cambiar sustancialmente las transformaciones y preprocesado realizado.
+
+De igual modo la selección del algoritmo empleado determina también parcialmente el resultado.
+Sería interesante emplear otros algoritmos dentro de ARM como Predictive Apriori.
+
+Incluso se podrían emplear algoritmos de SPM para responder a preguntas como "¿se han aprobado más actividades tras recibir insignias?".
+
+En cuanto a las limitaciones de este proyecto se puede mencionar, en primer lugar, el origen de los datos de entrada.
+Los datos de entrada consisten en un dataset público con información seleccionada de un curso de cuatro semanas en inglés sobre el propio Moodle. Las limitaciones de este dataset podrían resumirse en los siguiente puntos:
+
+* la selección de datos de Moodle ya viene predefinida y seleccionada.
+* los participantes, por el lenguaje del curso, son hablantes de inglés. Se observa, de hecho, que el mayor número de participantes son de USA.
+* sólo hay información de un curso y de un ámbito muy reducido (tanto por el tiempo del mismo como por el tema).
+
+Sería interesante, por tanto, realizar un estudio similar en el que:
+
+* se explorara con más detenimiento el contenido de la BD. Se podrían encontrar dentro de la misma otros atributos y elementos, distintos o adicionales, que ofrecieran una visión diferente para el estudio.
+* se consideraran más cursos y de distinta índole:
+** los participantes estuvieran más repartidos geográficamente. O bien se tratara de cursos en español y con participantes hispanohablantes para comparar resultados y comprobar si se pueden aplicar los mismos mecanismos.
+** cursos de distintos niveles (para educación básica, universitaria...)
+
+Es importante considerar el proceso de Data Mining como un proceso iterativo complejo formado por varias fases y cuya salida del proceso (el modelado final) siempre servirá de entrada para realimentar de nuevo todo el ciclo (<<proceso_edm>>). Existirá una fase de hipótesis, otra de test y una última de refinamiento (Romero y Ventura, 2013).
+Es decir, el trabajo no estará terminado una vez que se tenga el modelo y se haya validado con los usuarios expertos.
+Lo deseable es que esos resultados y las acciones pertinentes que conlleven sirvan como nuevas entradas para el proceso: volver a realizar hipótesis,  volver a comprobarlas y volver a obtener resultados.
+
+.Proceso EDM
+[[proceso_edm]]
+image::edm_process.png[]
 //https://pdfs.semanticscholar.org/c73b/0424e1a4ab2574cfce2e41c505f71f46940e.pdf
 
-Importancia del preprocesado.
+Un ejemplo de esta posible retroalimentación sería: si en nuestro modelo podemos dar por válido, por ejemplo, que el recibir dos insignias implica que se aprobarán el máximo de actividades, se podrá incentivar la consecución de insignias de distintas formas y comprobar si el uso de estas formas genera nueva información y nuevas relaciones inesperadas.
 
-Revisar las transformaciones realizadas y los atributos seleccionados
+Uno de los escollos más importantes para realizar estudios de este tipo es encontrar datasets de la suficiente calidad.
 
-Análisis de logs
+La legislación europea sobre protección de datos (RGPD es el último ejemplo) se ha endurecido y requiere un mayor control de la información personal de los usuarios de servicios digitales.
+Esto hace que los propietarios de dicha información sean, lógicamente, más renuentes a hacerla pública, incluso anonimizada, por temor a posibles consecuencias legales.
 
-Bajar de nivel de usuario análisis de cada actividad.
+Esto hace muy interesante proyectos como el PSLC Datahop (https://pslcdatashop.web.cmu.edu); un repositorio donde se pueden encontrar diversos datasets específicamente orientados a EDM.
+Repositorios de este tipo permiten estandarizar la forma en la que se publica la información y que diversos analistas e investigadores trabajen sobre el mismo conjunto de datos para poder comparar mejor los resultados obtenidos.
 
-Análisis secuencial (¿se han aprobado más tras recibir insignias?)
+Puede profundizarse en la exploración y estudio de este tipo de repositorios e, incluso, la posible implementación e impulso de un repositorio similar en el ámbito hispanohablante.
 
-Valores de cursos en español. Distintos niveles (grado superior, educación básica, etc.).
+Por último también se considera como una posible área sobre la que profundizar y explorar el uso de herramientas usualmente vinculadas a otras áreas de conocimiento pero que serían de utilidad para proyectos de EDM.
 
-Acceso directo a BD
+En concreto se proponen dos herramientas de las que se ha hecho uso someramente en este proyecto aunque no se ha entrado en el detalle de este uso a lo largo de esta memoria.
 
-PDLC
-https://archive.ics.uci.edu/ml/datasets/Open+University+Learning+Analytics+dataset
-** https://analyse.kmi.open.ac.uk/open_dataset
+La primera de ellas es Pentaho Kettle, una herramienta ETL vinculada al mundo de las Bases de Datos y BI.
+Es una herramienta visual que puede facilitar enormemente el preprocesamiento de los datos y que permite la reutilización de procesos de este tipo.
+Esta herramienta, dentro del contexto global de un proceso DM, facilitaría la automatización, el mantenimiento y la modificación de la fase de preprocesado: desde la obtención de los datos (de ficheros, de una BD, de una llamada a un API, etc.) pasando por las distintas transformaciones hasta un artefacto final que podría ser un fichero ARFF.
 
-Usar Predictive Apriori y otros
+Puede verse en <<preproceso_kettle>>, con fines ilustrativos y sin entrar en el detalle, un ejemplo de cómo se ve en esta herramienta el preproceso que se ha realizado en este proyecto.
 
-Uso de Docker Kettle
+.Ejemplo de preproceso con Kettle
+[[preproceso_kettle]]
+image::kettle_process.png[]
 
-image::edm_process.png[]
+La segunda herramienta es Docker, un gestor de contenedores software vinculado al mundo del desarrollo software.
+Esta herramienta facilita el despliegue de aplicaciones, empaquetadas de forma sencilla como componentes que pueden relacionarse unos con otros.
+La aportación que puede ofrecer a investigaciones de este tipo es facilitar a los investigadores pertinentes el despliegue de una aplicación como Moodle, por ejemplo.
+Por medio de esta herramienta un investigador no necesitará conocimientos que están fuera del estudio EDM (conocimientos sobre BD, sobre servidores web como Apache, etc.) para poder instalar dicha herramienta y, en cambio, podría tener una aplicación de ejemplo operativa para poder explorarla en cuestión de minutos.

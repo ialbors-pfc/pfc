@@ -11,7 +11,7 @@ endif::[]
 Ignacio Albors Fernández <ignacio.albors@gmail.com>
 v1.0
 :numbered:
-:toc:
+:toc: macro
 :toclevels: 5
 :lang: es
 :encoding: utf8
@@ -24,24 +24,114 @@ v1.0
 :experimental:
 :imagesdir: _images
 :table-caption: Tabla
+:example-caption: Ejemplo
 :included:
-toc::[]
 
 // Notas:
 // Habría que hablar del constructivismo, construccionismo. De la teoría
 // psicológica que hay detrás de Moodle. Incorporar notas de cuaderno rojo.
 
+:numbered!:
 == Resumen
 
-== Palabras claves
+La aplicación de las técnicas de Data Mining a los entornos educativos se conoce como Educational Data Mining (o EDM).
+Es un área de estudio relativamente reciente cuyo origen temporal puede fijarse, aproximadamente, alrededor de 2005.
+Es, por lo tanto, una disciplina con mucho margen para la exploración y experimentación.
+
+EDM viene de la mano de los cambios que ha traído la revolución digital como la posibilidad casi ilimitada de generar y almacenar información de entornos educativos en formatos digitales que permiten su tratamiento y comunicación de forma mucho más rápida y sencilla que lo que era habitual hasta entonces.
+
+También como consecuencia de esa revolución se ha producido un interés creciente en los entornos educativos virtuales (VLE por sus siglas en inglés, Virtual Learning Environments).
+Esto puede verse, por ejemplo, en la proliferación de cursos en línea masivos y abiertos (MOOCs) o en el empleo cada vez más extendido de plataformas software orientadas a la educación.
+Una de las plataformas más extendida e importante en este campo es Moodle.
+
+En este proyecto se va a elaborar un estudio de un modelo predictivo, a partir de técnicas de Data Mining que generen reglas de asociación a partir de un conjunto de datos obtenidos en un entorno Moodle.
+
+
+== Palabras clave
+Educational Data Mining, Association Rule Mining, algoritmos, Weka, Moodle, Learning Management System, Entorno Virtual de Aprendizaje, algoritmo Apriori.
+
+toc::[]
+
+<<<
 
 == Glosario
+
+[glossary]
+AAAI::
+  Association for the Advancement of Artificial Intelligence.
+API::
+  Application Programming Interface
+
+ARFF::
+  Attribute-Relation File Format
+ARM::
+  Association Rule Mining
+BD::
+  Base de datos
+
+BI::
+  Business Intelligence
+
+CRISP-DM::
+  Cross Industry Standard Process for Data Mining
+
+DM::
+  Data Mining
+
+EDM::
+  Educational Data Mining
+
+ETL::
+  Extract Transform and Load
+
+LA::
+  Learning Analytics
+
+LMS::
+  Learning Management System
+
+MAE::
+  Mean Absolute Error
+
+
+MIT::
+   Massachusetts Institute of Technology
+MOOC::
+  Massive Open Online Course
+
+VLE::
+  Virtual Learning Environment (Entorno Virtual de Aprendizaje)
+
+PSLC::
+  Pittsburgh Science of Learning Center
+
+RMSE::
+  Root Mean Square Error
+RGPD::
+  Reglamento General de Protección de Datos
+
+SPM::
+  Sequential Pattern Mining
+
+<<<
+
+:numbered:
 
 == Introducción
 
 include::introduccion.adoc[]
 
-== Estructura del documento
+=== Estructura del documento
+
+La memoria de este proyecto se ha estructurado en las siguientes secciones principales:
+
+. Introducción: en esta sección se ofrece un marco general en el que encaja este proyecto además de una justificación del mismo y los objetivos que se plantean.
+. Estado del arte: en esta sección se hace un repaso de los principales componentes de este proyecto: se da una categorización de las principales técnicas de minería de datos para la educación y una breve descripción de las mismas; se describe también la plataforma LMS que proporciona los datos sobre los que se realizará el estudio: Moodle; y, por último, se toma en consideración la herramienta de DM que se aplicará en el estudio: Weka.
+. Estudio: en esta sección se desarrolla el estudio de este proyecto. Se aplica en Weka el algoritmo Apriori (propio de ARM) sobre datos reales obtenidos a partir de un curso realizado sobre la plataforma Moodle.
+. Conclusiones: en esta sección se exponen las conclusiones de este proyecto, se exponen sus limitacioes y se proponen futuras líneas de investigación.
+. Bibliografía: se enumeran tanto las referencias que aparecen en esta memoria como aquella documentación adicional útil para ampliar y profundizar en los contenidos relacionados con este proyecto.
+. Anexos: por último se incluyen anexos con información adicional que completa lo expuesto en apartados anteriores.
+
 <<<
 
 == Estado del arte
@@ -57,16 +147,10 @@ include::estudio.adoc[]
 
 <<<
 
-== Conclusiones
+== Conclusiones, limitaciones y futuras líneas de investigación
 
-// include::conclusiones.adoc[]
-//
-// === Limitaciones y futuras líneas de investigación
-//
-// Kettle + docker
-//
-// Explorar posibilidades de PSLC Datashop https://pslcdatashop.web.cmu.edu/help (¿otros?) + anonimizar datos (RGPD)
-//
+include::conclusiones.adoc[]
+
 <<<
 
 == Bibliografía
