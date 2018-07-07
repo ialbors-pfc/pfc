@@ -1,66 +1,51 @@
-Moodle el nombre se corresponde con las siglas en inglés Modular Object-Oriented
-Dynamic Learning Environment.
+Los Virtual Learning Environments (VLE) están cada vez más extendidos en contextos educativos como universidades o colegios.
+Estos entornos son también conocidos como Learning Management Systems (LMS), Course  Management  System  (CMS), Learning Content Management System (LCMS),  Managed  Learning  Environment (MLE),  Learning  Support  System (LSS) o  Learning Platform (LP), tal como resaltan Romero, Ventura y García (2008).
 
-Existen dos conceptos fundamentales que subyacen en la filosofía que dirige el
-proyecto Moodle: constructivismo y construccionismo.
+Algunos de estos sistemas son: Blackboard, WebCT, TopClass, Desire2Learn, Ilias, Chamilo, Sakai, Paradiso LMS o Claroline. Moodle es también uno de estos sistemas y uno de los más conocidos. Su nombre se corresponde con las siglas en inglés Modular Object-Oriented Dynamic Learning Environment (entorno  de aprendizaje dinámico modularmente orientado a objetos).
 
-El constructivismo es una teoría del aprendizaje que otorga un papel fundamental
-a la “construcción de algo” en el proceso de aprendizaje. Es decir, considera el
-aprendizaje, más que un proceso pasivo, en el que el sujeto que aprende recibe
-el conocimiento (de forma oral o escrita, por ejemplo), es un proceso activo en
-el que el sujeto debe interactuar con el objeto de conocimiento (esto es,
-construir activamente ese conocimiento) para poder adquirir realmente ese
-conocimiento. Por poner un ejemplo sencillo, para enseñar a sumar no bastará con
-una clase en que se expliquen las reglas básicas de la suma sino que el alumno
-realizará sumas él mismo para poder comprenderlo mejor.
+Rice (2006) define Moodle como un LMS libre que permite crear experiencias de aprendizaje en línea potentes, flexibles y atractivas.
 
-Se ha elegido Moodle como la herramienta LMS sobre la cual se realizará el
-análisis debido a que es la que se está empleando en la actualidad en los cursos
-tal y cual del .
+Surge a partir del trabajo de Martin Dougiamas en la Universidad de Perth, en Australia. El objetivo que se proponía con esta herramienta era responder a cómo podría un software hecho para internet contribuir a apoyar la teoría constructivista social de la enseñanza y el aprendizaje (Dougiamas y Taylor, 2013).
 
+El constructivismo social es una teoría pedagógica que otorga un papel fundamental a la “construcción de algo” en el proceso de aprendizaje; además, esa construcción se da por medio de la interacción con otros actores sociales.
+Es decir, considera que el aprendizaje, más que un proceso pasivo, en el que el sujeto que aprende recibe el conocimiento (de forma oral o escrita, por ejemplo), es un proceso activo en el que el sujeto debe interactuar con el objeto de conocimiento (esto es, construir activamente el conocimiento) y con otros estudiantes para poder adquirir realmente ese conocimiento.
 
-La filosofía que subyace bajo el proyecto de Moodle según se asegura en
-https://docs.moodle.org/33/en/Philosophy es la pedagogía social y
-construccionista.
+La diferencia entre la educación tradicional y la que propone esta teoría es la misma que existe entre una ponencia y un debate (Rice, 2006).
 
-Definiciones:
-Constructivismo: en pedagogía
+Por poner un ejemplo sencillo, para enseñar a sumar no bastará con una clase en que se expliquen las reglas básicas de la suma sino que el alumno *debe* realizar él mismo esas sumas para poder comprender mejor el concepto.
+Y aun más, deberá comunicar y debatir sobre ese conocimiento con otros estudiantes para entenderlo mejor y hacerlo suyo.
 
-Las ventajas de Moodle.
+Se trata, en resumen, de un aprendizaje colaborativo y activo que fomenta el compartir y las interacciones sociales.
 
+En este contexto el profesor no es solamente un actor que _entrega_ su conocimiento a los alumnos, sino que su función es también la de crear un ambiente propicio entre los educandos para que el alumno pueda construir su propio conocimiento e interactuar con otros educandos.
 
-Algunas de las características más destacadas de esta plataforma son las
-siguientes
+Dentro de Moodle existen cuatro roles posibles: invitados, estudiantes, profesores y administradores.
+Los invitados tienen un acceso limitado a la plataforma; este acceso tiene cierto margen de configuración por parte de profesores y administradores.
+Los estudiantes pueden inscribirse en cursos, participar en ellos e interactuar con otros alumnos por medio de las herramientas dispuestas para ello (como los foros).
+Los profesores diseñan el contenido de los cursos y material docente y ejercen cierto control sobre los estudiantes, a los que pueden evaluar, alentar, aconsejar, etc.
+Los administradores realizan una labor más operativa y de gestión de la plataforma (Casales, Rojas y Paulí, 2008).
 
-==== Código fuente
-El código fuente de Moodle es libre y abierto, es decir, está disponible para
-todo el mundo. La licencia del código [https://docs.moodle.org/dev/License] es
-GPL Versión 3, la cual considera las cuatro libertades esenciales
+En el aspecto propiamente técnico, Moodle está programado en el lenguaje de programación PHP y requiere de un servidor web (como el servidor web de Apache) y una base de datos (MySQL o PostgreSQL).
+
+La interfaz de usuario es clara y limpia como se puede ver en la página de inicio de un sitio de prueba (<<moodle_pag_inicio>>).
+
+.Ejemplo de página de inicio de Moodle
+[[moodle_pag_inicio]]
+image::moodle_pag_inicio.png[]
+
+El código fuente de Moodle es libre y abierto, es decir, está disponible para todo el mundo.
+La licencia del código [https://docs.moodle.org/dev/License] es GPL Versión 3, la cual considera las cuatro libertades esenciales del software:
 
 * libertad de uso del sofware con cualquier propósito
 * libertad para modificar el software
 * libertad para redistribuir copias del sofware
 * libertad para redistribuir las modificaciones hechas sobre el software
 
-La ventaja principal de esta características es que esto permite
+La ventaja principal de estas características es que esto permite una mayor facilidad para estudiar el código fuente y modificarlo en caso de que se encuentren errores o de que sea necesario adaptarlo a las necesidades.
 
-* facilidad para estudiar el código fuente y modificarlo en caso de que se
-encuentren errores o de que sea necesario adaptarlo a las necesidades.
-El modelo de software libre y abierto ofrece, además, la posibilidad de
-contribuir con esas mejoras o adaptaciones al proyecto principal si fueran de
-utilidad para más gente.
+El modelo de software libre y abierto ofrece, además, la posibilidad de contribuir con esas mejoras o adaptaciones al proyecto principal si fueran de utilidad para más gente.
+Este punto encaja muy bien con el espíritu académico que guía a las organizaciones que, en general, estarán interesadas en este tipo de software.
 
+Por último esta licencia permite que se eliminen o reduzcan muchas de  las trabas legales y económicas para usar el software.
 
-
-
-Algunas alternativas a Moodle
-(vamos a centrarnos en las de código libre)
-
-Chamilo
-Sakai
-
-
-
-Paradiso LMS
-
-Blackboard
+Por todo lo comentado en este apartado se ha elegido Moodle para realizar el análisis de este proyecto.

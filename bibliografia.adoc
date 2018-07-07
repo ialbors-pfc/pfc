@@ -30,8 +30,12 @@ endif::[]
 // https://jedm.educationalData Mining.org/index.php/JEDM/article/download/8/2
 * Bouckaert, R. R., Frank, E., Hall, M. A., Holmes, G., Pfahringer, B., Reutemann, P., & Witten, I. H. (2010). WEKA - Experiences with a Java Open-Source Project. Journal of Machine Learning Research, 11(Sep), 2533-2541.
 // http://www.jmlr.org/papers/volume11/bouckaert10a/bouckaert10a.pdf
+* Casales, R., Rojas, J., & Paulí, G. (2008). Algunas experiencias didácticas en el entorno de la plataforma Moodle. Revista de informática educativa y medios audiovisuales, 5(19), 1-10.
+// http://laboratorios.fi.uba.ar/lie/Revista/Articulos/050510/A1mar2008.pdf
 * Ceglar, A. & Roddick, J.F. (2006). Association Mining. ACM Computing Surveys, 38 (2), 5.
 * Dalton, E. (2017). " Learn Moodle August 2016" anonymized data set. Recuperado a partir de https://research.moodle.net/158/
+* Dougiamas, M., & Taylor, P. (2003). Moodle: Using learning communities to create an open source course management system. In EdMedia: World Conference on Educational Media and Technology (pp. 171-178). Association for the Advancement of Computing in Education (AACE).
+// http://researchrepository.murdoch.edu.au/id/eprint/36645/1/Moodle%20Create.pdf
 * Fernández-González, N. (2016). La LOMCE: aportaciones para el debate sobre la política educativa. Revista Educación, Política y Sociedad.
 * Gonçalves Jr, P. M., Barros, R. S., & Vieira, D. C. (2012, May). On the use of data mining tools for data preparation in classification problems. In Computer and Information Science (ICIS), 2012 IEEE/ACIS 11th International Conference on (pp. 173-178). IEEE.
 // https://www.computer.org/csdl/proceedings/icis/2012/1536/00/06211093.pdf
@@ -46,6 +50,9 @@ endif::[]
 * Moodle (n.d.). Recuperado en Julio 7, 2015 de Wikipedia: http://es.wikipedia.org/wiki/Moodle
 * Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.
 * Perasso, V. (2016, oct. 12). Qué es la cuarta revolución industrial (y por qué debería preocuparnos). _BBC_. Recuperado de http://www.bbc.com/mundo/noticias-37631834
+* Rice, W. H., & William, H. (2006). Moodle. Birmingham: Packt Publishing.
+// http://ead.iesgo.edu.br/file.php/1/apostilas/Moodle_Sample_e-book.pdf
+// http://roa.ult.edu.cu/bitstream/123456789/568/1/Moodle%2520-%2520E-Learning%2520Course%2520Development%2520(2006)%2520-%2520Bbl.pdf
 * Romero, C., López, M.I., Luna, J.M., & Ventura, S. (2013). Predicting students' final performance from participation in on-line discussion forums. Computers & Education, 68, 458-472.
 * Romero, C. & Ventura, S. (2010). Educational data mining: a review of the state of the art, IEEE Transactions on Systems, Man, and Cybernetics, Part C: Applications and Reviews, 40(6), 601-618.
 * Romero, C., & Ventura, S. (2007). Educational data mining: A survey from 1995 to 2005. Expert systems with applications, 33(1), 135-146.
@@ -54,6 +61,8 @@ endif::[]
 // https://pdfs.semanticscholar.org/c73b/0424e1a4ab2574cfce2e41c505f71f46940e.pdf
 * Romero, C., Romero, J. R., & Ventura, S. (2014). A survey on pre-processing educational data. In Educational data mining (pp. 29-64). Springer, Cham.
 // https://s3.amazonaws.com/academia.edu.documents/46925768/A_Survey_on_Pre-Processing_Educational_D20160630-14564-9nvrl.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530212868&Signature=Inhi%2BqKySbbQDe3h2UzKcsyx1KU%3D&response-content-disposition=inline%3B%20filename%3DA_Survey_on_Pre-Processing_Educational_D.pdf
+* Romero, C., Ventura, S., & García, E. (2008). Data mining in course management systems: Moodle case study and tutorial. Computers & Education, 51(1), 368-384.
+// https://s3.amazonaws.com/academia.edu.documents/6404764/romero-ventura-garcia-ce.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1530890364&Signature=f%2FKTJoHNYjlF26Sz5o4k%2BGXdwvQ%3D&response-content-disposition=inline%3B%20filename%3DData_mining_in_course_management_systems.pdf
 * Sao Pedro, M., Baker, R.S.J.d., Gobert, J. (2012) Improving Construct Validity Yields Better Models of Systematic Inquiry, Even with Less Information. Proceedings of the 20th International Conference on User Modeling, Adaptation and Personalization (UMAP 2012), 249-260.
 * Sánchez, E. (2015, may. 22). Big Data al servicio de la educación. _Euronews_. Recuperado de http://es.euronews.com/2015/05/22/big-data-al-servicio-de-la-educacion
 * Vasudevan, V., Almozini, B., Almuhanna, S., & Aljubair, A. University Student’s Learning Pattern Analysis and Prediction in LMS Using Data Mining Techniques.

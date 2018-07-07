@@ -602,41 +602,6 @@ El objetivo de estas técnicas es encontrar relaciones ocultas a simple vista en
 //
 // Dentro de esta clasificación existen subclasificaciones.
 
-====== Correlation Mining
-// http://www.eecs.umich.edu/eecs/pdfs/events/2711.pdf
-// http://users.wpi.edu/~rsbaker/Encyclopedia%20Chapter%20Draft%20v10%20-fw.pdf
-//
-El objetivo es encontrar correlaciones lineales entre variables cuando el número de variables es muy alto.
-
-El enfoque puede ser más reducido y así intentar
-encontrar qué variables están correlacionadas con otra fija en la que se tiene
-un interés especial o bien un enfoque más amplio en el que se quiera encontrar
-asociaciones significativas entre dos variables cualquiera del conjunto de
-variables sin ninguna limitación inicial.
-//
-// Bonferroni y FDR como correcciones.
-
-====== Causal Data Mining
-El objetivo es hallar relaciones causales entre variables.
-// http://nugget.unisa.edu.au/Thuc/CausalAssRule.pdf
-
-Es decir, no solamente debe existir una asociación entre dos variables o entre los valores de dos variables, sino que esa relación debe ser causal.
-Por ejemplo, podría existir una asociación entre “suspender Matemáticas” y
-“suspender Lengua” en un conjunto determinado de datos.
-Que exista esa asociación no quiere decir que “suspender Matemáticas” sea causa de “suspender
-Lengua” o viceversa.
-En cambio podría existir una tercera variable -- “nivel académico previo”, por ejemplo -- que sí podría ser causa de las otras dos.
-
-Una forma de estudiar las posible relaciones causales de forma experimental implica la
-manipulación de los sujetos de estudio de modo que variando los valores de una variable
-A se estudie si esa variación repercuta en el valor de otra variable B.
-Las implicaciones éticas que conlleva este procedimiento, especialmente cuando el objeto de estudio es un ser humano (como es el caso de EDM), suponen un importante impedimento.
-Por ejemplo si se obliga a un alumno a no atender en clase para comprobar cómo repercute eso
-en sus notas.
-
-Es por ello por lo que es importante ser capaces de obtener relaciones causales
-únicamente a partir de datos ya recopilados.
-
 ====== Association Rule Mining
 Consiste en encontrar relaciones entre variables del tipo:
 
@@ -674,6 +639,41 @@ Siendo:
 
 * P(B): la probabilidad de B.
 
+====== Correlation Mining
+// http://www.eecs.umich.edu/eecs/pdfs/events/2711.pdf
+// http://users.wpi.edu/~rsbaker/Encyclopedia%20Chapter%20Draft%20v10%20-fw.pdf
+//
+El objetivo es encontrar correlaciones lineales entre variables cuando el número de variables es muy alto.
+
+El enfoque puede ser más reducido y así intentar
+encontrar qué variables están correlacionadas con otra fija en la que se tiene
+un interés especial o bien un enfoque más amplio en el que se quiera encontrar
+asociaciones significativas entre dos variables cualquiera del conjunto de
+variables sin ninguna limitación inicial.
+//
+// Bonferroni y FDR como correcciones.
+
+====== Causal Data Mining
+El objetivo es hallar relaciones causales entre variables.
+// http://nugget.unisa.edu.au/Thuc/CausalAssRule.pdf
+
+Es decir, no solamente debe existir una asociación entre dos variables o entre los valores de dos variables, sino que esa relación debe ser causal.
+Por ejemplo, podría existir una asociación entre “suspender Matemáticas” y
+“suspender Lengua” en un conjunto determinado de datos.
+Que exista esa asociación no quiere decir que “suspender Matemáticas” sea causa de “suspender
+Lengua” o viceversa.
+En cambio podría existir una tercera variable -- “nivel académico previo”, por ejemplo -- que sí podría ser causa de las otras dos.
+
+Una forma de estudiar las posible relaciones causales de forma experimental implica la
+manipulación de los sujetos de estudio de modo que variando los valores de una variable
+A se estudie si esa variación repercuta en el valor de otra variable B.
+Las implicaciones éticas que conlleva este procedimiento, especialmente cuando el objeto de estudio es un ser humano (como es el caso de EDM), suponen un importante impedimento.
+Por ejemplo si se obliga a un alumno a no atender en clase para comprobar cómo repercute eso
+en sus notas.
+
+Es por ello por lo que es importante ser capaces de obtener relaciones causales
+únicamente a partir de datos ya recopilados.
+
 ====== Sequential Pattern mining
 
 En esta categoría el objetivo es crear relaciones como las de ARM pero en la que se tiene en cuenta el factor tiempo.
@@ -693,12 +693,13 @@ El descubrimiento con modelos consiste en utilizar un modelo predictivo (creado 
 
 Generalmente se usa un modelo de predicción para una variable que posteriormente es usado con otro modelo de predicción donde esta variable pasa a ser una variable productora.
 
-La otra técnica más frecuente es usar la predicción de una variable para posteriormente aplicar una técnica de miniería de relaciónes.
+La otra técnica más frecuente es usar la predicción de una variable para posteriormente aplicar una técnica de minería de relaciones.
 
 Es un término acuñado por Baker y Yacef (2009) que, según ellos mismos afirman, surge a partir de 2008/2009, por lo que todavía no tiene demasiado recorrido a pesar de que ya en 2010 suponía el 20% de los estudios publicados en EDM.
 
 
 === Moodle
+
 include::moodle.adoc[]
 
 === Weka

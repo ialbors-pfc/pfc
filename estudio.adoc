@@ -32,7 +32,7 @@ Toda la información relevante de la que hace acopio Moodle se guarda en una bas
 De ahí radica la importancia de conocer bien esa BD para poder extraer la información pertinente adecuadamente.
 
 Moodle es una herramienta en constante y activo desarrollo.
-Es por ello que su la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
+Es por ello que la definición de su modelo de datos, reflejada en la base de datos, puede ser igualmente cambiante.
 
 Pero, al mismo tiempo, es una herramienta con la suficiente madurez como para poder afirmar que existe cierta estabilidad en dicho modelo de datos y que los cambios con respecto al núcleo del mismo se considerarán mínimos.
 
@@ -525,11 +525,26 @@ Cuando se usa la opción _treatZeroAsMissing_ el valor del mínimo soporte baja 
 9. city=1 num_completados='(26.4-inf)' num_aprobados='(5.6-8.4]' 466 ==> num_badges=2 423    <conf:(0.91)> lift:(3.38) lev:(0.14) [297] conv:(7.74)
 ----
 
+Por ejemplo la nº 1, que establece que si el número de insignias es 2 el alumno completará 27 o más actividades (es el rango mayor para ese atributo).
+A partir de esta regla se podría potenciar la asignación de insignias para lograr el mayor número de actividades completadas.
+Aunque sería conveniente realizar un estudio de Causal Data Mining puesto que la relación entre esos atributos puede no ser causal.
+
+
 ===== Selección de atributos por correlación
 
 A raíz de la poca información que se obtenía en la primera modalidad del primer experimento, se va a intentar eliminar aquellos atributos redundantes.
 Para ello, en este segundo experimento, se van a seleccionar por medio un filtro Weka únicamente los *cinco atributos* con el valor de correlación más alto con respecto al atributo _num_aprobados_.
 
+Los atributos que permanecen son:
+
+* timezone
+* description
+* url
+* num_badges
+* num_completados
+* num_aprobados
+
+Los resultados se encuentran en <<tabla_resumen_exp2>>.
 
 [cols="30%h,35%,35%",options="header"]
 [[tabla_resumen_exp2]]
@@ -567,7 +582,10 @@ Pero muchas de ellas siguen teniendo un valor de _lift_ bajo.
 4. num_completados='(26.4-inf)' num_aprobados='(5.6-8.4]' 531 ==> num_badges=2 485    <conf:(0.91)> lift:(3.4) lev:(0.16) [342] conv:(8.26)
 ----
 
-Con _treatZeroAsMissing_ lo más destacable es que sólo se han podido obtener 4 reglas en vez de las 10 esperadas. Además, de nuevo, las reglas son más significativas que en la versión con valores por defecto aunque algo redundantes.
+Con _treatZeroAsMissing_ lo más destacable es que sólo se han podido obtener 4 reglas en vez de las 10 esperadas.
+Además, de nuevo, las reglas son más significativas que en la versión con valores por defecto aunque algo redundantes.
+
+Un ejemplo de regla interesante sería la nº3, que podría leerse como "si el número de aprobados está entre 6 y 8, el número de actividades completadas está en el rango superior".
 
 ===== Eliminar instancias con cero aprobados
 
@@ -620,4 +638,5 @@ El resto de parámetros tienen valores parecidos al último experimento.
 6. num_aprobados='(6.2-8.8]' 499 ==> num_badges=2 num_completados='(26.6-inf)' 455    <conf:(0.91)> lift:(1.84) lev:(0.18) [208] conv:(5.6)
 ----
 
-De nuevo se observa que con _treatZeroAsMissing_ la calidad de las reglas generadas mejora con respecto a los valores por defecto. También se aprecia que disminuye el número de reglas generadas y, por último, que el _interés_ de las mismas ha bajado con respecto al segundo experimento (valores de lift por debajo de 2).
+De nuevo se observa que con _treatZeroAsMissing_ la calidad de las reglas generadas mejora con respecto a los valores por defecto.
+También se aprecia que disminuye el número de reglas generadas y, por último, que el _interés_ de las mismas ha bajado con respecto al segundo experimento (valores de lift por debajo de 2).

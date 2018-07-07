@@ -16,7 +16,7 @@ Según Bouckaert et al. (2010) algunos de las características que han favorecid
 Gracias a esto puede ejecutarse en un gran número de plataformas (como Windows, Linux o Solaris).
 * la existencia de una interfaz gráfica (o GUI), que rebaja la barrera de entrada para usar cualquier programa y facilita su uso.
 * la combinación de la publicación del _software_ con la publicación de un libro sobre Data Mining en el que se emplea Weka como herramienta ilustrativa. Ambas cosas han funcionado como un círculo virtuoso.
-* extensibildad: es posible extender su funcionalidad (con nuevos algoritmos o técnicas) de forma sencilla e incluso embeber dicha funcionalidad en otro programa.
+* extensibilidad: es posible extender su funcionalidad (con nuevos algoritmos o técnicas) de forma sencilla e incluso embeber dicha funcionalidad en otro programa.
 * la extensa documentación (generada por los autores o por la propia comunidad) facilita el uso de la herramienta.
 * integralidad: se han reescrito ciertos algoritmos en Java para que así esta herramienta sea una solución integral que contenga, si no todos, los más importantes algoritmos de esta materia.
 
