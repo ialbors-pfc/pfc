@@ -177,6 +177,8 @@ PSLC::
 
 RMSE::
   Root Mean Square Error
+ROC::
+  Receiver Operating Characteristic
 RGPD::
   Reglamento General de Protección de Datos
 
