@@ -47,6 +47,7 @@ endif::[]
 // https://researchcommons.waikato.ac.nz/bitstream/handle/10289/1138/uow-cs-wp-1994-09.pdf?sequence=1
 * Jiménez Pérez, E. (2017). Lectura y educación en España: análisis longitudinal de las leyes educativas generales. Investigaciones Sobre Lectura, (8), 79-90. Recuperado a partir de https://www.comprensionlectora.es/revistaisl/index.php/revistaISL/article/view/218
 * Kharwar, A. R., & Kapadia, V. (1998). A Effective Preprocessing for Web Usage Mining.
+* Liang, L., Liu, M., & Sun, W. (2017). A deep learning approach to estimate chemically-treated collagenous tissue nonlinear anisotropic stress-strain responses from microscopy images. Acta biomaterialia, 63, 227-235.
 * Liu, H., Yu, L. (2005) Toward integrating feature selection algorithms for classification and clustering. IEEE Transactions on Knowledge and Data Engineering, 17 (4), 491-502.
 * Moodle (n.d.). Recuperado en Julio 7, 2015 de Wikipedia: http://es.wikipedia.org/wiki/Moodle
 * Muñoz, J. M. E. (2003). La calidad de la educación: controversias y retos para la Educación Pública. Educatio, (20-21), 21.

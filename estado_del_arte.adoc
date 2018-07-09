@@ -476,6 +476,15 @@ especificidad = \frac{VN}{VN+FP}
 // tasa de falsos positivos: de todos los que son negativos, cuántos se han clasificado como positivos
 
 La curva se dibuja calculando ese par de valores modificando el criterio de decisión para determinar que un punto es VERDADERO o FALSO.
+
+.Ejemplo de curvas ROC (Liang, Liu y Sun, 2017).
+[[curvas_roc]]
+image::roc_curves.png[]
+
+En <<curvas_roc>> se puede ver un ejemplo de cuatro curvas ROC para sendos clasificadores.
+Cuanto mejor es la curva ROC más se sitúa hacia el vértice superior izquierdo.
+En este caso la curva roja se corresponde con el mejor clasificador según su curva ROC y la curva azul se corresponde con el peor. 
+
 //
 // Cutoff sería el umbral de decisión para decidir
 //
