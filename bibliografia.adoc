@@ -70,6 +70,9 @@ endif::[]
 * Weka (aprendizaje automático) (n.d.). Recuperado en Mayo 31, 2018 de Wikipedia: http://es.wikipedia.org/wiki/Weka_(aprendizaje_autom%C3%A1tico)
 * Wirth, R., & Hipp, J. (2000, April). CRISP-DM: Towards a standard process model for data mining. In Proceedings of the 4th international conference on the practical applications of knowledge discovery and data mining (pp. 29-39).
 
+* Wu, X., Kumar, V., Quinlan, J. R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G.J., Ng, A., Liu, B., Yu, P.S., Steinbach, M., Hand, D.J., Steinberg, D. & Zhou, Z. H. (2008). Top 10 algorithms in data mining. Knowledge and information systems, 14(1), 1-37.
+
+// http://www.realtechsupport.org/UB/CM/algorithms/Wu_10Algorithms_2008.pdf
 
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5133&rep=rep1&type=pdf

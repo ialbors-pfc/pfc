@@ -182,13 +182,30 @@ Es necesario utilizar unas medidas comunes que sirvan para poder comparar unos m
 Es una medida de la posible relación lineal entre dos variables.
 Es decir, si se consideran dos variables A y B, esta métrica establece si, al incrementar el valor de A, se produce un incremento lineal en el valor de B.
 
+Se define el coeficiente de correlación de Pearson para dos variables (X, Y) como:
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+\rho_{X,Y} = \frac{\sigma_X_Y}{\sigma_X\sigma_Y}
+++++++++++++++++++++++++++++++++++++++++++++
+
+Donde:
+
+* latexmath:[\sigma_{XY}]: es la covarianza de X, Y.
+* latexmath:[\sigma_X]: es la desviación típica de la variable X.
+* latexmath:[\sigma_Y]: es la desviación típica de la variable Y.
+
+
 Análisis de los distintos valores:
 
-*  1: la correlación es perfecta.
-*  0: no existe relación lineal entre las dos variables consideradas.
-*  -1: existe una correlación perfecta pero inversa.
-*  Valores intermedios depende del campo en el que se esté aplicando. Para
-EDM, por ejemplo, una correlación de 0,3 se considera buena.
+* r = 1: la correlación es perfecta.
+* 0 < r < 1: existe una correlación positiva.
+* r = 0: no existe relación lineal entre las dos variables consideradas.
+* r = -1: existe una correlación perfecta pero inversa.
+* -1 < r < 0: existe una correlación negativa.
+
+En general, para los valores intermedios, su interpretación depende del campo en el que se esté aplicando.
+Para EDM, por ejemplo, una correlación de 0,3 se considera buena.
 
 También se emplea el valor r², es decir, el coeficiente de correlación al cuadrado.
 Es una medida de qué porcentaje de la variación está explicada por el modelo.
@@ -196,6 +213,11 @@ Es una medida de qué porcentaje de la variación está explicada por el modelo.
 .MAE/RMSE
 
 El valor absoluto medio (MAE por sus siglas en inglés: Mean Absolute Error) se calcula como la media del valor absoluto de la diferencia entre el valor predicho y el valor real.
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+MAE = \frac {\sum_{i=1}^n |y_i - x_i|}{n}
+++++++++++++++++++++++++++++++++++++++++++++
 
 Indica la media de la desviación del error predicho con respecto al real.
 
@@ -226,9 +248,12 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 
 *  Step regression
 *  Logistic regression
-*  J48/C4.5 decision trees
+*  árboles de decisión (J48/C4.5)
 *  Jrip decision rules
-*  K* Instance-based classifiers
+*  clasificadores K* Instance-based
+
+A continuación se verán algunos ejemplos.
+
 //
 // ====== Step regression
 // WARNING: No es stepwise regression!!!!
@@ -263,26 +288,33 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 //
 // WARNING: ¿Qué significa conservador?(¿qué significa, lo explica más adelabnte?)
 //
-// ====== Decision trees (J48 o C4.5 o C5.0)
-// J48 es el nombre que recibe la implementación en Java y de código abierto
-// del algoritmo C4.5. Esta implementación está incluida en una de las herramientas
-//  de minería de datos más popular: Weka.
-//
-// Es un algoritmo desarrollado por Ross Quinlan y que supuso una evolución a partir
-// de otro algoritmo del mismo autor: ID3.
-//
-// De nuevo el mismo autor ha trabajado en una nueva versión del algoritmo, C5.0,
-// la cual presenta significativas mejoras con respecto a su predecesora.
+
+.Árboles de decision (J48 o C4.5 o C5.0)
+
+C4.5 Es un algoritmo desarrollado por Ross Quinlan y que supuso una evolución a partir de otro algoritmo del mismo autor: ID3.
+
+J48 es el nombre que recibe la implementación en Java y de código abierto del algoritmo C4.5.
+Esta _reimplementación_ se realizó expresamente para la herramienta Weka.
+
+El mismo Ross Quinlan ha trabajado en una nueva versión del algoritmo, C5.0, la cual presenta significativas mejoras con respecto a su predecesora (por ejemplo en cuanto a velocidad o memoria).
 //
 // Tiene en cuentra la interacción entre variables (a dferencia de los dos
 // algoritmos anteriores)
-//
-// Este algoritmo puede tratar tanto con variables de tipo numérico como con
-// categorías.
-//
+
+Esta familia de algoritmos puede tratar tanto con variables de tipo numérico como con categorías.
+
 // Tiene sentido cuando hay interacciones entre variables o cuando se puede llegar
 // al mismo resultado desde distintos puntos.
 //
+
+En <<j48_tree_en_weka>> se puede ver un árbol creado con el algoritmo J48 en Weka a partir de datos de ejemplo de la propia herramienta de Data Mining.
+
+.Ejemplo de árbol J48 en Weka
+[[j48_tree_en_weka]]
+image::j48_tree.png[]
+
+Este algoritmo es uno de los más conocidos y empleados dentro de Data Mining (Wu et al., 2008).
+
 // ====== Decision Rules (Jrip y PART)
 // Reglas de tipo *SI x ENTONCES* y que se comprueban en orden.
 //
@@ -311,10 +343,9 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 //
 // Buenos cuando se dan interacciones en varios niveles.
 //
-// ====== Clasificadores K* Instance-based classifiers
-// Predice el valor de la variable a predecir teniendo en cuenta otros puntos de
-// datos vecinos. Tendrán más peso aquellos puntos que estén más cerca del punto de
-// análisis.
+
+.Clasificadores K* Instance-based
+Predice el valor de la variable correspondiente que se quiere predecir teniendo en cuenta otros puntos de datos vecinos. Los puntos más cercanos tendrán mayor peso en el análisis.
 //
 // Este algoritmo es recomendable cuando:
 //
@@ -324,13 +355,10 @@ Hay muchísimos algoritmos de clasificación. Algunos ejemplos:
 //
 // Es, en muchos casos, un plan B para cuando todo lo demás no funciona.
 //
-// Baker et al., 2012 [encontrar la referencia exacta] asegura que ha sido un
-// algoritmo muy útil para detecta emociones a partir de ficheros de log.
-//
-// image::referencia.png[]
-//
-// Su principal inconveniente es que es necesario tener todos los datos para poder
-// construir este modelo.
+
+En Baker et al. (2012) se asegura que ha sido un algoritmo muy útil para detectar emociones a partir de ficheros de log.
+
+Su principal inconveniente es que es necesario tener todos los datos para poder construir este modelo.
 //
 // ====== Bagged stumps
 // WARNING: [Lo que hay es del curso de EDM pero soy incapaz de encontrar nada más]
@@ -364,7 +392,7 @@ Al igual que ocurría con la regresión, es importante no solamente saber el val
 Por ejemplo, se tendrá más información si se dice que "hay un 50% de probabilidades de que el alumno vaya a  abandonar el colegio" que si sólamente se dice que el modelo predictivo predice que el alumno va a abandonar el colegio.
 
 
-Algunas de esas métricas se detallan a continuación.
+Algunas de las métricas asociadas a la clasificación se detallan a continuación.
 
 // .Detector confidence:
 // Esto es útil, por ejemplo, para decidir cómo será la intervención sobre un
@@ -416,30 +444,38 @@ Interpretación de Kappa:
 * Entre 0 y 1: son los valores más típicos.
 Se suelen admitir como válidos valores entre 0.3 y 0.5 para considerar un modelo mejor que el azar.
 
-// Comparar Kappa entre dos conjuntos de datos es complicado. Sólo tiene sentido
-// compararlos si las distintas categorías en que queremos clasificar son
-// proporcionales en su núnero de elementos.
+Comparar Kappa entre dos conjuntos de datos es complicado.
+Sólo tiene sentido compararlos si las distintas categorías en que se quiere clasificar son  proporcionales en su núnero de elementos.
 //
 // Ejemplo con dos categorías (Expected agreement = Expected acuerdo para categoría
 // 1 + expected para categoría2, siendo EA1 = freq cat1*freqcat1 clasificada)
-//
-// ====== Curvas ROC
-// Están pensadas para sistemas binarios de VERDADERO o FALSO. Por ejemplo, se usan
-// mucho para análisis de métodos diagnósticos en medicina.
-//
-// Se usa en sistemas que, más que darnos el resultado de la clasificación, nos dan
-// un valor a partir del cual podemos establecer un umbral para marcar el dato como
-// VERDADERO o FALSO.
-//
-// Las curvas ROC (acrónimo de Receiver Operating Characteristic o Característica
-// Operativa del Receptor) son una representación del porcentaje de falsos
-// positivos (valores clasificados como positivos cuando realmente no lo son).
-//
-// En el eje Y se sitúa TRUE POSITIVE ratio (también se le llama sensibilidad) y en
-// el eje X Fpratio (sería equivalente a 1-Especificidad).
-//
-// La curva se dibuja calculando ese par de valores modificando el criterio de
-// decisión para determinar que un punto es VERDADERO o FALSO.
+
+.Curvas ROC
+Están pensadas para sistemas binarios de VERDADERO o FALSO.
+Por ejemplo, es una métrica muy empleada para análisis de métodos diagnósticos en medicina.
+
+Se usa en sistemas que, más que darnos el resultado de la clasificación, nos dan un valor a partir del cual podemos establecer un umbral para marcar el dato como VERDADERO o FALSO.
+
+Las curvas ROC (acrónimo de Receiver Operating Characteristic o Característica Operativa del Receptor) son una representación del porcentaje de FALSOS POSITIVOS  (valores clasificados como positivos cuando realmente no lo son).
+
+En el eje Y se sitúa la tasa de VERDADEROS POSITIVOS  (también llamado *sensibilidad*) frente al eje X, donde se representa la tasa de FALSOS POSITIVOS, que es equivalente a 1-*especificidad*.
+
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+sensibilidad = \frac{VP}{VP + FN}
+++++++++++++++++++++++++++++++++++++++++++++
+
+[latexmath]
+++++++++++++++++++++++++++++++++++++++++++++
+especificidad = \frac{VN}{VN+FP}
+++++++++++++++++++++++++++++++++++++++++++++
+
+// ialbors: sensibilidad: de entre todos los que son positivos, cuántos se han clasificado como tal.
+// ialbors: especificidad: de entre todos los que son negativos, cuántos se han clasificado como negativos.
+// tasa de falsos positivos: de todos los que son negativos, cuántos se han clasificado como positivos
+
+La curva se dibuja calculando ese par de valores modificando el criterio de decisión para determinar que un punto es VERDADERO o FALSO.
 //
 // Cutoff sería el umbral de decisión para decidir
 //
@@ -471,6 +507,7 @@ Se suelen admitir como válidos valores entre 0.3 y 0.5 para considerar un model
 // *  Suele tener valores más altos que Kappa.
 // *  Tiene en cuenta confidence
 //
+
 .Precisión
 Es la probabilidad de que un punto clasificado como VERDADERO sea realmente VERDADERO.
 
@@ -484,14 +521,14 @@ Siendo:
 * TP: TRUE POSITIVE o Verdadero Positivo (se ha marcado correctamente como VERDADERO).
 * FP: FALSE POSITIVE o Falso Positivo (se ha clasificado incorrectamente como VERDADERO).
 
-// ====== Exhaustividad
-// La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
-//
-// [latexmath]
-// ++++
-// Recall = \frac{TP}{TP + FN}
-// ++++
-//
+.Exhaustividad
+La probabilidad de que un punto que es VERDADERO sea clasificado como VERDADERO.
+
+[latexmath]
+++++
+Recall = \frac{TP}{TP + FN}
+++++
+
 // ===== Validación cruzada y sobreajuste
 // El sobreajuste se da cuando el modelo no sólo se ajusta a la señal sino también
 // al ruido.
