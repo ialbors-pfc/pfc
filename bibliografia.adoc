@@ -23,6 +23,7 @@ endif::[]
 * ARFF (book version) (n.d.). Recuperado en Julio 1, 2017 de http://weka.wikispaces.com/ARFF%20%28book%20version%29
 * Asamblea General de la ONU. (1948). "Declaración Universal de los Derechos Humanos" (217 [III] A). Paris. Recuperado de http://www.un.org/en/universal-declaration-human-rights/
 * Baker, R. S. (2010). Mining data for student models. In Advances in intelligent tutoring systems (pp. 323-337). Springer, Berlin, Heidelberg.
+* Baker, R. S., Gowda, S. M., Wixon, M., Kalka, J., Wagner, A. Z., Salvi, A., Aleven, V., Kusbit, G.W., Ocumpaugh, J. & Rossi, L. (2012). Towards Sensor-Free Affect Detection in Cognitive Tutor Algebra. International Educational Data Mining Society.
 * Baker, R. S., & Inventado, P. S. (2014). Educational data mining and learning analytics. In Learning analytics (pp. 61-75). Springer, New York, NY.
 * Baker, R., & Siemens, G. (2014) Educational data mining and learning analytics. In Sawyer, K. (Ed.) Cambridge Handbook of the Learning Sciences: 2nd Edition, pp. 253-274.
 * Baker, R. S., & Yacef, K. (2009). The state of educational data mining in 2009: A review and future visions. JEDM| Journal of Educational Data Mining, 1(1), 3-17.
