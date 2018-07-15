@@ -196,6 +196,12 @@ BACK GLOSARIO
 
 == Introducción
 
+<<<
+
+BLANK_INTRODUCCION
+
+<<<
+
 include::introduccion.adoc[]
 
 === Estructura del documento
@@ -211,20 +217,65 @@ La memoria de este proyecto se ha estructurado en las siguientes secciones princ
 
 <<<
 
+<<<
+
+BLANK
+
+<<<
+
+
 == Estado del arte
+
+
+<<<
+
+BLANK_ESTADO_DEL_ARTE
+
+<<<
+
 
 // include::estado_del_arte0.adoc[]
 include::estado_del_arte.adoc[]
 
 <<<
 
+
+<<<
+
+BLANK
+
+<<<
+
+
 == Estudio
+
+
+<<<
+
+BLANK_ESTUDIO
+
+<<<
+
 
 include::estudio.adoc[]
 
 <<<
 
+<<<
+
+BLANK
+
+<<<
+
+
 == Conclusiones, limitaciones y futuras líneas de investigación
+
+<<<
+
+BLANK_CONCLUSIONES
+
+<<<
+
 
 include::conclusiones.adoc[]
 
@@ -232,10 +283,30 @@ include::conclusiones.adoc[]
 
 == Bibliografía
 
+
+<<<
+
+BLANK_BIBLIOGRAFIA
+
+<<<
+
+
 include::bibliografia.adoc[]
 
 <<<
 
+<<<
+
+BLANK
+
+<<<
+
 == Apéndices
+
+<<<
+
+BLANK_INTRODUCCION
+
+<<<
 
 include::apendices.adoc[]
